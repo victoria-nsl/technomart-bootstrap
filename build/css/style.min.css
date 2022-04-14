@@ -1,0 +1,2 @@
+@charset "UTF-8";.block1,.block2,.block3{position:relative;z-index:4;width:300px;padding:50px 100px;background-color:orange;border-bottom-left-radius:50px;border-bottom-right-radius:50px}.block2,.block3{top:-50px;z-index:3;padding:100px 100px 50px;background-color:#0ff}.block3{top:-100px;z-index:2;background-color:#7fff00}
+/*# sourceMappingURL=style.min.css.map */
