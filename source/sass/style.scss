@@ -1,2 +1,9 @@
+@import "../bootstrap-5/scss/bootstrap.scss";
+
 /*ГЛОБАЛЬНЫЕ СТИЛИ*/
+@import "global/font.scss";
+@import "global/variables.scss";
+@import "global/mixin.scss";
+@import "global/global.scss";
+
 /*БЛОКИ*/

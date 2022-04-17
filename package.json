@@ -1,7 +1,7 @@
 {
-  "name": "xxxxxx",
+  "name": "technomart-bootstrap",
   "version": "1.0.0",
-  "description": "Название проекта",
+  "description": "Интернет магазин Техномарт",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -51,5 +51,8 @@
   },
   "dependencies": {
     "del": "^4.1.1"
-  }
+  },
+  "eslintIgnore": [
+    "vendor.js"
+  ]
 }
