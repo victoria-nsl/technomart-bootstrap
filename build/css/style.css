@@ -7544,4 +7544,50 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.container {
+  max-width: 100%;
+  padding: 0 15px; }
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 50px; } }
+  @media (min-width: 1200px) {
+    .container {
+      padding: 0 130px; } }
+
 /*БЛОКИ*/
+.manufacturer__header {
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f9f5f0; }
+
+.manufacturer__wrapper-title {
+  padding: 5px 0; }
+
+.manufacturer__wrapper-title h2, .manufacturer__wrapper-title .h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #32425c; }
+
+.manufacturer__button {
+  width: 192px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.manufacturer__list {
+  width: 100%;
+  margin: 0 auto; }
+
+.manufacturer__item {
+  outline: 5px solid rgba(0, 255, 0, 0.5);
+  outline-offset: -5px;
+  margin-bottom: 20px; }
+
+.manufacturer__link {
+  width: 100%; }
+
+.manufacturer__link img {
+  width: 100%; }
