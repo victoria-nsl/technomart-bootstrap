@@ -1,50 +1,74 @@
+.manufacturer {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+//Шапка с заголовком и кнопкой
 .manufacturer__header {
   width: 100%;
-  padding: 20px 0;
   margin: 0 auto;
+
+  padding: 25px 0;
   margin-bottom: 20px;
 
   text-align: center;
   background-color: $grey-background;
+
+  @media (min-width: $tablet-width) {
+    text-align: end;
+  }
 }
 
-.manufacturer__wrapper-title {
-  padding: 5px 0;
-}
-
-.manufacturer__wrapper-title h2 {
-  margin: 0;
-
-  padding: 0;
+.manufacturer h2 {
+  margin-bottom: 20px;
 
   font-weight: 400;
-  // font-size: 30px;
-  // line-height: 30px;
+  font-size: 23px;
+  line-height: 23px;
+  text-transform: uppercase;
   color: $blue-text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-align: start;
+  }
 }
 
 .manufacturer__button {
   width: 192px;
 
   font-weight: 400;
-  // font-size: 14px;
-  //line-height: 18px;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
+  border-radius: 0;
 }
 
-.manufacturer__list {
-  width: 100%;
-  margin: 0 auto;
-}
-
+//Карточки с лого производителей
 .manufacturer__item {
-  outline: 5px solid rgba(0, 255, 0, 0.5);
-  outline-offset: -5px;
+  position: relative;
+  padding-top: 60%;
+  border: 1px solid $grey-border;
   margin-bottom: 20px;
 }
 
 .manufacturer__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .manufacturer__link img {

@@ -21,82 +21,200 @@
 <body>
   <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
+  <section class="products">
+
+    <div class="container">
+      <div class="products__header row justify-content-between align-items-center">
+        <div class="col-xl-5 col-md-7 col-sm-12">
+          <h2>Популярные товары:</h2>
+        </div>
+        <div class="col-xl-3 col-md-5 col-sm-12">
+          <button type="button" class="products__button btn btn-danger">
+            Все популярные товары
+          </button>
+        </div>
+      </div>
+
+      <div class="products__list row justify-content-between align-items-center">
+
+        <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+          <div class="products__item card">
+            <div class="products__wrapper-image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1200px)"
+                  srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
+                <!--1x: 184x164px  2x: 368x328px-->
+                <img class ="img-fluid" width="184" height="164" src="img/product-1.png" srcset="img/product-1@2x.png 2x"
+                  alt="Фотография перфоратора Bosch">
+              </picture>
+            </div>
+            <div class="products__description card-body">
+              <h3 class="card-title">Перфоратор BOSCH BFG 9000</h3>
+              <p class="card-text">32500 Р.</p>
+              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+                25500 Р.
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+          <div class="products__item card">
+            <div class="products__wrapper-image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1200px)"
+                  srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
+                <!--1x: 127x112px  2x: 254x224px-->
+                <img class ="img-fluid" width="127" height="112" src="img/product-2.png" srcset="img/product-2@2x.png 2x"
+                  alt="Фотография перфоратора Bosch">
+              </picture>
+            </div>
+            <div class="products__description card-body">
+              <h3 class="card-title">Перфоратор BOSCH BFG 3000</h3>
+              <p class="card-text">22500 Р.</p>
+              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+                15500 Р.
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-4  col-sm-6 col-12">
+          <div class="products__item card">
+            <div class="products__wrapper-image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1200px)"
+                  srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
+                <!--1x: 144x128px  2x: 288x256px-->
+                <img class ="img-fluid" width="144" height="128" src="img/product-3.png" srcset="img/product-3@2x.png 2x"
+                  alt="Фотография перфоратора Bosch">
+              </picture>
+            </div>
+            <div class="products__description card-body">
+              <h3 class="card-title">Перфоратор BOSCH BFG 6000</h3>
+              <p class="card-text">32500 Р.</p>
+              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+                25500 Р.
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+          <div class="products__item card">
+            <div class="products__wrapper-image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1200px)"
+                  srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
+                <!--1x: 127x112px  2x: 254x224px-->
+                <img class ="img-fluid" width="127" height="112" src="img/product-4.png" srcset="img/product-4@2x.png 2x"
+                  alt="Фотография перфоратора Bosch">
+              </picture>
+            </div>
+            <div class="products__description card-body">
+              <h3 class="card-title">Перфоратор BOSCH BFG 2000</h3>
+              <p class="card-text">22500 Р.</p>
+              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+                12500 Р.
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section class="manufacturer">
 
     <div class="container">
       <div class="manufacturer__header row justify-content-between align-items-center">
-        <div class="manufacturer__wrapper-title col-xl-5 col-md-6 col-sm-12">
+        <div class="col-xl-5 col-md-7 col-sm-12">
           <h2>Популярные производители:</h2>
         </div>
-        <div class="manufacturer__wrapper-button col-xl-3 col-md-6 col-sm-12">
+        <div class="col-xl-3 col-md-5 col-sm-12">
           <button type="button" class="manufacturer__button btn btn-danger">
             Все производители
           </button>
         </div>
       </div>
 
-      <div class="manufacturer__list row">
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-1.svg" width="220" height="145" alt="Логотип компании Bosch">
-            </picture>
-          </a>
+      <div class="manufacturer__list row justify-content-between">
+        <div class=" col-md-3 col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img class ="img-fluid" src="img/manufacturer-1.svg" width="126" height="37" alt="Логотип компании Bosch">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-2.svg" width="220" height="145" alt="Логотип компании Makita">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-2.svg" width="123" height="40" alt="Логотип компании Makita">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-3.svg" width="220" height="145" alt="Логотип компании DeWalt">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-3.svg" width="146" height="44" alt="Логотип компании DeWalt">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-4.svg" width="220" height="145" alt="Логотип компании Интерскол">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-4.svg" width="200" height="75" alt="Логотип компании Интерскол">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-5.svg" width="220" height="145" alt="Логотип компании Hitachi">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-5.svg" width="169" height="31" alt="Логотип компании Hitachi">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-6.svg" width="220" height="145" alt="Логотип компании LG">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-6.svg" width="121" height="73" alt="Логотип компании LG">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-7.svg" width="220" height="145" alt="Логотип компании AEG">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-7.svg" width="151" height="98" alt="Логотип компании AEG">
+              </picture>
+            </a>
+          </div>
         </div>
-        <div class="manufacturer__item col-xl-3 col-md-6 col-sm-12">
-          <a class="manufacturer__link">
-            <picture>
-              <img src="img/manufacturer-8.svg" width="220" height="145" alt="Логотип компании Metabo">
-            </picture>
-          </a>
+        <div class="col-md-3  col-6">
+          <div class="manufacturer__item">
+            <a class="manufacturer__link">
+              <picture>
+                <img src="img/manufacturer-8.svg" width="206" height="73" alt="Логотип компании Metabo">
+              </picture>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
   </section>
-
   <script type="module" src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
