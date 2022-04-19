@@ -21,6 +21,102 @@
 <body>
   <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
+
+  <section class="about">
+    <div class="about__inner">
+      <h2 class="visually-hidden">О компании</h2>
+
+      <div class="container">
+        <div class="about__list row justify-content-center">
+          <div class="col-xl-4 col-md-6 order-2 order-xl-1">
+            <div class="about__item">
+              <a class="about__link about__link--materials  about__link--mark" href="">
+                <h3>Материалы</h3>
+                <p>На любой вкус</p>
+                <div class="mark-new">New</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 order-3 order-xl-2">
+            <div class="about__item ">
+              <a class="about__link about__link--tool" href="">
+                <h3>Инструмент</h3>
+                <p>На все случаи</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 order-4 order-md-5 order-xl-3">
+            <div class="about__item ">
+              <a class="about__link about__link--building" href="">
+                <h3>Техника</h3>
+                <p>Для стройки</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-8 col-md-12 order-1 order-xl-4">
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+              <div class="about__list-carousel carousel-inner">
+                <div class="about__item-carousel about__item-carousel--one carousel-item active" data-interval="false">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a href="#" class="about__button-carousel btn btn-primary">Oткрыть каталог</a>
+                </div>
+
+                <div class="about__item-carousel about__item-carousel--two carousel-item" data-interval="false">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a href="#" class="about__button-carousel  btn btn-primary">Oткрыть каталог</a>
+                </div>
+
+                <div class="about__item-carousel about__item-carousel--three carousel-item" data-interval="false">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a href="#" class="about__button-carousel btn btn-primary">Oткрыть каталог</a>
+                </div>
+
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-12 order-md-4 order-5">
+            <div class="row">
+              <div class="col-xl-12 col-md-6">
+                <div class="about__item ">
+                  <a class="about__link about__link--discounts" href="">
+                    <h3>Скидки 50%</h3>
+                    <p>На 350 товаров</p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-xl-12 col-md-6">
+                <div class="about__item">
+                  <a class="about__link about__link--delivery" href="">
+                    <h3>Доставка</h3>
+                    <p>Бесплатно</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="products">
 
     <div class="container">
@@ -29,7 +125,7 @@
           <h2>Популярные товары:</h2>
         </div>
         <div class="col-xl-3 col-md-5">
-          <button type="button" class="products__button btn btn-danger">
+          <button type="button" class="products__button btn btn-primary">
             Все популярные товары
           </button>
         </div>
@@ -38,7 +134,7 @@
       <div class="products__list row justify-content-center align-items-center">
 
         <div class="col-xl-3 col-md-4 col-sm-6">
-          <div class="products__item card">
+          <div class="products__item ">
             <div class="products__wrapper-image">
               <picture>
                 <source type="image/webp" media="(max-width: 1200px)" srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
@@ -46,10 +142,10 @@
                 <img class="img-fluid" width="184" height="164" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="Фотография перфоратора Bosch">
               </picture>
             </div>
-            <div class="products__description card-body">
-              <h3 class="card-title">Перфоратор BOSCH BFG 9000</h3>
-              <p class="card-text">32500 Р.</p>
-              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+            <div class="products__description">
+              <h3>Перфоратор BOSCH BFG 9000</h3>
+              <p>32500 Р.</p>
+              <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
                 25500 Р.
               </a>
             </div>
@@ -57,7 +153,7 @@
         </div>
 
         <div class="col-xl-3 col-md-4 col-sm-6">
-          <div class="products__item card">
+          <div class="products__item ">
             <div class="products__wrapper-image">
               <picture>
                 <source type="image/webp" media="(max-width: 1200px)" srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
@@ -65,18 +161,19 @@
                 <img class="img-fluid" width="127" height="112" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="Фотография перфоратора Bosch">
               </picture>
             </div>
-            <div class="products__description card-body">
-              <h3 class="card-title">Перфоратор BOSCH BFG 3000</h3>
-              <p class="card-text">22500 Р.</p>
-              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+            <div class="products__description">
+              <h3>Перфоратор BOSCH BFG 3000</h3>
+              <p>22500 Р.</p>
+              <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
                 15500 Р.
               </a>
             </div>
+            <div class="mark-new">New</div>
           </div>
         </div>
 
         <div class="col-xl-3 col-md-4 col-sm-6">
-          <div class="products__item card">
+          <div class="products__item ">
             <div class="products__wrapper-image">
               <picture>
                 <source type="image/webp" media="(max-width: 1200px)" srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
@@ -84,10 +181,10 @@
                 <img class="img-fluid" width="144" height="128" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="Фотография перфоратора Bosch">
               </picture>
             </div>
-            <div class="products__description card-body">
-              <h3 class="card-title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="card-text">32500 Р.</p>
-              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+            <div class="products__description">
+              <h3>Перфоратор BOSCH BFG 6000</h3>
+              <p>32500 Р.</p>
+              <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
                 25500 Р.
               </a>
             </div>
@@ -95,7 +192,7 @@
         </div>
 
         <div class="col-xl-3 col-md-4 col-sm-6">
-          <div class="products__item card">
+          <div class="products__item ">
             <div class="products__wrapper-image">
               <picture>
                 <source type="image/webp" media="(max-width: 1200px)" srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
@@ -103,13 +200,14 @@
                 <img class="img-fluid" width="127" height="112" src="img/product-4.png" srcset="img/product-4@2x.png 2x" alt="Фотография перфоратора Bosch">
               </picture>
             </div>
-            <div class="products__description card-body">
-              <h3 class="card-title">Перфоратор BOSCH BFG 2000</h3>
-              <p class="card-text">22500 Р.</p>
-              <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
+            <div class="products__description">
+              <h3>Перфоратор BOSCH BFG 2000</h3>
+              <p>22500 Р.</p>
+              <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
                 12500 Р.
               </a>
             </div>
+            <div class="mark-new">New</div>
           </div>
         </div>
       </div>
@@ -125,7 +223,7 @@
           <h2>Популярные производители:</h2>
         </div>
         <div class="col-xl-3 col-md-5">
-          <button type="button" class="manufacturer__button btn btn-danger">
+          <button type="button" class="manufacturer__button btn btn-primary">
             Все производители
           </button>
         </div>
@@ -145,7 +243,7 @@
           <div class="manufacturer__item">
             <a class="manufacturer__link">
               <picture>
-                <img src="img/manufacturer-2.svg" width="123" height="40" alt="Логотип компании Makita">
+                <img src="img/manufacturer-8.svg" width="123" height="40" alt="Логотип компании Makita">
               </picture>
             </a>
           </div>
@@ -199,7 +297,7 @@
           <div class="manufacturer__item">
             <a class="manufacturer__link">
               <picture>
-                <img src="img/manufacturer-8.svg" width="206" height="73" alt="Логотип компании Metabo">
+                <img src="img/manufacturer-2.svg" width="206" height="73" alt="Логотип компании Metabo">
               </picture>
             </a>
           </div>

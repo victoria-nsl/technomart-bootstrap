@@ -1,0 +1,22 @@
+.mark-new {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+
+  background-color: $red;
+}

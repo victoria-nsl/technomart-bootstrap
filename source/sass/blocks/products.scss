@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 
   text-align: center;
-  background-color: $grey-background;
+  background-color: $azure-background;
 
   @media (min-width: $tablet-width) {
     text-align: end;
@@ -52,12 +52,14 @@
 //Карточки товаров
 
 .products__item {
-  padding: 5px 0 21px 0;
+  position: relative;
+  padding: 5px 0 0;
   margin-bottom: 20px;
 
   text-align: center;
 
   border: 1px solid $grey-border;
+  overflow: hidden;
 }
 
 .products__wrapper-image {
@@ -70,6 +72,9 @@
 .products__description {
   display: grid;
   grid-template-rows: 1fr min-content min-content;
+  padding: 21px 0;
+
+  background-color: $azure-background;
 }
 
 .products__item h3 {
@@ -113,7 +118,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent $white transparent transparent;
+  border-color: transparent $azure-background  transparent transparent;
 }
 
 .products__item-button::before {
@@ -127,5 +132,5 @@
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent $white transparent transparent;
+  border-color: transparent $azure-background transparent transparent;
 }
