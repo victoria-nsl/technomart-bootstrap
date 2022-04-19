@@ -1,0 +1,195 @@
+.service {
+  padding: 50px 0 0;
+  margin-bottom: 50px;
+  background-color: $azure-background;
+
+  @media (min-width: $desktop-width) {
+    padding: 94px 0 0;
+  }
+}
+
+.service__inner {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.service__header {
+  margin-bottom: 70px;
+}
+
+.service__header h2 {
+  width: 290px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $black;
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.service__header p {
+  width: 80%;
+  margin: 0 auto;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: $black;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    width: 38%;
+    margin: 0;
+    text-align: start;
+  }
+}
+
+//Табы
+.service__list-buttons {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 99px;
+    margin: 0;
+  }
+}
+
+.service__button {
+  width: 100%;
+  padding: 13px 22px 18px 22px;
+
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: $white;
+  background-color: $blue-light;
+  box-shadow: inset 0 1px 0 $blue-shadow;
+  border: none;
+}
+
+.service__button--active {
+  color: $blue-text;
+  background-color: $white;
+  box-shadow: inset 0 1px 0 $white;
+}
+
+.service__list-buttons--nojs .service__button {
+  color: $blue-text;
+  background-color: $white;
+  border: 1px solid $blue-shadow;
+  box-shadow: none;
+}
+
+.service__list-buttons--nojs .service__button:not(:nth-child(1)) {
+  border-top: none;
+}
+
+.service__list-tab {
+  @include reset-style-list;
+}
+
+.service__item-tab {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 400px;
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  &--delivery {
+    background-image: url("../img/service-lorry.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service-lorry@2x.png");
+    }
+  }
+
+  &--warranty {
+    background-image: url("../img/service-warranty.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service-warranty@2x.png");
+    }
+  }
+
+  &--credit {
+    background-image: url("../img/service-many.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service-many@2x.png");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 283px;
+    background-position: 100% top;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
+    background-position: right top;
+  }
+}
+
+.service__item-tab--active {
+  display: block;
+}
+
+.service__item-tab--nojs {
+  display: block;
+}
+
+.service__item-tab h3 {
+  width: 151px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $blue-text;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 30px;
+
+    text-align: start;
+  }
+}
+
+.service__item-tab p {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: $blue-text;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 275px;
+    margin: 0;
+
+    text-align: start;
+  }
+}
