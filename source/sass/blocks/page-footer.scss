@@ -1,0 +1,125 @@
+.page-footer {
+  background-color: $blue-light;
+}
+
+/*============Подвал - верх================*/
+.page-footer__wrapper-top {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-footer__list-about {
+  @include reset-style-list;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.page-footer__item-about {
+  @media (min-width: $desktop-width) {
+    margin-left: 58px;
+  }
+}
+
+.page-footer__link-about {
+  color: $white-text;
+}
+
+/*============Подвал - середина================*/
+.page-footer__wrapper-middle {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-footer__text-contacts {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white-text;
+}
+
+.page-footer__link-tel {
+  color: $white-text;
+}
+
+.page-footer__list-products {
+  @include reset-style-list;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.page-footer__item-products {
+  @media (min-width: $desktop-width) {
+    margin-left: 58px;
+  }
+}
+
+.page-footer__link-products {
+  color: $yellow-text;
+}
+
+/*============Подвал - низ================*/
+.page-footer__wrapper-bottom {
+  background-color: $blue-dark;
+}
+
+.page-footer__bottom {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+//Права
+.page-footer__text-law {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+}
+
+//Социальные сети
+.page-footer__list-social {
+  @include reset-style-list;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//Обратная связь
+.page-footer__text-email {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+}
+
+.page-footer__link-email {
+  color: $yellow-text;
+}
+
+//Разработано
+.page-footer__text-design {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+}
+
+.page-footer__link-site {
+  color: $yellow-text;
+}
