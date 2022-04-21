@@ -1,0 +1,12 @@
+.logistics-contacts {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.logistics-contacts__col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

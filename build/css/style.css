@@ -6642,8 +6642,9 @@ img {
       line-height: 30px;
       text-align: start; } }
 
-.products__button {
+.products__link {
   width: 192px;
+  padding: 11px 0 9px 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -6749,8 +6750,9 @@ img {
       line-height: 30px;
       text-align: start; } }
 
-.manufacturer__button {
+.manufacturer__link-header {
   width: 192px;
+  padding: 11px 0 9px 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -6826,12 +6828,11 @@ img {
 
 .service__list-buttons {
   width: 100%;
-  margin: 0 auto;
-  padding-bottom: 50px; }
+  margin: 0;
+  padding-bottom: 20px; }
   @media (min-width: 768px) {
     .service__list-buttons {
-      padding-bottom: 99px;
-      margin: 0; } }
+      padding-bottom: 99px; } }
 
 .service__button {
   width: 100%;
@@ -6841,13 +6842,13 @@ img {
   line-height: 30px;
   color: #ffffff;
   background-color: #32425c;
-  box-shadow: inset 0px 1px 0px #405069;
+  box-shadow: inset 0 1px 0 #405069;
   border: none; }
 
 .service__button--active {
   color: #32425c;
   background-color: #ffffff;
-  box-shadow: inset 0px 1px 0px #ffffff; }
+  box-shadow: inset 0 1px 0 #ffffff; }
 
 .service__list-buttons--nojs .service__button {
   color: #32425c;
@@ -6864,35 +6865,38 @@ img {
   list-style: none; }
 
 .service__item-tab {
+  position: relative;
   display: none;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   min-height: 400px;
-  background-repeat: no-repeat;
-  background-position: center bottom; }
-  .service__item-tab--delivery {
-    background-image: url("../img/service-lorry.png"); }
-    @media (min-resolution: 2dppx) {
-      .service__item-tab--delivery {
-        background-image: url("../img/service-lorry@2x.png"); } }
-  .service__item-tab--warranty {
-    background-image: url("../img/service-warranty.png"); }
-    @media (min-resolution: 2dppx) {
-      .service__item-tab--warranty {
-        background-image: url("../img/service-warranty@2x.png"); } }
-  .service__item-tab--credit {
-    background-image: url("../img/service-many.png"); }
-    @media (min-resolution: 2dppx) {
-      .service__item-tab--credit {
-        background-image: url("../img/service-many@2x.png"); } }
+  padding-top: 240px;
+  padding-bottom: 20px; }
   @media (min-width: 768px) {
     .service__item-tab {
       min-height: 283px;
-      background-position: 100% top; } }
-  @media (min-width: 1200px) {
-    .service__item-tab {
-      margin: 0;
-      background-position: right top; } }
+      padding-top: 0; } }
+  .service__item-tab::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    @media (min-width: 768px) {
+      .service__item-tab::before {
+        top: 0;
+        right: 0;
+        transform: translateX(0); } }
+  .service__item-tab--delivery::before {
+    background-image: url("../img/back-icon-service-1.svg"); }
+  .service__item-tab--warranty::before {
+    background-image: url("../img/back-icon-service-2.svg"); }
+  .service__item-tab--credit::before {
+    background-image: url("../img/back-icon-service-3.svg"); }
 
 .service__item-tab--active {
   display: block; }
@@ -6928,6 +6932,160 @@ img {
   text-align: center; }
   @media (min-width: 768px) {
     .service__item-tab p {
+      width: 60%;
+      margin: 0;
+      text-align: start; } }
+  @media (min-width: 1200px) {
+    .service__item-tab p {
       width: 275px;
       margin: 0;
       text-align: start; } }
+
+.logistics-contacts {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px; }
+
+.logistics-contacts__col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+
+.logistics {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 30px; }
+  @media (min-width: 1200px) {
+    .logistics {
+      margin-bottom: 0; } }
+
+.logistics__wrapper-text {
+  width: 100%;
+  margin-bottom: 26px;
+  flex-grow: 1; }
+  @media (min-width: 1200px) {
+    .logistics__wrapper-text {
+      width: 90%; } }
+
+.logistics__wrapper-text p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000; }
+
+.logistics__wrapper-text p:first-child {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000; }
+
+.logistics__wrapper-text p:nth-child(2) {
+  margin-bottom: 30px; }
+
+.logistics__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000; }
+
+.logistics__item {
+  position: relative;
+  padding-left: 37px; }
+
+.logistics__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 2px;
+  background-color: #db1421; }
+
+.logistics__link {
+  display: block;
+  width: 100%;
+  padding: 11px 0 9px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0; }
+  @media (min-width: 768px) {
+    .logistics__link {
+      width: 60%;
+      margin: 0 auto; } }
+  @media (min-width: 1200px) {
+    .logistics__link {
+      width: 220px;
+      margin: 0; } }
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; }
+
+.contacts__wrapper-text {
+  flex-grow: 1; }
+
+.contacts__wrapper-text h2, .contacts__wrapper-text .h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000; }
+
+.contacts__wrapper-text p {
+  width: 60%;
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000; }
+
+.contacts__map {
+  margin-bottom: 25px;
+  background-image: url("../img/map.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-resolution: 2dppx) {
+    .contacts__map {
+      background-image: url("../img/map@2x.png"); } }
+
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+  height: 158px; }
+
+.contacts__link {
+  display: block;
+  width: 100%;
+  padding: 11px 0 9px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0; }
+  @media (min-width: 768px) {
+    .contacts__link {
+      width: 60%;
+      margin: 0 auto; } }
+  @media (min-width: 1200px) {
+    .contacts__link {
+      width: 100%;
+      margin: 0; } }

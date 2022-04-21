@@ -1,0 +1,73 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contacts__wrapper-text {
+  flex-grow: 1;
+}
+
+.contacts__wrapper-text h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.contacts__wrapper-text p {
+  width: 60%;
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: $black;
+}
+
+.contacts__map {
+  margin-bottom: 25px;
+
+  background-image: url("../img/map.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
+}
+
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+  height: 158px;
+}
+
+.contacts__link {
+  display: block;
+  width: 100%;
+  padding: 11px 0 9px 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
