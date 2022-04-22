@@ -2,29 +2,86 @@
   background-color: $blue-light;
 }
 
-/*============Подвал - верх================*/
-.page-footer__wrapper-top {
+.page-footer__wrapper-top-middle {
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+  }
+}
+
+/*============Подвал - верх================*/
+.page-footer__wrapper-top {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.page-footer__logo-link-image {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__list-about {
   @include reset-style-list;
 
+  width: 100%;
+  margin-bottom: 20px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  box-shadow: inset 0 -1px 0 $blue-shadow;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+
+    text-align: start;
+    text-transform: capitalize;
+    box-shadow: none;
+  }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding-top: 37px;
+    padding-left: 18px;
+    padding-bottom: 0;
   }
 }
 
 .page-footer__item-about {
+  padding: 10px 0;
+
+  box-shadow: inset 0 1px 0 $blue-shadow;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 67px;
+    margin-bottom: 7px;
+
+    box-shadow: none;
+  }
+
   @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-right: 0;
     margin-left: 58px;
+    margin-bottom: 7px;
   }
 }
 
@@ -33,17 +90,32 @@
 }
 
 /*============Подвал - середина================*/
-.page-footer__wrapper-middle {
-  max-width: $max-width;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .page-footer__text-contacts {
+  padding: 10px 0 20px;
+
   font-weight: 400;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 24px;
   color: $white-text;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.page-footer__text-contacts p {
+  margin: 0;
 }
 
 .page-footer__link-tel {
@@ -52,20 +124,51 @@
 
 .page-footer__list-products {
   @include reset-style-list;
+  width: 100%;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: start;
+    text-transform: capitalize;
+    box-shadow: none;
+  }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-left: 42px;
+    padding-bottom: 0;
   }
 }
 
 .page-footer__item-products {
+  padding: 10px 0;
+
+  box-shadow: inset 0 1px 0 $blue-shadow;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 67px;
+    margin-bottom: 7px;
+
+    box-shadow: none;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-right: 0;
     margin-left: 58px;
+    margin-bottom: 7px;
   }
 }
 
@@ -75,10 +178,13 @@
 
 /*============Подвал - низ================*/
 .page-footer__wrapper-bottom {
+  padding: 20px 0;
+
   background-color: $blue-dark;
 }
 
 .page-footer__bottom {
+  display: flex;
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
@@ -86,40 +192,95 @@
 
 //Права
 .page-footer__text-law {
+  padding: 20px 0;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: $white;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    text-align: start;
+  }
+}
+
+.page-footer__text-law p {
+  margin: 0;
 }
 
 //Социальные сети
 .page-footer__list-social {
   @include reset-style-list;
+
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  column-gap: 15px;
+  row-gap: 5px;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    column-gap: 4px;
+  }
 }
 
-//Обратная связь
-.page-footer__text-email {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: $white;
+.page-footer__item-social {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 3px;
+  }
 }
 
-.page-footer__link-email {
-  color: $yellow-text;
+.page-footer__link-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: $blue-very-dark;
 }
 
-//Разработано
+//Обратная связь Разработано
+.page-footer__text-email,
 .page-footer__text-design {
+  padding: 20px 0;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: $white;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
 }
 
+.page-footer__text-design {
+  @media (min-width: $tablet-width) {
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.page-footer__text-email p,
+.page-footer__text-design p {
+  margin-bottom: 0;
+}
+
+.page-footer__link-email,
 .page-footer__link-site {
   color: $yellow-text;
 }
