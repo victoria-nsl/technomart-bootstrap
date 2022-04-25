@@ -6452,6 +6452,192 @@ img {
   overflow: hidden; }
 
 /*БЛОКИ*/
+.page-header {
+  background-color: #293449; }
+
+.page-header__toggle {
+  display: none; }
+
+/*=============Верхнее меню===============*/
+.page-header__wrapper-top {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.page-header__logo-link-image {
+  cursor: pointer; }
+
+.page-header__logo-link-image img {
+  display: block;
+  width: 220px;
+  height: 47px; }
+
+.page-header__form {
+  padding: 9px 0; }
+
+.page-header__form input {
+  display: none; }
+
+.page-header__button-search {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  border: none;
+  background-color: transparent; }
+
+.page-header__button-search svg {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px; }
+
+.page-header__list-navigation-user {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 0; }
+
+.page-header__item-navigation-user--bookmark {
+  margin-right: 50px; }
+
+.page-header__link-navigation-user {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff; }
+
+.page-header__link-navigation-user svg {
+  margin-right: 8px; }
+  .page-header__link-navigation-user svg--bookmark {
+    width: 16px;
+    height: 16px; }
+  .page-header__link-navigation-user svg--cart {
+    width: 18px;
+    height: 16px; }
+
+.page-header__link-navigation-user span:nth-child(2) {
+  margin-right: 6px; }
+
+.page-header__link-order {
+  width: 140px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #63a63e;
+  border-radius: 0; }
+
+/*=============Среднее меню===============*/
+.page-header__wrapper-middle {
+  margin-top: -5px;
+  padding: 40px 0;
+  background-color: #f1f5f7; }
+
+.page-header__middle {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.page-header__middle h1, .page-header__middle .h1 {
+  width: 250px;
+  margin: 0;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  color: #db1421; }
+
+.page-header__link-tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding: 7px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+  border-radius: 0; }
+
+.page-header__link-tel span {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: #db1421; }
+
+.page-header__link-tel svg {
+  width: 19px;
+  height: 19px;
+  margin-right: 16px; }
+
+.page-header__middle p {
+  width: 250px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c; }
+
+.page-header__wrapper-login {
+  display: flex;
+  justify-content: flex-end; }
+
+.page-header__link-login,
+.page-header__link-registration {
+  padding: 12px;
+  background-size: border-box;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 0; }
+
+.page-header__link-login {
+  width: 121px;
+  margin-right: 10px; }
+
+.page-header__link-registration {
+  width: 150px; }
+
+.page-header__link-login svg {
+  margin-right: 8px;
+  width: 20px;
+  height: 17px; }
+
+/*=============Нижнее меню===============*/
+.page-header__wrapper-bottom {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.page-header__list-navigation-site {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 53px;
+  row-gap: 5px;
+  padding: 16px 53px 20px 53px; }
+
+.page-header__link-navigation-site {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out; }
+
 .mark-new {
   position: absolute;
   top: 40px;
@@ -6557,6 +6743,7 @@ img {
   padding: 20px 23px;
   color: #ffffff;
   background-color: #0f7392;
+  transition: all 0.2s ease-in-out;
   cursor: pointer; }
   .about__link--mark {
     overflow: hidden; }
@@ -7181,7 +7368,8 @@ img {
       margin-bottom: 7px; } }
 
 .page-footer__link-about {
-  color: #f1f5f7; }
+  color: #f1f5f7;
+  transition: all 0.2s ease-in-out; }
 
 /*============Подвал - середина================*/
 .page-footer__text-contacts {
@@ -7207,7 +7395,8 @@ img {
   margin: 0; }
 
 .page-footer__link-tel {
-  color: #f1f5f7; }
+  color: #f1f5f7;
+  transition: all 0.2s ease-in-out; }
 
 .page-footer__list-products {
   margin: 0;
@@ -7252,7 +7441,8 @@ img {
       margin-bottom: 7px; } }
 
 .page-footer__link-products {
-  color: #ffd180; }
+  color: #ffd180;
+  transition: all 0.2s ease-in-out; }
 
 /*============Подвал - низ================*/
 .page-footer__wrapper-bottom {
@@ -7310,7 +7500,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #212a3a; }
+  background-color: #212a3a;
+  transition: all 0.2s ease-in-out; }
 
 .page-footer__text-email,
 .page-footer__text-design {
@@ -7331,7 +7522,8 @@ img {
 
 @media (min-width: 1200px) {
   .page-footer__text-design {
-    text-align: start; } }
+    text-align: start;
+    padding-left: 42px; } }
 
 .page-footer__text-email p,
 .page-footer__text-design p {
@@ -7339,4 +7531,5 @@ img {
 
 .page-footer__link-email,
 .page-footer__link-site {
-  color: #ffd180; }
+  color: #ffd180;
+  transition: all 0.2s ease-in-out; }

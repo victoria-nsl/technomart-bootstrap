@@ -87,6 +87,7 @@
 
 .page-footer__link-about {
   color: $white-text;
+  transition: all 0.2s ease-in-out;
 }
 
 /*============Подвал - середина================*/
@@ -120,6 +121,7 @@
 
 .page-footer__link-tel {
   color: $white-text;
+  transition: all 0.2s ease-in-out;
 }
 
 .page-footer__list-products {
@@ -174,6 +176,7 @@
 
 .page-footer__link-products {
   color: $yellow-text;
+  transition: all 0.2s ease-in-out;
 }
 
 /*============Подвал - низ================*/
@@ -247,6 +250,7 @@
 
   border-radius: 50%;
   background-color: $blue-very-dark;
+  transition: all 0.2s ease-in-out;
 }
 
 //Обратная связь Разработано
@@ -272,6 +276,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: start;
+    padding-left: 42px;
   }
 }
 
@@ -283,4 +288,5 @@
 .page-footer__link-email,
 .page-footer__link-site {
   color: $yellow-text;
+  transition: all 0.2s ease-in-out;
 }

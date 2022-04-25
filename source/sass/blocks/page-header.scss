@@ -1,0 +1,235 @@
+.page-header {
+  background-color: $blue-dark;
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+/*=============Верхнее меню===============*/
+.page-header__wrapper-top {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+//Логотип
+.page-header__logo-link-image {
+  cursor: pointer;
+}
+
+.page-header__logo-link-image img {
+  display: block;
+  width: 220px;
+  height: 47px;
+}
+
+//Поиск
+.page-header__form {
+  padding: 9px 0;
+}
+
+.page-header__form input {
+  display: none;
+}
+
+.page-header__button-search {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white;
+
+  border: none;
+  background-color: transparent;
+}
+
+.page-header__button-search svg {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+}
+
+//Закладки-корзина
+.page-header__list-navigation-user {
+  @include reset-style-list;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 0;
+}
+
+.page-header__item-navigation-user--bookmark {
+  margin-right: 50px;
+}
+
+.page-header__link-navigation-user {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white;
+}
+
+.page-header__link-navigation-user svg {
+  margin-right: 8px;
+
+  &--bookmark {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--cart {
+    width: 18px;
+    height: 16px;
+  }
+}
+
+.page-header__link-navigation-user span:nth-child(2) {
+  margin-right: 6px;
+}
+
+//Оформить заказ
+.page-header__link-order {
+  width: 140px;
+  padding: 8px;
+  box-sizing: border-box;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white;
+
+  background-color: $green-dark;
+  border-radius: 0;
+}
+
+/*=============Среднее меню===============*/
+.page-header__wrapper-middle {
+  margin-top: -5px;
+  padding: 40px 0;
+  background-color: $azure-light-background;
+}
+
+.page-header__middle {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+//Название интернет-магазина
+.page-header__middle h1 {
+  width: 250px;
+  margin: 0;
+
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  color: $red;
+}
+
+//Контакты
+.page-header__link-tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding: 7px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  box-sizing: border-box;
+
+  border: 3px solid $white;
+  border-radius: 0;
+}
+
+.page-header__link-tel span {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: $red;
+}
+
+.page-header__link-tel svg {
+  width: 19px;
+  height: 19px;
+  margin-right: 16px;
+}
+
+.page-header__middle p {
+  width: 250px;
+  margin: 0 auto;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $blue-light;
+}
+
+//Войти/регистрация
+.page-header__wrapper-login {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-header__link-login,
+.page-header__link-registration {
+  padding: 12px;
+  background-size: border-box;
+
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
+  color: $black;
+
+  background-color: $white;
+  border-radius: 0;
+}
+
+.page-header__link-login {
+  width: 121px;
+  margin-right: 10px;
+}
+
+.page-header__link-registration {
+  width: 150px;
+}
+
+.page-header__link-login svg {
+  margin-right: 8px;
+  width: 20px;
+  height: 17px;
+}
+
+/*=============Нижнее меню===============*/
+.page-header__wrapper-bottom {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-header__list-navigation-site {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 53px;
+  row-gap: 5px;
+
+  padding: 16px 53px 20px 53px;
+}
+
+.page-header__link-navigation-site {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white;
+
+  transition: all 0.2s ease-in-out;
+}

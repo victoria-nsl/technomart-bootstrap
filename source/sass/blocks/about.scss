@@ -117,6 +117,7 @@
   color: $white;
   background-color: $azure;
 
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 
   &--mark {
