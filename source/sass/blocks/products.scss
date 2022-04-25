@@ -68,6 +68,26 @@
   align-items: center;
   justify-content: center;
   min-height: 164px;
+
+  &--one img {
+    width: 184px;
+    height: 164px;
+  }
+
+  &--two img {
+    width: 127px;
+    height: 112px;
+  }
+
+  &--three img {
+    width: 144px;
+    height: 128px;
+  }
+
+  &--four img {
+    width: 127px;
+    height: 112px;
+  }
 }
 
 .products__description {
@@ -119,7 +139,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent $azure-background  transparent transparent;
+  border-color: transparent $azure-background transparent transparent;
 }
 
 .products__item-button::before {

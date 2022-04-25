@@ -70,8 +70,44 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
-}
 
-.manufacturer__link img {
-  width: 100%;
+  &--one img {
+    width: 126px;
+    height: 37px;
+  }
+
+  &--two img {
+    width: 123px;
+    height: 40px;
+  }
+
+  &--three img {
+    width: 146px;
+    height: 44px;
+  }
+
+  &--four img {
+    width: 200px;
+    height: 75px;
+  }
+
+  &--five img {
+    width: 169px;
+    height: 31px;
+  }
+
+  &--six img {
+    width: 121px;
+    height: 73px;
+  }
+
+  &--seven img {
+    width: 151px;
+    height: 98px;
+  }
+
+  &--eight img {
+    width: 206px;
+    height: 73px;
+  }
 }

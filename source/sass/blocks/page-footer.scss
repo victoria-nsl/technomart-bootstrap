@@ -30,6 +30,11 @@
   }
 }
 
+.page-footer__logo-link-image img {
+  width: 220px;
+  height: 68px;
+}
+
 .page-footer__list-about {
   @include reset-style-list;
 
@@ -251,6 +256,21 @@
   border-radius: 50%;
   background-color: $blue-very-dark;
   transition: all 0.2s ease-in-out;
+
+  &--vkontakte img {
+    width: 26px;
+    height: 15px;
+  }
+
+  &--facebook img {
+    width: 12px;
+    height: 22px;
+  }
+
+  &--instagram img {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 //Обратная связь Разработано
