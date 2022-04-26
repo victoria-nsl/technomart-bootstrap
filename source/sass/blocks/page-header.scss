@@ -115,7 +115,7 @@
   }
 }
 
-//Кнопка - открыть поиск
+//Кнопка отправить запрос
 .page-header__button-submit {
   position: absolute;
   top: 50%;
@@ -134,7 +134,7 @@
   fill: $black;
 }
 
-//Кнопка отправить запрос
+//Кнопка - открыть поиск
 .page-header__button-search {
   display: flex;
   align-items: center;
@@ -155,6 +155,7 @@
   margin-right: 8px;
 
   fill: $white;
+  opacity: 0.3;
 }
 
 //ЗАКЛАДКИ-КОРЗИНА
@@ -180,6 +181,9 @@
 
 .page-header__link-navigation-user svg {
   margin-right: 8px;
+
+  fill: $white;
+  opacity: 0.3;
 
   &--bookmark {
     width: 16px;
@@ -262,6 +266,8 @@
   width: 19px;
   height: 19px;
   margin-right: 16px;
+
+  fill: $grey-svg;
 }
 
 .page-header__middle p {
@@ -307,6 +313,8 @@
   margin-right: 8px;
   width: 20px;
   height: 17px;
+
+  fill: $grey-dark-svg;
 }
 
 /*=============Нижнее меню===============*/

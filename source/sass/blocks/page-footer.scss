@@ -257,19 +257,25 @@
   background-color: $blue-very-dark;
   transition: all 0.2s ease-in-out;
 
-  &--vkontakte img {
+  &--vkontakte svg {
     width: 26px;
     height: 15px;
+
+    fill: $white;
   }
 
-  &--facebook img {
+  &--facebook svg {
     width: 12px;
     height: 22px;
+
+    fill: $white;
   }
 
-  &--instagram img {
+  &--instagram svg {
     width: 22px;
     height: 22px;
+
+    fill: $white;
   }
 }
 

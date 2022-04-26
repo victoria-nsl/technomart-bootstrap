@@ -1,5 +1,5 @@
 .about {
-  padding: 30px 0;
+  padding: 50px 0;
   margin-bottom: 70px;
   background-color: $azure-background;
 }
@@ -8,9 +8,11 @@
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: -20px;
 }
 
 //карусель
+
 .about__item-carousel {
   padding: 23px 24px 27px;
   margin-bottom: 20px;

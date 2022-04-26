@@ -6575,7 +6575,8 @@ img {
   width: 17px;
   height: 17px;
   margin-right: 8px;
-  fill: #ffffff; }
+  fill: #ffffff;
+  opacity: 0.3; }
 
 .page-header__list-navigation-user {
   margin: 0;
@@ -6596,7 +6597,9 @@ img {
   color: #ffffff; }
 
 .page-header__link-navigation-user svg {
-  margin-right: 8px; }
+  margin-right: 8px;
+  fill: #ffffff;
+  opacity: 0.3; }
   .page-header__link-navigation-user svg--bookmark {
     width: 16px;
     height: 16px; }
@@ -6658,7 +6661,8 @@ img {
 .page-header__link-tel svg {
   width: 19px;
   height: 19px;
-  margin-right: 16px; }
+  margin-right: 16px;
+  fill: #b7bfc8; }
 
 .page-header__middle p {
   width: 250px;
@@ -6693,7 +6697,8 @@ img {
 .page-header__link-login svg {
   margin-right: 8px;
   width: 20px;
-  height: 17px; }
+  height: 17px;
+  fill: #c5c5c5; }
 
 /*=============Нижнее меню===============*/
 .page-header__wrapper-bottom {
@@ -6740,14 +6745,15 @@ img {
   background-color: #db1421; }
 
 .about {
-  padding: 30px 0;
+  padding: 50px 0;
   margin-bottom: 70px;
   background-color: #f3f7f9; }
 
 .about__inner {
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: -20px; }
 
 .about__item-carousel {
   padding: 23px 24px 27px;
@@ -7087,7 +7093,7 @@ img {
   background-color: #f3f7f9; }
   @media (min-width: 1200px) {
     .service {
-      padding: 94px 0 0; } }
+      padding: 64px 0 0; } }
 
 .service__inner {
   max-width: 1200px;
@@ -7137,7 +7143,7 @@ img {
   @media (min-width: 768px) {
     .service__list-buttons {
       display: flex;
-      margin-bottom: 99px; } }
+      margin-bottom: 69px; } }
   @media (min-width: 1200px) {
     .service__list-buttons {
       position: relative;
@@ -7197,7 +7203,7 @@ img {
   transition: all 0.2s ease-in-out; }
   @media (min-width: 768px) {
     .service__item-tab {
-      min-height: 283px;
+      min-height: 253px;
       padding-top: 0; } }
   .service__item-tab::before {
     content: "";
@@ -7621,15 +7627,18 @@ img {
   border-radius: 50%;
   background-color: #212a3a;
   transition: all 0.2s ease-in-out; }
-  .page-footer__link-social--vkontakte img {
+  .page-footer__link-social--vkontakte svg {
     width: 26px;
-    height: 15px; }
-  .page-footer__link-social--facebook img {
+    height: 15px;
+    fill: #ffffff; }
+  .page-footer__link-social--facebook svg {
     width: 12px;
-    height: 22px; }
-  .page-footer__link-social--instagram img {
+    height: 22px;
+    fill: #ffffff; }
+  .page-footer__link-social--instagram svg {
     width: 22px;
-    height: 22px; }
+    height: 22px;
+    fill: #ffffff; }
 
 .page-footer__text-email,
 .page-footer__text-design {
