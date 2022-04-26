@@ -1,10 +1,89 @@
 .page-header {
+  position: relative;
+  padding-top: 50px;
   background-color: $blue-dark;
-  margin-bottom: 70px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-bottom: 70px;
+  }
 }
 
-.page-header__toggle {
+.page-header--closed .page-header__wrapper-bottom {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.page-header--opened .page-header__wrapper-bottom {
+  display: block;
+}
+
+.page-header--nojs .page-header__navigation {
+  display: block;
+}
+
+//Кнопка Открыть меню
+.page-header__toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header--closed .page-header__toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: top left;
+
+  width: 35px;
+  height: 2px;
+  background-color: $white;
+}
+
+.page-header--opened .page-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+
+  width: 35px;
+  height: 2px;
+  background-color: $white;
 }
 
 /*=============Верхнее меню===============*/
@@ -16,18 +95,32 @@
 
 //ЛОГОТИП
 .page-header__logo-link-image {
+  position: absolute;
+  top: 0;
+  left: 15px;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
+.page-header__logo-link-image[href] {
   cursor: pointer;
 }
 
 .page-header__logo-link-image img {
   display: block;
-  width: 220px;
+
   height: 47px;
 }
 
 //ПОИСК
 .page-header__form {
-  padding: 9px 0;
+  padding-top: 18px;
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 0;
+  }
 }
 
 //попап
@@ -139,14 +232,22 @@
   display: flex;
   align-items: center;
   padding: 0;
+  width: 70px;
+  margin: 0 auto;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: $white;
+  text-transform: uppercase;
 
   border: none;
   background-color: transparent;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-transform: capitalize;
+  }
 }
 
 .page-header__button-search svg {
@@ -163,13 +264,40 @@
   @include reset-style-list;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 9px 0;
+  padding-top: 18px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    padding: 9px 0;
+  }
+}
+
+.page-header__item-navigation-user {
+  width: 100%;
+  padding: 10px 0;
+
+  text-align: center;
+
+  box-shadow: inset 0 1px 0 $blue-shadow;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    box-shadow: none;
+  }
 }
 
 .page-header__item-navigation-user--bookmark {
-  margin-right: 50px;
+  @media (min-width: $desktop-width) {
+    margin-right: 50px;
+  }
 }
 
 .page-header__link-navigation-user {
@@ -177,6 +305,11 @@
   font-size: 18px;
   line-height: 24px;
   color: $white;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    text-transform: capitalize;
+  }
 }
 
 .page-header__link-navigation-user svg {
@@ -202,7 +335,9 @@
 
 //ОФОРМИТЬ ЗАКАЗ
 .page-header__link-order {
-  width: 140px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
   padding: 8px;
   box-sizing: border-box;
 
@@ -213,13 +348,26 @@
 
   background-color: $green-dark;
   border-radius: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 40%;
+    margin: 20px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 140px;
+    margin: 0;
+  }
 }
 
 /*=============Среднее меню===============*/
 .page-header__wrapper-middle {
-  margin-top: -5px;
   padding: 40px 0;
   background-color: $blue-light;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -5px;
+  }
 }
 
 .page-header__middle {
@@ -230,14 +378,25 @@
 
 //Название интернет-магазина
 .page-header__middle h1 {
-  width: 250px;
+  width: 100%;
   margin: 0;
+  margin-bottom: 20px;
 
   font-weight: 700;
-  //font-style: italic;
   font-size: 22px;
   line-height: 27px;
   color: $white;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    margin: 0;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+  }
 }
 
 //Контакты
@@ -245,14 +404,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 100%;
   padding: 7px;
   margin: 0 auto;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
   box-sizing: border-box;
 
   border: 3px solid $white;
   border-radius: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 270px;
+  }
 }
 
 .page-header__link-tel span {
@@ -273,17 +440,29 @@
 .page-header__middle p {
   width: 250px;
   margin: 0 auto;
+  margin-bottom: 20px;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: $blue-light;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 //Войти/регистрация
 .page-header__wrapper-login {
-  display: flex;
-  justify-content: flex-end;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .page-header__link-login,
@@ -301,12 +480,30 @@
 }
 
 .page-header__link-login {
-  width: 121px;
-  margin-right: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 45%;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 121px;
+  }
 }
 
 .page-header__link-registration {
-  width: 150px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 55%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+  }
 }
 
 .page-header__link-login svg {
@@ -329,12 +526,39 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  column-gap: 53px;
-  row-gap: 5px;
 
-  padding: 16px 53px 20px 53px;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    column-gap: 45px;
+    row-gap: 20px;
+
+    padding: 16px 53px 20px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 53px;
+    row-gap: 5px;
+    justify-content: space-between;
+  }
+}
+
+.page-header__item-navigation-site {
+  width: 100%;
+  padding: 10px 0;
+
+  text-align: center;
+
+  box-shadow: inset 0 1px 0 $blue-shadow;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 0;
+
+    box-shadow: none;
+  }
 }
 
 .page-header__link-navigation-site {
@@ -342,6 +566,11 @@
   font-size: 18px;
   line-height: 24px;
   color: $white;
+  text-transform: uppercase;
 
   transition: all 0.2s ease-in-out;
+
+  @media (min-width: $desktop-width) {
+    text-transform: capitalize;
+  }
 }
