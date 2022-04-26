@@ -6452,8 +6452,13 @@ img {
   overflow: hidden; }
 
 /*БЛОКИ*/
+.page--no-scroll {
+  height: 100vh;
+  overflow: hidden; }
+
 .page-header {
-  background-color: #293449; }
+  background-color: #293449;
+  margin-bottom: 70px; }
 
 .page-header__toggle {
   display: none; }
@@ -6475,8 +6480,85 @@ img {
 .page-header__form {
   padding: 9px 0; }
 
-.page-header__form input {
+.page-header__wrapper-popup {
+  position: relative;
   display: none; }
+
+.page-header__wrapper-popup--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: block;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.page-header__button-close-popup {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent; }
+
+.page-header__button-close-popup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 56px;
+  height: 2px;
+  background-color: #ffffff; }
+
+.page-header__button-close-popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  width: 56px;
+  height: 2px;
+  background-color: #ffffff; }
+
+.page-header__wrapper-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; }
+
+.page-header__wrapper-input input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000; }
+  .page-header__wrapper-input input--placeholder {
+    color: rgba(0, 0, 0, 0.7); }
+
+.page-header__button-submit {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent; }
+
+.page-header__button-submit svg {
+  fill: #000000; }
 
 .page-header__button-search {
   display: flex;
@@ -6492,7 +6574,8 @@ img {
 .page-header__button-search svg {
   width: 17px;
   height: 17px;
-  margin-right: 8px; }
+  margin-right: 8px;
+  fill: #ffffff; }
 
 .page-header__list-navigation-user {
   margin: 0;
@@ -6539,7 +6622,7 @@ img {
 .page-header__wrapper-middle {
   margin-top: -5px;
   padding: 40px 0;
-  background-color: #f1f5f7; }
+  background-color: #394a66; }
 
 .page-header__middle {
   max-width: 1200px;
@@ -6550,10 +6633,9 @@ img {
   width: 250px;
   margin: 0;
   font-weight: 700;
-  font-style: italic;
-  font-size: 20px;
-  line-height: 25px;
-  color: #db1421; }
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff; }
 
 .page-header__link-tel {
   display: flex;
@@ -6584,7 +6666,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: #32425c; }
+  color: #394a66; }
 
 .page-header__wrapper-login {
   display: flex;
@@ -6742,7 +6824,7 @@ img {
   width: 100%;
   padding: 20px 23px;
   color: #ffffff;
-  background-color: #0f7392;
+  background-color: #105791;
   transition: all 0.2s ease-in-out;
   cursor: pointer; }
   .about__link--mark {
@@ -6856,10 +6938,10 @@ img {
     height: 164px; }
   .products__wrapper-image--two img {
     width: 127px;
-    height: 112x; }
+    height: 112px; }
   .products__wrapper-image--three img {
     width: 144px;
-    height: 128x; }
+    height: 128px; }
   .products__wrapper-image--four img {
     width: 127px;
     height: 112px; }
@@ -7051,7 +7133,7 @@ img {
   margin: 0;
   margin-bottom: 20px;
   box-sizing: border-box;
-  border: 2px solid #32425c; }
+  border: 2px solid #394a66; }
   @media (min-width: 768px) {
     .service__list-buttons {
       display: flex;
@@ -7080,7 +7162,7 @@ img {
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
-  background-color: #32425c;
+  background-color: #394a66;
   box-shadow: inset 0 1px 0 #405069;
   border: none;
   transition: all 0.2s ease-in-out; }
@@ -7331,7 +7413,7 @@ img {
       margin: 0; } }
 
 .page-footer {
-  background-color: #32425c; }
+  background-color: #394a66; }
 
 .page-footer__wrapper-top-middle {
   max-width: 1200px;

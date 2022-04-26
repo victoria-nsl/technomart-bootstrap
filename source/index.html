@@ -37,8 +37,20 @@
 
             <div class="col-xl-3">
               <form class="page-header__form" method="get" action="https://echo.htmlacademy.ru">
-                <label class="visually-hidden" for="search">Поиск по сайту</label>
-                <input id="search" type="search" name="text" autocomplete="off" placeholder="Искать..." required>
+                <div class="page-header__wrapper-popup">
+                  <button class="page-header__button-close-popup" type="button" aria-label="Открыть/закрыть модальное окно">
+                  </button>
+                  <div class="page-header__wrapper-input">
+                    <label class="visually-hidden" for="search">Поиск по сайту</label>
+                    <input id="search" type="search" name="text" autocomplete="off" placeholder="Искать..." required>
+                    <button class="page-header__button-submit" type="submit"
+                      aria-label="Отправить запрос по поиску на сайте">
+                      <svg role="img" width="17" height="17" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#icon-header-search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
                 <button class="page-header__button-search" type="button" aria-label="Открыть окно поиска">
                   <svg role="img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="img/sprite_auto.svg#icon-header-search"></use>
@@ -211,19 +223,19 @@
                     data-interval="false">
                     <h3>Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
-                    <a href="#" class="about__button-carousel btn btn-primary">Oткрыть каталог</a>
+                    <a href="#" class="about__button-carousel btn btn-danger">Oткрыть каталог</a>
                   </div>
 
                   <div class="about__item-carousel about__item-carousel--two carousel-item" data-interval="false">
                     <h3>Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
-                    <a href="#" class="about__button-carousel  btn btn-primary">Oткрыть каталог</a>
+                    <a href="#" class="about__button-carousel  btn btn-danger">Oткрыть каталог</a>
                   </div>
 
                   <div class="about__item-carousel about__item-carousel--three carousel-item" data-interval="false">
                     <h3>Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
-                    <a href="#" class="about__button-carousel btn btn-primary">Oткрыть каталог</a>
+                    <a href="#" class="about__button-carousel btn btn-danger">Oткрыть каталог</a>
                   </div>
 
                 </div>
@@ -275,7 +287,7 @@
             <h2>Популярные товары:</h2>
           </div>
           <div class="col-xl-3 col-md-5">
-            <a class="products__link btn btn-primary" href="#">
+            <a class="products__link btn btn-danger" href="#">
               Все популярные товары
             </a>
           </div>
@@ -297,7 +309,7 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 9000</h3>
                 <p>32500 Р.</p>
-                <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
+                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
                   25500 Р.
                 </a>
               </div>
@@ -318,7 +330,7 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p>22500 Р.</p>
-                <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
+                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
                   15500 Р.
                 </a>
               </div>
@@ -340,7 +352,7 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p>32500 Р.</p>
-                <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
+                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
                   25500 Р.
                 </a>
               </div>
@@ -361,7 +373,7 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
                 <p>22500 Р.</p>
-                <a href="#" class="products__item-button btn btn-primary" aria-label="Посмотреть в карточку товара">
+                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
                   12500 Р.
                 </a>
               </div>
@@ -381,7 +393,7 @@
             <h2>Популярные производители:</h2>
           </div>
           <div class="col-xl-3 col-md-5">
-            <a class="manufacturer__link-header btn btn-primary" href="#">
+            <a class="manufacturer__link-header btn btn-danger" href="#">
               Все производители
             </a>
           </div>
@@ -541,7 +553,7 @@
                 </ul>
               </div>
               <div class="logistics__wrapper-link">
-                <a class="logistics__link btn btn-primary" href="#">
+                <a class="logistics__link btn btn-danger" href="#">
                   Подробнее о компании
                 </a>
               </div>
@@ -563,7 +575,7 @@
                     height="158" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
                     title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург"></iframe>
                 </div>
-                <a class="contacts__link btn btn-primary" href="#">
+                <a class="contacts__link btn btn-danger" href="#">
                   Заблудились? Напишите нам!
                 </a>
               </div>
