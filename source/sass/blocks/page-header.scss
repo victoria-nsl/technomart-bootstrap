@@ -1,20 +1,12 @@
 .page-header {
   position: relative;
   padding-top: 50px;
+
   background-color: $blue-dark;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
     margin-bottom: 70px;
-  }
-}
-
-.page-header__navigation {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    display: block;
   }
 }
 
@@ -38,17 +30,32 @@
 }
 
 //Меню открыто
-.page-header--opened .page-header__form,
-.page-header--opened .page-header__link-order,
-.page-header--opened .page-header__wrapper-bottom {
+.page-header--opened .page-header__navigation {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+
   display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: $blue-dark;
+
+  overflow-y: scroll;
+}
+
+.page-header--opened .page-header__wrapper-middle {
+  display: none;
 }
 
 .page-header--opened .page-header__list-navigation-user {
   display: flex;
 }
 
-//При отключенном js
+//Меню при отключенном js
 .page-header--nojs .page-header__form,
 .page-header--nojs .page-header__link-order,
 .page-header--nojs .page-header__wrapper-bottom {
@@ -59,17 +66,56 @@
   display: flex;
 }
 
+.page-header--nojs .page-header__toggle {
+  display: none;
+}
+
+/*==============ЛОГОТИП/КНОПКА ПЕРЕКЛЮЧЕНИЯ МЕНЮ В МОБИЛЬНОЙ ВЕРСИИ============*/
+//Логотип
+.page-header__logo-link-image {
+  position: absolute;
+  top: 0;
+  left: 10px;
+
+  @media (min-width: 576px) {
+    left: calc(10px + 3.1%);
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 6.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% - 470px);
+  }
+}
+
+.page-header__logo-link-image[href] {
+  cursor: pointer;
+}
+
+.page-header__logo-link-image img {
+  display: block;
+
+  width: 220px;
+  height: 47px;
+}
+
 //Кнопка Открыть меню
 .page-header__toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
 
   width: 25px;
   height: 25px;
 
   border: none;
   background-color: transparent;
+
+  @media (min-width: 576px) {
+    right: calc(10px + 3.1%);
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -120,47 +166,31 @@
   background-color: $white;
 }
 
-/*=============Верхнее меню===============*/
+/*=============ВЕРХНЕЕ МЕНЮ===============*/
 .page-header__wrapper-top {
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
 }
 
-//ЛОГОТИП
-.page-header__logo-link-image {
-  position: absolute;
-  top: 0;
-  left: 15px;
-
-  @media (min-width: $tablet-width) {
-    position: static;
-  }
-}
-
-.page-header__logo-link-image[href] {
-  cursor: pointer;
-}
-
-.page-header__logo-link-image img {
-  display: block;
-
-  height: 47px;
-}
-
 //ПОИСК
 .page-header__form {
   padding-top: 18px;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 240px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding: 9px 0;
+    padding: 9px 0 9px 240px;
   }
 }
 
-//попап
+//попап c поиском по сайту
 .page-header__wrapper-popup {
   @media (min-width: $tablet-width) {
     position: relative;
+
     display: none;
   }
 }
@@ -183,7 +213,44 @@
   }
 }
 
-//кнопка закрыть попап
+//Кнопка - открыть поиск
+.page-header__button-search {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 70px;
+    margin: 0 auto;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    text-transform: uppercase;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
+    text-transform: capitalize;
+  }
+}
+
+.page-header__button-search svg {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  fill: $white;
+  opacity: 0.3;
+}
+
+//кнопка закрыть попап с поиском по сайту
 .page-header__button-close-popup {
   display: none;
 
@@ -195,6 +262,7 @@
     display: block;
     width: 40px;
     height: 40px;
+
     border: none;
     background-color: transparent;
   }
@@ -226,11 +294,12 @@
 
     width: 56px;
     height: 2px;
+
     background-color: $white;
   }
 }
 
-//input
+// поле поиска -input
 .page-header__wrapper-input {
   position: relative;
 
@@ -277,42 +346,6 @@
 
 .page-header__button-submit svg {
   fill: $black;
-}
-
-//Кнопка - открыть поиск
-.page-header__button-search {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    width: 70px;
-    margin: 0 auto;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    color: $white;
-    text-transform: uppercase;
-
-    border: none;
-    background-color: transparent;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    text-transform: capitalize;
-  }
-}
-
-.page-header__button-search svg {
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-
-  fill: $white;
-  opacity: 0.3;
 }
 
 //ЗАКЛАДКИ-КОРЗИНА
@@ -397,15 +430,10 @@
   }
 }
 
-/*=============Среднее меню===============*/
+/*=============СРЕДНЕЕ МЕНЮ===============*/
 .page-header__wrapper-middle {
-  order: 3;
   padding: 40px 0;
   background-color: $blue-light;
-
-  @media (min-width: $desktop-width) {
-    margin-top: -5px;
-  }
 }
 
 .page-header__middle {
@@ -552,7 +580,7 @@
   fill: $grey-dark-svg;
 }
 
-/*=============Нижнее меню===============*/
+/*=============НИЖНЕЕ МЕНЮ===============*/
 .page-header__wrapper-bottom {
   max-width: $max-width;
   width: 100%;

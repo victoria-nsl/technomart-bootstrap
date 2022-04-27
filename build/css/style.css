@@ -6465,13 +6465,6 @@ img {
       padding-top: 0;
       margin-bottom: 70px; } }
 
-.page-header__navigation {
-  display: flex;
-  flex-direction: column; }
-  @media (min-width: 768px) {
-    .page-header__navigation {
-      display: block; } }
-
 .page-header--closed .page-header__form,
 .page-header--closed .page-header__link-order,
 .page-header--closed .page-header__wrapper-bottom {
@@ -6488,10 +6481,27 @@ img {
     .page-header--closed .page-header__list-navigation-user {
       display: flex; } }
 
-.page-header--opened .page-header__form,
-.page-header--opened .page-header__link-order,
-.page-header--opened .page-header__wrapper-bottom {
-  display: block; }
+.page-header--closed .page-header__list-navigation-user {
+  display: none; }
+  @media (min-width: 768px) {
+    .page-header--closed .page-header__list-navigation-user {
+      display: flex; } }
+
+.page-header--opened .page-header__navigation {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #293449;
+  overflow-y: scroll; }
+
+.page-header--opened .page-header__wrapper-middle {
+  display: none; }
 
 .page-header--opened .page-header__list-navigation-user {
   display: flex; }
@@ -6504,14 +6514,43 @@ img {
 .page-header--nojs .page-header__list-navigation-user {
   display: flex; }
 
+.page-header--nojs .page-header__toggle {
+  display: none; }
+
+/*==============ЛОГОТИП/КНОПКА ПЕРЕКЛЮЧЕНИЯ МЕНЮ В МОБИЛЬНОЙ ВЕРСИИ============*/
+.page-header__logo-link-image {
+  position: absolute;
+  top: 0;
+  left: 10px; }
+  @media (min-width: 576px) {
+    .page-header__logo-link-image {
+      left: calc(10px + 3.1%); } }
+  @media (min-width: 768px) {
+    .page-header__logo-link-image {
+      left: 6.5%; } }
+  @media (min-width: 1200px) {
+    .page-header__logo-link-image {
+      left: calc(50% - 470px); } }
+
+.page-header__logo-link-image[href] {
+  cursor: pointer; }
+
+.page-header__logo-link-image img {
+  display: block;
+  width: 220px;
+  height: 47px; }
+
 .page-header__toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border: none;
   background-color: transparent; }
+  @media (min-width: 576px) {
+    .page-header__toggle {
+      right: calc(10px + 3.1%); } }
   @media (min-width: 768px) {
     .page-header__toggle {
       display: none; } }
@@ -6552,32 +6591,20 @@ img {
   height: 2px;
   background-color: #ffffff; }
 
-/*=============Верхнее меню===============*/
+/*=============ВЕРХНЕЕ МЕНЮ===============*/
 .page-header__wrapper-top {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto; }
 
-.page-header__logo-link-image {
-  position: absolute;
-  top: 0;
-  left: 15px; }
-  @media (min-width: 768px) {
-    .page-header__logo-link-image {
-      position: static; } }
-
-.page-header__logo-link-image[href] {
-  cursor: pointer; }
-
-.page-header__logo-link-image img {
-  display: block;
-  height: 47px; }
-
 .page-header__form {
   padding-top: 18px; }
+  @media (min-width: 768px) {
+    .page-header__form {
+      padding-left: 240px; } }
   @media (min-width: 1200px) {
     .page-header__form {
-      padding: 9px 0; } }
+      padding: 9px 0 9px 240px; } }
 
 @media (min-width: 768px) {
   .page-header__wrapper-popup {
@@ -6597,6 +6624,34 @@ img {
     overflow-x: hidden;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.7); } }
+
+.page-header__button-search {
+  display: none; }
+  @media (min-width: 768px) {
+    .page-header__button-search {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      width: 70px;
+      margin: 0 auto;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #ffffff;
+      text-transform: uppercase;
+      border: none;
+      background-color: transparent; } }
+  @media (min-width: 1200px) {
+    .page-header__button-search {
+      margin: 0;
+      text-transform: capitalize; } }
+
+.page-header__button-search svg {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  fill: #ffffff;
+  opacity: 0.3; }
 
 .page-header__button-close-popup {
   display: none; }
@@ -6671,34 +6726,6 @@ img {
 .page-header__button-submit svg {
   fill: #000000; }
 
-.page-header__button-search {
-  display: none; }
-  @media (min-width: 768px) {
-    .page-header__button-search {
-      display: flex;
-      align-items: center;
-      padding: 0;
-      width: 70px;
-      margin: 0 auto;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
-      color: #ffffff;
-      text-transform: uppercase;
-      border: none;
-      background-color: transparent; } }
-  @media (min-width: 1200px) {
-    .page-header__button-search {
-      margin: 0;
-      text-transform: capitalize; } }
-
-.page-header__button-search svg {
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-  fill: #ffffff;
-  opacity: 0.3; }
-
 .page-header__list-navigation-user {
   margin: 0;
   padding: 0;
@@ -6761,14 +6788,10 @@ img {
       width: 140px;
       margin: 0; } }
 
-/*=============Среднее меню===============*/
+/*=============СРЕДНЕЕ МЕНЮ===============*/
 .page-header__wrapper-middle {
-  order: 3;
   padding: 40px 0;
   background-color: #394a66; }
-  @media (min-width: 1200px) {
-    .page-header__wrapper-middle {
-      margin-top: -5px; } }
 
 .page-header__middle {
   max-width: 1200px;
@@ -6883,7 +6906,7 @@ img {
   height: 17px;
   fill: #c5c5c5; }
 
-/*=============Нижнее меню===============*/
+/*=============НИЖНЕЕ МЕНЮ===============*/
 .page-header__wrapper-bottom {
   max-width: 1200px;
   width: 100%;
