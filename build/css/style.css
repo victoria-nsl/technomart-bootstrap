@@ -6481,12 +6481,6 @@ img {
     .page-header--closed .page-header__list-navigation-user {
       display: flex; } }
 
-.page-header--closed .page-header__list-navigation-user {
-  display: none; }
-  @media (min-width: 768px) {
-    .page-header--closed .page-header__list-navigation-user {
-      display: flex; } }
-
 .page-header--opened .page-header__navigation {
   position: fixed;
   top: 50px;

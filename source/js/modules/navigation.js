@@ -4,24 +4,28 @@ const TABLET_DESKTOP = 767;
 
 const page = document.body;
 const menu = document.querySelector('.page-header');
+const anchorsLinks = document.querySelectorAll('[data-link-anchors]');
 
-/*======ОТКРЫТИЕ/ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ ============*/
+
+/*======ОТКРЫТИЕ/ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ И ПЛАВНЫЙ СКРОЛЛ============*/
+
+//открытие-закрытие меню
+const closeMenu = () => {
+  menu.classList.add('page-header--closed');
+  menu.classList.remove('page-header--opened');
+  page.classList.remove('page--no-scroll');
+};
 
 if (menu && page.clientWidth < TABLET_DESKTOP) {
   const navigationToggle = menu.querySelector('.page-header__toggle');
   const elementsFocusable = menu.querySelectorAll('[data-link-menu]');
+
 
   const numberElements = elementsFocusable.length;
   const firstFocusElement = elementsFocusable[0];
   const lastFocusElement = elementsFocusable[numberElements - 1];
 
   menu.classList.remove('page-header--nojs');
-
-  const closeMenu = () => {
-    menu.classList.add('page-header--closed');
-    menu.classList.remove('page-header--opened');
-    page.classList.remove('page--no-scroll');
-  };
 
   const onDocumentKeydown = (evt) => {
     if(isEscEvent(evt)) {
@@ -55,4 +59,28 @@ if (menu && page.clientWidth < TABLET_DESKTOP) {
   };
 
   navigationToggle.addEventListener('click', onNavigationToggleClick);
+
+}
+
+//плавный скролл
+if (anchorsLinks) {
+
+  const onAnchorLinkClick = (evt) => {
+    evt.preventDefault();
+
+    const blockId = evt.target.getAttribute('href').substr(1); //substring()
+
+    document.getElementById(blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+
+    if (menu.classList.contains('page-header--opened')) {
+      closeMenu();
+    }
+  };
+
+  anchorsLinks.forEach((anchorLink) => {
+    anchorLink.addEventListener('click',  onAnchorLinkClick);
+  });
 }
