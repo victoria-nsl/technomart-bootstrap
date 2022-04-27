@@ -317,3 +317,40 @@
   color: $yellow-text;
   transition: all 0.2s ease-in-out;
 }
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.page-footer__link-about[href]:hover,
+.page-footer__link-products:hover,
+.page-footer__link-site:hover,
+.page-footer__link-email:hover,
+.page-footer__link-tel:hover {
+  color: $yellow;
+}
+
+.page-footer__link-social:hover svg {
+  fill: $yellow;
+  opacity: 1;
+}
+
+
+//focus
+.page-footer__link-about[href]:focus-visible,
+.page-footer__link-products:focus-visible,
+.page-footer__link-site:focus-visible,
+.page-footer__link-email:focus-visible,
+.page-footer__link-tel:focus-visible,
+.page-footer__link-social:focus-visible {
+  outline: 2px solid $blue;
+  outline-offset: 2px;
+}
+
+//active
+.page-footer__link-about[href]:active,
+.page-footer__link-products:active,
+.page-footer__link-site:active,
+.page-footer__link-email:active,
+.page-footer__link-tel:active,
+.page-footer__link-social:active {
+  opacity: 0.5;
+}

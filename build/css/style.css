@@ -6512,7 +6512,8 @@ img {
 .page-header__logo-link-image {
   position: absolute;
   top: 0;
-  left: 10px; }
+  left: 10px;
+  transition: all 0.2s ease-in-out; }
   @media (min-width: 576px) {
     .page-header__logo-link-image {
       left: calc(10px + 3.1%); } }
@@ -6555,7 +6556,8 @@ img {
   height: 2px;
   background-color: #ffffff;
   border-radius: 3px;
-  box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff; }
+  box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+  transition: all 0.2s ease-in-out; }
   @media (min-width: 768px) {
     .page-header--closed .page-header__toggle::after {
       display: none; } }
@@ -6617,7 +6619,8 @@ img {
     background-color: rgba(0, 0, 0, 0.7); } }
 
 .page-header__button-search {
-  display: none; }
+  display: none;
+  transition: all 0.2s ease-in-out; }
   @media (min-width: 768px) {
     .page-header__button-search {
       display: flex;
@@ -6642,10 +6645,12 @@ img {
   height: 17px;
   margin-right: 8px;
   fill: #ffffff;
-  opacity: 0.3; }
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__button-close-popup {
-  display: none; }
+  display: none;
+  transition: all 0.2s ease-in-out; }
   @media (min-width: 768px) {
     .page-header__button-close-popup {
       position: absolute;
@@ -6699,7 +6704,8 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #000000; }
+  color: #000000;
+  transition: all 0.2s ease-in-out; }
   .page-header__wrapper-input input--placeholder {
     color: rgba(0, 0, 0, 0.7); }
 
@@ -6712,10 +6718,12 @@ img {
   align-items: center;
   justify-content: space-between;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__button-submit svg {
-  fill: #000000; }
+  fill: #000000;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__list-navigation-user {
   margin: 0;
@@ -6742,12 +6750,14 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff; }
+  color: #ffffff;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__link-navigation-user svg {
   margin-right: 8px;
   fill: #ffffff;
-  opacity: 0.3; }
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out; }
   .page-header__link-navigation-user svg--bookmark {
     width: 16px;
     height: 16px; }
@@ -6769,7 +6779,8 @@ img {
   line-height: 24px;
   color: #ffffff;
   background-color: #63a63e;
-  border-radius: 0; }
+  border-radius: 0;
+  transition: all 0.2s ease-in-out; }
   @media (min-width: 768px) {
     .page-header__link-order {
       width: 40%;
@@ -6829,13 +6840,15 @@ img {
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
-  color: #db1421; }
+  color: #db1421;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__link-tel svg {
   width: 19px;
   height: 19px;
   margin-right: 16px;
-  fill: #b7bfc8; }
+  fill: #b7bfc8;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__middle p {
   width: 250px;
@@ -6868,7 +6881,8 @@ img {
   line-height: 21px;
   color: #000000;
   background-color: #ffffff;
-  border-radius: 0; }
+  border-radius: 0;
+  transition: all 0.2s ease-in-out; }
 
 .page-header__link-login {
   width: 100%;
@@ -6895,7 +6909,8 @@ img {
   margin-right: 8px;
   width: 20px;
   height: 17px;
-  fill: #c5c5c5; }
+  fill: #c5c5c5;
+  transition: all 0.2s ease-in-out; }
 
 /*=============НИЖНЕЕ МЕНЮ===============*/
 .page-header__wrapper-bottom {
@@ -7964,3 +7979,32 @@ img {
 .page-footer__link-site {
   color: #ffd180;
   transition: all 0.2s ease-in-out; }
+
+/*=============СТАЙЛГАЙД============*/
+.page-footer__link-about[href]:hover,
+.page-footer__link-products:hover,
+.page-footer__link-site:hover,
+.page-footer__link-email:hover,
+.page-footer__link-tel:hover {
+  color: #f0710a; }
+
+.page-footer__link-social:hover svg {
+  fill: #f0710a;
+  opacity: 1; }
+
+.page-footer__link-about[href]:focus-visible,
+.page-footer__link-products:focus-visible,
+.page-footer__link-site:focus-visible,
+.page-footer__link-email:focus-visible,
+.page-footer__link-tel:focus-visible,
+.page-footer__link-social:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px; }
+
+.page-footer__link-about[href]:active,
+.page-footer__link-products:active,
+.page-footer__link-site:active,
+.page-footer__link-email:active,
+.page-footer__link-tel:active,
+.page-footer__link-social:active {
+  opacity: 0.5; }
