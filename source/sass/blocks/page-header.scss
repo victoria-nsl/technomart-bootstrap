@@ -640,3 +640,92 @@
     text-transform: capitalize;
   }
 }
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.page-header__link-navigation-site[href]:hover,
+.page-header__link-navigation-user:hover span,
+.page-header__button-search:hover span {
+  color: $yellow;
+}
+
+.page-header__link-order:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.page-header__link-tel:hover {
+  border: 3px solid $yellow;
+}
+
+.page-header__link-tel:hover span {
+  color: $white;
+}
+
+.page-header__link-tel:hover svg {
+  fill: $white;
+}
+
+.page-header__button-close-popup:hover::after,
+.page-header__button-close-popup:hover::before {
+  background-color: $yellow;
+}
+
+.page-header--closed .page-header__toggle:hover::after,
+.page-header--closed .page-header__toggle:hover::before {
+  box-shadow: 0 10px 0 0 $yellow, 0 20px 0 0 $yellow;
+  background-color: $yellow;
+}
+
+.page-header--opened .page-header__toggle:hover::after,
+.page-header--opened .page-header__toggle:hover::before {
+  background-color: $yellow;
+}
+
+.page-header__link-navigation-user:hover:hover svg,
+.page-header__button-search:hover:hover svg,
+.page-header__button-submit:hover svg {
+  fill: $yellow;
+  opacity: 1;
+}
+
+.page-header__link-login:hover,
+.page-header__link-registration:hover {
+  background-color: $yellow;
+  color: $white;
+}
+
+.page-header__link-login:hover svg {
+  fill: $white;
+}
+
+//focus
+.page-header__link-navigation-site[href]:focus-visible,
+.page-header__link-login:focus-visible,
+.page-header__link-registration:focus-visible,
+.page-header__link-order:focus-visible,
+.page-header__link-tel:focus-visible,
+.page-header__link-navigation-user:focus-visible,
+.page-header__toggle:focus-visible,
+.page-header__button-search:focus-visible,
+.page-header__button-submit:focus-visible,
+.page-header__button-close-popup:focus-visible,
+.page-header__wrapper-input input:focus-visible {
+  outline: 2px solid $blue;
+  outline-offset: 2px;
+}
+
+//active
+.page-header__link-navigation-site[href]:active,
+.page-header__link-login:active,
+.page-header__link-registration:active,
+.page-header__link-order:active,
+.page-header__link-tel:active,
+.page-header__link-navigation-user:active,
+.page-header__toggle:active,
+.page-header__button-search:active,
+.page-header__button-submit:active,
+.page-header__button-close-popup:active,
+.page-header__wrapper-input input:active {
+  opacity: 0.5;
+}
