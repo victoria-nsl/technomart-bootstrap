@@ -263,6 +263,8 @@
     height: 15px;
 
     fill: $white;
+
+    transition: all 0.2s ease-in-out;
   }
 
   &--facebook svg {
@@ -270,6 +272,8 @@
     height: 22px;
 
     fill: $white;
+
+    transition: all 0.2s ease-in-out;
   }
 
   &--instagram svg {
@@ -277,6 +281,8 @@
     height: 22px;
 
     fill: $white;
+
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -341,7 +347,7 @@
 .page-footer__link-email:focus-visible,
 .page-footer__link-tel:focus-visible,
 .page-footer__link-social:focus-visible {
-  outline: 2px solid $blue;
+  outline: 2px solid $green;
   outline-offset: 2px;
 }
 

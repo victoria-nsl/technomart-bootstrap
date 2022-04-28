@@ -7018,7 +7018,7 @@ img {
 .page-header__button-submit:focus-visible,
 .page-header__button-close-popup:focus-visible,
 .page-header__wrapper-input input:focus-visible {
-  outline: 2px solid #0d6efd;
+  outline: 2px solid #1bc01e;
   outline-offset: 2px; }
 
 .page-header__link-navigation-site[href]:active,
@@ -7195,6 +7195,22 @@ img {
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0.3); }
 
+/*=============СТАЙЛГАЙД============*/
+.about__link:hover,
+.about__button-carousel:hover {
+  opacity: 0.8; }
+
+.about__link:focus-visible,
+.about__button-carousel:focus-visible,
+.about .carousel-control-prev:focus-visible,
+.about .carousel-control-next:focus-visible {
+  outline: 2px solid #1bc01e;
+  outline-offset: 2px; }
+
+.about__link:active,
+.about__link:active {
+  opacity: 0.5; }
+
 .products {
   max-width: 1200px;
   width: 100%;
@@ -7315,6 +7331,12 @@ img {
   border-width: 0 20px 20px 0;
   border-color: transparent #f3f7f9 transparent transparent; }
 
+/*=============СТАЙЛГАЙД============*/
+.products__link:focus-visible,
+.products__item-button:focus-visible {
+  outline: 2px solid #1bc01e;
+  outline-offset: 2px; }
+
 .manufacturer {
   max-width: 1200px;
   width: 100%;
@@ -7352,13 +7374,11 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0; }
+  text-transform: uppercase; }
 
 .manufacturer__item {
   position: relative;
   padding-top: 60%;
-  border: 1px solid #eaeaea;
   margin-bottom: 20px; }
 
 .manufacturer__link {
@@ -7370,7 +7390,9 @@ img {
   align-items: center;
   width: 100%;
   height: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #eaeaea;
+  border-radius: 0; }
   .manufacturer__link--one img {
     width: 126px;
     height: 37px; }
@@ -7395,6 +7417,18 @@ img {
   .manufacturer__link--eight img {
     width: 206px;
     height: 73px; }
+
+/*=============СТАЙЛГАЙД============*/
+.manufacturer__link:hover {
+  border: 1px solid #f0710a; }
+
+.manufacturer__link-header:focus-visible,
+.manufacturer__link:focus-visible {
+  outline: 2px solid #1bc01e;
+  outline-offset: 2px; }
+
+.manufacturer__link:active {
+  border: 1px solid rgba(240, 113, 10, 0.5); }
 
 .service {
   padding: 50px 0 0;
@@ -7579,6 +7613,17 @@ img {
       margin: 0;
       text-align: start; } }
 
+/*=============СТАЙЛГАЙД============*/
+.service__button:not(.service__button--active):hover {
+  color: #f0710a; }
+
+.service__button:focus-visible {
+  outline: 2px solid #1bc01e;
+  outline-offset: 2px; }
+
+.service__button:not(.service__button--active):active {
+  opacity: 0.9; }
+
 .logistics-contacts {
   max-width: 1200px;
   width: 100%;
@@ -7667,6 +7712,11 @@ img {
     .logistics__link {
       margin: 0; } }
 
+/*=============СТАЙЛГАЙД============*/
+.logistics__link:focus-visible {
+  outline: 2px solid #1bc01e;
+  outline-offset: 2px; }
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -7726,6 +7776,12 @@ img {
     .contacts__link {
       width: 100%;
       margin: 0; } }
+
+/*=============СТАЙЛГАЙД============*/
+.contacts__link:focus-visible,
+.contacts__map iframe:focus-visible {
+  outline: 2px solid #1bc01e;
+  outline-offset: 2px; }
 
 .page-footer {
   background-color: #394a66; }
@@ -7939,15 +7995,18 @@ img {
   .page-footer__link-social--vkontakte svg {
     width: 26px;
     height: 15px;
-    fill: #ffffff; }
+    fill: #ffffff;
+    transition: all 0.2s ease-in-out; }
   .page-footer__link-social--facebook svg {
     width: 12px;
     height: 22px;
-    fill: #ffffff; }
+    fill: #ffffff;
+    transition: all 0.2s ease-in-out; }
   .page-footer__link-social--instagram svg {
     width: 22px;
     height: 22px;
-    fill: #ffffff; }
+    fill: #ffffff;
+    transition: all 0.2s ease-in-out; }
 
 .page-footer__text-email,
 .page-footer__text-design {
@@ -7998,7 +8057,7 @@ img {
 .page-footer__link-email:focus-visible,
 .page-footer__link-tel:focus-visible,
 .page-footer__link-social:focus-visible {
-  outline: 2px solid #0d6efd;
+  outline: 2px solid #1bc01e;
   outline-offset: 2px; }
 
 .page-footer__link-about[href]:active,

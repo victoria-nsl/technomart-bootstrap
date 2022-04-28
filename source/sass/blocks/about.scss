@@ -198,3 +198,24 @@
 
   background-color: rgba($white, 0.3);
 }
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.about__link:hover,
+.about__button-carousel:hover {
+  opacity: 0.8;
+}
+
+//focus
+.about__link:focus-visible,
+.about__button-carousel:focus-visible,
+.about .carousel-control-prev:focus-visible,
+.about .carousel-control-next:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
+
+//active
+.about__link:active {
+  opacity: 0.5;
+}

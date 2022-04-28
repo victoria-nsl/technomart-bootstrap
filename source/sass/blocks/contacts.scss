@@ -71,3 +71,11 @@
     margin: 0;
   }
 }
+
+/*=============СТАЙЛГАЙД============*/
+//focus
+.contacts__link:focus-visible,
+.contacts__map iframe:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
