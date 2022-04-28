@@ -67,10 +67,12 @@
 
   width: 100%;
   height: 100%;
+
   cursor: pointer;
 
   border: 1px solid $grey-border;
   border-radius: 0;
+  transition: all 0.2s ease-in-out;
 
   &--one img {
     width: 126px;

@@ -7207,7 +7207,6 @@ img {
   outline: 2px solid #1bc01e;
   outline-offset: 2px; }
 
-.about__link:active,
 .about__link:active {
   opacity: 0.5; }
 
@@ -7392,7 +7391,8 @@ img {
   height: 100%;
   cursor: pointer;
   border: 1px solid #eaeaea;
-  border-radius: 0; }
+  border-radius: 0;
+  transition: all 0.2s ease-in-out; }
   .manufacturer__link--one img {
     width: 126px;
     height: 37px; }
