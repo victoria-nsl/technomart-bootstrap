@@ -657,6 +657,10 @@
   }
 }
 
+.page-header__item-navigation-site--active {
+  border-bottom: 2px solid $red;
+}
+
 .page-header__link-navigation-site {
   font-weight: 400;
   font-size: 18px;
@@ -685,7 +689,7 @@
 }
 
 .page-header__link-tel:hover {
-  border: 3px solid $yellow;
+  border: 3px solid $green;
 }
 
 .page-header__link-tel:hover span {
@@ -721,7 +725,7 @@
 
 .page-header__link-login:hover,
 .page-header__link-registration:hover {
-  background-color: $yellow;
+  background-color: $green;
   color: $white;
 }
 

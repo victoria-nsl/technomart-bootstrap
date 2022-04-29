@@ -51,9 +51,9 @@
 }
 
 //Карточки товаров
-
 .products__item {
   position: relative;
+
   padding: 5px 0 0;
   margin-bottom: 20px;
 
@@ -61,6 +61,8 @@
 
   border: 1px solid $grey-border;
   overflow: hidden;
+
+  transition: all 0.2s ease-in-out;
 }
 
 .products__wrapper-image {
@@ -88,6 +90,54 @@
     width: 127px;
     height: 112px;
   }
+}
+
+//Купить/в закладки
+.products__wrapper-button {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: none;
+  width: 42.45%;
+  margin: 0 auto;
+}
+
+.products__button-buy,
+.products__button-bookmark {
+  display: block;
+  width: 100%;
+  padding: 7px 3px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $green-dark;
+  border-radius: 0;
+  border: 3px solid $green-dark;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.products__button-buy {
+  margin-bottom: 10px;
+}
+
+.products__button-buy svg {
+  margin-right: 3px;
+  fill: $white;
+  opacity: 0.3;
+}
+
+.products__button-bookmark {
+  color: $blue-text;
+  background-color: $white;
 }
 
 .products__description {
@@ -119,14 +169,19 @@
 .products__item-button {
   position: relative;
 
-  display: block;
   width: 141px;
   margin: 0 auto;
   padding: 7px 0;
 
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $white;
+
   border-radius: 0;
   border: none;
   box-shadow: none;
+  background-color: $red-button;
 }
 
 .products__item-button::after {
@@ -156,9 +211,43 @@
   border-color: transparent $azure-background transparent transparent;
 }
 /*=============СТАЙЛГАЙД============*/
+//hover
+.products__item:hover {
+  box-shadow: 0 0 16px 0 rgba($black, 0.5);
+}
+
+.products__item:hover img {
+  display: none;
+}
+
+.products__item:hover .products__wrapper-button {
+  display: block;
+}
+
+.products__button-buy:hover,
+.products__button-bookmark:hover {
+  background-color: $green;
+  color: $white;
+
+  border: 3px solid $green;
+}
+
+.products__button-buy:hover svg {
+  opacity: 1;
+}
+
+
 //focus
-.products__link:focus-visible,
-.products__item-button:focus-visible {
+.products__button-buy:focus-visible,
+.products__button-bookmark:focus-visible,
+.products__link:focus-visible {
   outline: 2px solid $green;
   outline-offset: 2px;
+}
+
+//active
+.products__item-link:active,
+.products__button-buy:active,
+.products__button-bookmark:active {
+  opacity: 0.5;
 }

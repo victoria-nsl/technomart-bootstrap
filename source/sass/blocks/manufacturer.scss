@@ -100,8 +100,8 @@
   }
 
   &--six img {
-    width: 121px;
-    height: 73px;
+    width: 153px;
+    height: 60px;
   }
 
   &--seven img {
@@ -118,7 +118,7 @@
 /*=============СТАЙЛГАЙД============*/
 //hover
 .manufacturer__link:hover {
-  border: 1px solid $yellow;
+  box-shadow: 0 0 16px 0 rgba($black, 0.5);
 }
 
 //focus
@@ -130,5 +130,5 @@
 
 //active
 .manufacturer__link:active {
-  border: 1px solid rgba($yellow, 0.5);
+  opacity: 0.5;
 }

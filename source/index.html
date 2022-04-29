@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
+  <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
     page-header--closed - закрытое меню, кнопка для открытия /бургер/
     page-header--opened - открытое меню, кнопка для закрытия /крестик/-->
   <header class="page-header page-header--closed page-header--nojs">
@@ -43,7 +43,8 @@
                   </button>
                   <div class="page-header__wrapper-input">
                     <label class="visually-hidden" for="search">Поиск по сайту</label>
-                    <input id="search" type="search" name="text" autocomplete="off" placeholder="Искать..." required data-link-menu>
+                    <input id="search" type="search" name="text" autocomplete="off" placeholder="Искать..." required
+                      data-link-menu>
                     <button class="page-header__button-submit" type="submit"
                       aria-label="Отправить запрос по поиску на сайте" data-link-menu>
                       <svg role="img" width="17" height="17" aria-hidden="true">
@@ -64,7 +65,8 @@
             <div class="col-xl-4 col-md-5">
               <ul class="page-header__list-navigation-user">
                 <li class="page-header__item-navigation-user page-header__item-navigation-user--bookmark">
-                  <a class="page-header__link-navigation-user page-header__link-navigation-user--bookmark" href="#" data-link-menu>
+                  <a class="page-header__link-navigation-user page-header__link-navigation-user--bookmark" href="#"
+                    data-link-menu>
                     <svg role="img" width="14" height="16" aria-hidden="true">
                       <use xlink:href="img/sprite_auto.svg#icon-header-bookmark"></use>
                     </svg>
@@ -73,7 +75,8 @@
                   </a>
                 </li>
                 <li class="page-header__item-navigation-user page-header__item-navigation-user--cart">
-                  <a class="page-header__link-navigation-user page-header__link-navigation-user--cart" href="#" data-link-menu>
+                  <a class="page-header__link-navigation-user page-header__link-navigation-user--cart" href="#"
+                    data-link-menu>
                     <svg role="img" width="18" height="16">
                       <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
                     </svg>
@@ -138,8 +141,8 @@
           <div class="row">
             <div class="col-12 justify-content-md-center">
               <ul class="page-header__list-navigation-site">
-                <li class="page-header__item-navigation-site">
-                  <a class="page-header__link-navigation-site page-header__link-navigation-site--active" data-link-menu >
+                <li class="page-header__item-navigation-site page-header__item-navigation-site--active">
+                  <a class="page-header__link-navigation-site page-header__link-navigation-site--active" data-link-menu>
                     Главная
                   </a>
                 </li>
@@ -224,19 +227,19 @@
                     data-interval="false">
                     <h3>Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
-                    <a href="#" class="about__button-carousel btn btn-danger">Oткрыть каталог</a>
+                    <a href="catalog.html" class="about__button-carousel btn btn-danger">Oткрыть каталог</a>
                   </div>
 
                   <div class="about__item-carousel about__item-carousel--two carousel-item" data-interval="false">
-                    <h3>Перфораторы</h3>
-                    <p>Настоящие мужские игрушки</p>
-                    <a href="#" class="about__button-carousel  btn btn-danger">Oткрыть каталог</a>
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость</p>
+                    <a href="catalog.html" class="about__button-carousel  btn btn-danger">Oткрыть каталог</a>
                   </div>
 
                   <div class="about__item-carousel about__item-carousel--three carousel-item" data-interval="false">
-                    <h3>Перфораторы</h3>
-                    <p>Настоящие мужские игрушки</p>
-                    <a href="#" class="about__button-carousel btn btn-danger">Oткрыть каталог</a>
+                    <h3>Перфораторы и дрели</h3>
+                    <p>Лучшие инструменты</p>
+                    <a href="catalog.html" class="about__button-carousel btn btn-danger">Oткрыть каталог</a>
                   </div>
 
                 </div>
@@ -297,11 +300,10 @@
         <div class="products__list row justify-content-center align-items-center">
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="products__item ">
+            <div class="products__item">
               <div class="products__wrapper-image products__wrapper-image-one">
                 <picture>
-                  <source type="image/webp" media="(max-width: 1200px)"
-                    srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
+                  <source type="image/webp" srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
                   <!--1x: 184x164px  2x: 368x328px-->
                   <img class="img-fluid" width="184" height="164" src="img/product-1.png"
                     srcset="img/product-1@2x.png 2x" alt="Фотография перфоратора Bosch">
@@ -310,19 +312,27 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 9000</h3>
                 <p>32500 Р.</p>
-                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
-                  25500 Р.
-                </a>
+                <div class="products__item-button">25500 Р.</div>
+              </div>
+              <div class="products__wrapper-button">
+                <button class="products__button-buy">
+                  <svg role="img" width="18" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                  </svg>
+                  <span>Купить</span>
+                </button>
+                <button class="products__button-bookmark">
+                  В закладки
+                </button>
               </div>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="products__item ">
+            <div class="products__item">
               <div class="products__wrapper-image products__wrapper-image-two">
                 <picture>
-                  <source type="image/webp" media="(max-width: 1200px)"
-                    srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
+                  <source type="image/webp" srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
                   <!--1x: 127x112px  2x: 254x224px-->
                   <img class="img-fluid" width="127" height="112" src="img/product-2.png"
                     srcset="img/product-2@2x.png 2x" alt="Фотография перфоратора Bosch">
@@ -331,20 +341,28 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p>22500 Р.</p>
-                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
-                  15500 Р.
-                </a>
+                <div class="products__item-button">15500 Р.</div>
               </div>
               <div class="mark-new">New</div>
+              <div class="products__wrapper-button">
+                <button class="products__button-buy">
+                  <svg role="img" width="18" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                  </svg>
+                  <span>Купить</span>
+                </button>
+                <button class="products__button-bookmark">
+                  В закладки
+                </button>
+              </div>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="products__item ">
+            <div class="products__item">
               <div class="products__wrapper-image products__wrapper-image-three">
                 <picture>
-                  <source type="image/webp" media="(max-width: 1200px)"
-                    srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
+                  <source type="image/webp" srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
                   <!--1x: 144x128px  2x: 288x256px-->
                   <img class="img-fluid" width="144" height="128" src="img/product-3.png"
                     srcset="img/product-3@2x.png 2x" alt="Фотография перфоратора Bosch">
@@ -353,19 +371,27 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p>32500 Р.</p>
-                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
-                  25500 Р.
-                </a>
+                <div class="products__item-button">25500 Р.</div>
+              </div>
+              <div class="products__wrapper-button">
+                <button class="products__button-buy">
+                  <svg role="img" width="18" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                  </svg>
+                  <span>Купить</span>
+                </button>
+                <button class="products__button-bookmark">
+                  В закладки
+                </button>
               </div>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="products__item ">
+            <div class="products__item">
               <div class="products__wrapper-image products__wrapper-image-four">
                 <picture>
-                  <source type="image/webp" media="(max-width: 1200px)"
-                    srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
+                  <source type="image/webp" srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
                   <!--1x: 127x112px  2x: 254x224px-->
                   <img class="img-fluid" width="127" height="112" src="img/product-4.png"
                     srcset="img/product-4@2x.png 2x" alt="Фотография перфоратора Bosch">
@@ -374,11 +400,20 @@
               <div class="products__description">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
                 <p>22500 Р.</p>
-                <a href="#" class="products__item-button btn btn-danger" aria-label="Посмотреть в карточку товара">
-                  12500 Р.
-                </a>
+                <div class="products__item-button">12500 Р.</div>
               </div>
               <div class="mark-new">New</div>
+              <div class="products__wrapper-button">
+                <button class="products__button-buy">
+                  <svg role="img" width="18" height="16">
+                    <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                  </svg>
+                  <span>Купить</span>
+                </button>
+                <button class="products__button-bookmark">
+                  В закладки
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -405,8 +440,10 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--one" href="#">
                 <picture>
-                  <img class="img-fluid" src="img/manufacturer-1.svg" width="126" height="37"
-                    alt="Логотип компании Bosch">
+                  <!--1x: 126x37px  2x: 252x74px-->
+                  <source type="image/webp" srcset="img/manufacturer-1.webp 1x, img/manufacturer-1@2x.webp 2x">
+                  <img class="img-fluid" width="126" height="37" src="img/manufacturer-1.png"
+                    srcset="img/manufacturer-1@2x.png 2x" alt="Логотип компании Bosch">
                 </picture>
               </a>
             </div>
@@ -415,7 +452,9 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--two" href="#">
                 <picture>
-                  <img src="img/manufacturer-8.svg" width="123" height="40" alt="Логотип компании Makita">
+                  <!--1x: 123x40px  2x: 246x80px-->
+                  <source type="image/webp" srcset="img/manufacturer-2.webp 1x, img/manufacturer-2@2x.webp 2x">
+                  <img class="img-fluid"  width="123" height="40" src="img/manufacturer-2.png" srcset="img/manufacturer-2@2x.png 2x" alt="Логотип компании Makita">
                 </picture>
               </a>
             </div>
@@ -424,7 +463,9 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--three" href="#">
                 <picture>
-                  <img src="img/manufacturer-3.svg" width="146" height="44" alt="Логотип компании DeWalt">
+                  <!--1x: 146x44px  2x: 292x88px-->
+                  <source type="image/webp" srcset="img/manufacturer-3.webp 1x, img/manufacturer-3@2x.webp 2x">
+                  <img class="img-fluid" width="146" height="44" src="img/manufacturer-3.png"  srcset="img/manufacturer-3@2x.png 2x" alt="Логотип компании DeWalt">
                 </picture>
               </a>
             </div>
@@ -433,7 +474,9 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--four" href="#">
                 <picture>
-                  <img src="img/manufacturer-4.svg" width="200" height="75" alt="Логотип компании Интерскол">
+                  <!--1x: 200x75px  2x: 400x150px-->
+                  <source type="image/webp" srcset="img/manufacturer-4.webp 1x, img/manufacturer-4@2x.webp 2x">
+                  <img class="img-fluid"  width="200" height="75" src="img/manufacturer-4.png"  srcset="img/manufacturer-4@2x.png 2x" alt="Логотип компании Интерскол">
                 </picture>
               </a>
             </div>
@@ -442,7 +485,9 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--five" href="#">
                 <picture>
-                  <img src="img/manufacturer-5.svg" width="169" height="31" alt="Логотип компании Hitachi">
+                  <!--1x: 169x31px  2x: 338x62px-->
+                  <source type="image/webp" srcset="img/manufacturer-5.webp 1x, img/manufacturer-5@2x.webp 2x">
+                  <img class="img-fluid" width="169" height="31" src="img/manufacturer-5.png" srcset="img/manufacturer-5@2x.png 2x" alt="Логотип компании Hitachi">
                 </picture>
               </a>
             </div>
@@ -451,7 +496,9 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--six" href="#">
                 <picture>
-                  <img src="img/manufacturer-6.svg" width="121" height="73" alt="Логотип компании LG">
+                  <!--1x: 153x60px  2x: 206x120px-->
+                  <source type="image/webp" srcset="img/manufacturer-8.webp 1x, img/manufacturer-8@2x.webp 2x">
+                  <img class="img-fluid"  width="153" height="60" src="img/manufacturer-6.png" srcset="img/manufacturer-7@2x.png 2x" alt="Логотип компании Bort">
                 </picture>
               </a>
             </div>
@@ -460,7 +507,9 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--seven" href="#">
                 <picture>
-                  <img src="img/manufacturer-7.svg" width="151" height="98" alt="Логотип компании AEG">
+                  <!--1x: 151x98px  2x: 302x96px-->
+                  <source type="image/webp" srcset="img/manufacturer-7.webp 1x, img/manufacturer-7@2x.webp 2x">
+                  <img class="img-fluid" width="151" height="98" src="img/manufacturer-7.png" srcset="img/manufacturer-7@2x.png 2x" alt="Логотип компании AEG">
                 </picture>
               </a>
             </div>
@@ -469,7 +518,10 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--eight" href="#">
                 <picture>
-                  <img src="img/manufacturer-2.svg" width="206" height="73" alt="Логотип компании Metabo">
+                  <!--1x: 206x73px  2x: 412x146px-->
+                  <source type="image/webp" srcset="img/manufacturer-7.webp 1x, img/manufacturer-7@2x.webp 2x">
+                  <img class="img-fluid" src="img/manufacturer-8.png" width="206" height="73"
+                    alt="Логотип компании Metabo">
                 </picture>
               </a>
             </div>
@@ -503,7 +555,8 @@
             <div class="col-xl-8 col-md-12">
               <ul class="service__list-tab">
                 <li
-                  class="service__item-tab service__item-tab--delivery service__item-tab--active service__item-tab--nojs"  id="delivery">
+                  class="service__item-tab service__item-tab--delivery service__item-tab--active service__item-tab--nojs"
+                  id="delivery">
                   <h3>Доставка</h3>
                   <p>
                     Мы с удовольствием доставим ваш товар прямо
@@ -562,7 +615,7 @@
           </div>
 
           <div class="logistics-contacts__col col-xl-4">
-            <section class="contacts"  id="contacts">
+            <section class="contacts" id="contacts">
               <div class="contacts__wrapper-text">
                 <h2>Контакты</h2>
                 <p>
@@ -570,12 +623,27 @@
                 </p>
               </div>
               <div class="contacts__wrapper-map">
-                <div class="contacts__map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412406!2d30.320894616211245!3d59.938796869047785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1650535608761!5m2!1sru!2sru"
-                    height="158" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
-                    title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург"></iframe>
+                <div class="contacts__modal">
+
+                  <div class="contacts__wrapper-iframe">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412406!2d30.320894616211245!3d59.938796869047785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1650535608761!5m2!1sru!2sru"
+                      height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+                      title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
+                    </iframe>
+                    <button class="contacts__button-close-popup" type="button"
+                  aria-label="Открыть/закрыть модальное окно"></button>
+                  </div>
                 </div>
+
+                <button class="contacts__map-button" type="button">
+                  <picture>
+                    <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+                    <!--1x: 300x158px  2x: 600x316px-->
+                    <img class="img-fluid" width="300" height="158" src="img/map.png"
+                      srcset="img/map.png 2x" alt="Карта г. Санкт-Петербург с указанием офиса компании">
+                  </picture>
+                </button>
                 <a class="contacts__link btn btn-danger" href="#">
                   Заблудились? Напишите нам!
                 </a>
@@ -623,7 +691,7 @@
                 </a>
               </li>
               <li class="page-footer__item-about">
-                <a href="#contacts" class="page-footer__link-about" data-link-anchors >
+                <a href="#contacts" class="page-footer__link-about" data-link-anchors>
                   Контакты
                 </a>
               </li>
