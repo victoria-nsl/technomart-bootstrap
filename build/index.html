@@ -136,7 +136,7 @@
           <div class="row">
             <div class="col-12 justify-content-md-center">
               <ul class="page-header__list-navigation-site">
-                <li class="page-header__item-navigation-site page-header__item-navigation-site--active">
+                <li class="page-header__item-navigation-site">
                   <a class="page-header__link-navigation-site page-header__link-navigation-site--active" data-link-menu="">
                     Главная
                   </a>
@@ -188,7 +188,7 @@
           <div class="about__list row justify-content-center">
             <div class="col-xl-4 col-md-6 order-2 order-xl-1">
               <div class="about__item">
-                <a class="about__link about__link--materials  about__link--mark" href="">
+                <a class="about__link about__link--materials  about__link--mark" href="#">
                   <h3>Материалы</h3>
                   <p>На любой вкус</p>
                   <div class="mark-new">New</div>
@@ -198,7 +198,7 @@
 
             <div class="col-xl-4 col-md-6 order-3 order-xl-2">
               <div class="about__item ">
-                <a class="about__link about__link--tool" href="">
+                <a class="about__link about__link--tool" href="#">
                   <h3>Инструмент</h3>
                   <p>На все случаи</p>
                 </a>
@@ -207,7 +207,7 @@
 
             <div class="col-xl-4 col-md-6 order-4 order-md-5 order-xl-3">
               <div class="about__item ">
-                <a class="about__link about__link--building" href="">
+                <a class="about__link about__link--building" href="#">
                   <h3>Техника</h3>
                   <p>Для стройки</p>
                 </a>
@@ -252,7 +252,7 @@
               <div class="row">
                 <div class="col-xl-12 col-md-6">
                   <div class="about__item ">
-                    <a class="about__link about__link--discounts" href="">
+                    <a class="about__link about__link--discounts" href="#">
                       <h3>Скидки 50%</h3>
                       <p>На 350 товаров</p>
                     </a>
@@ -261,7 +261,7 @@
 
                 <div class="col-xl-12 col-md-6">
                   <div class="about__item">
-                    <a class="about__link about__link--delivery" href="">
+                    <a class="about__link about__link--delivery" href="#">
                       <h3>Доставка</h3>
                       <p>Бесплатно</p>
                     </a>
@@ -450,8 +450,8 @@
             <div class="manufacturer__item">
               <a class="manufacturer__link manufacturer__link--three" href="#">
                 <picture>
-                   <!--1x: 146x44px  2x: 292x88px-->
-                   <source type="image/webp" srcset="img/manufacturer-3.webp 1x, img/manufacturer-3@2x.webp 2x">
+                  <!--1x: 146x44px  2x: 292x88px-->
+                  <source type="image/webp" srcset="img/manufacturer-3.webp 1x, img/manufacturer-3@2x.webp 2x">
                   <img class="img-fluid" width="146" height="44" src="img/manufacturer-3.png" srcset="img/manufacturer-3@2x.png 2x" alt="Логотип компании DeWalt">
                 </picture>
               </a>
@@ -776,6 +776,32 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal-lost">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="modal-lost__form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="modal-lost__wrapper-user">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-email">Ваш email:</label>
+          <input id="user-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="letter-text">Текст письма:</label>
+          <textarea id="letter-text" name="letter" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
+      <div class="modal-lost__wrapper-button">
+        <button class="modal-lost__button-submit btn btn-danger" type="submit" aria-label="Отправить письмо компании Техномаркет">
+          Отправить
+        </button>
+      </div>
+      <button class="modal-lost__button-close" type="button" aria-label="Закрыть"></button>
+    </form>
+  </section>
   <script type="module" src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>

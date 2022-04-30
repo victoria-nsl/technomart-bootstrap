@@ -6950,9 +6950,6 @@ img {
       padding: 0;
       box-shadow: none; } }
 
-.page-header__item-navigation-site--active {
-  border-bottom: 2px solid #db1421; }
-
 .page-header__link-navigation-site {
   font-weight: 400;
   font-size: 18px;
@@ -6963,6 +6960,9 @@ img {
   @media (min-width: 1200px) {
     .page-header__link-navigation-site {
       text-transform: capitalize; } }
+
+.page-header__link-navigation-site--active {
+  color: #db1421; }
 
 /*=============СТАЙЛГАЙД============*/
 .page-header__link-navigation-site[href]:hover,
@@ -7304,7 +7304,6 @@ img {
   background-color: #63a63e;
   border-radius: 0;
   border: 3px solid #63a63e;
-  box-sizing: border-box;
   transition: all 0.2s ease-in-out; }
 
 .products__button-buy {
@@ -7844,9 +7843,8 @@ img {
       padding-top: 55%; } }
   @media (min-width: 1200px) {
     .contacts__wrapper-iframe {
-      max-width: 943px;
-      width: 78.5%;
-      padding-top: 47.6%; } }
+      width: 943px;
+      padding-top: 449px; } }
 
 .contacts__wrapper-iframe iframe {
   position: absolute;
@@ -8006,12 +8004,12 @@ img {
       margin-right: 0;
       margin-bottom: 7px; } }
 
-.page-footer__item-about--active {
-  border-bottom: 2px solid #db1421; }
-
 .page-footer__link-about {
   color: #f1f5f7;
   transition: all 0.2s ease-in-out; }
+
+.page-footer__link-about--active {
+  color: #db1421; }
 
 /*============Подвал - середина================*/
 .page-footer__text-contacts {
@@ -8222,3 +8220,125 @@ img {
 .page-footer__link-tel:active,
 .page-footer__link-social:active {
   opacity: 0.5; }
+
+.modal-lost {
+  display: none; }
+
+.modal-lost--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: block;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.modal-lost__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 620px;
+  box-sizing: border-box;
+  border-top: 7px solid #db1421; }
+
+.modal-lost__wrapper-user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 46px 80px 37px;
+  background-color: #ffffff; }
+
+.modal-lost__wrapper-user p {
+  display: flex;
+  flex-direction: column;
+  width: 47.8%;
+  margin-bottom: 13px; }
+
+.modal-lost__wrapper-user p:last-child {
+  width: 100%;
+  margin-bottom: 0; }
+
+.modal-lost__wrapper-user label {
+  margin-bottom: 11px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000; }
+
+.modal-lost__wrapper-user input,
+.modal-lost__wrapper-user textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #a9a9a9;
+  border: 2px solid #c5c5c5;
+  border-radius: 2px; }
+  .modal-lost__wrapper-user input--placeholder,
+  .modal-lost__wrapper-user textarea--placeholder {
+    color: rgba(169, 169, 169, 0.7); }
+
+.modal-lost__wrapper-user textarea {
+  min-height: 114px;
+  resize: none; }
+
+.modal-lost__wrapper-user label {
+  margin-bottom: 11px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000; }
+
+.modal-lost__wrapper-button {
+  padding: 37px 80px;
+  background-color: #f3f7f9; }
+
+.modal-lost__button-submit {
+  display: block;
+  width: 100%;
+  padding: 11px 0 9px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0; }
+
+.modal-lost__button-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out; }
+
+@media (min-width: 768px) {
+  .modal-lost__button-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 29px;
+    height: 2px;
+    background-color: #db1421; } }
+
+@media (min-width: 768px) {
+  .modal-lost__button-close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(-45deg);
+    width: 29px;
+    height: 2px;
+    background-color: #db1421; } }

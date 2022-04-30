@@ -89,14 +89,16 @@
   }
 }
 
-.page-footer__item-about--active {
-  border-bottom: 2px solid $red;
-}
 
 .page-footer__link-about {
   color: $white-text;
   transition: all 0.2s ease-in-out;
 }
+
+.page-footer__link-about--active {
+  color: $red;
+}
+
 
 /*============Подвал - середина================*/
 .page-footer__text-contacts {

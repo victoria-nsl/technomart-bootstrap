@@ -141,7 +141,7 @@
           <div class="row">
             <div class="col-12 justify-content-md-center">
               <ul class="page-header__list-navigation-site">
-                <li class="page-header__item-navigation-site page-header__item-navigation-site--active">
+                <li class="page-header__item-navigation-site">
                   <a class="page-header__link-navigation-site page-header__link-navigation-site--active" data-link-menu>
                     Главная
                   </a>
@@ -454,7 +454,8 @@
                 <picture>
                   <!--1x: 123x40px  2x: 246x80px-->
                   <source type="image/webp" srcset="img/manufacturer-2.webp 1x, img/manufacturer-2@2x.webp 2x">
-                  <img class="img-fluid"  width="123" height="40" src="img/manufacturer-2.png" srcset="img/manufacturer-2@2x.png 2x" alt="Логотип компании Makita">
+                  <img class="img-fluid" width="123" height="40" src="img/manufacturer-2.png"
+                    srcset="img/manufacturer-2@2x.png 2x" alt="Логотип компании Makita">
                 </picture>
               </a>
             </div>
@@ -465,7 +466,8 @@
                 <picture>
                   <!--1x: 146x44px  2x: 292x88px-->
                   <source type="image/webp" srcset="img/manufacturer-3.webp 1x, img/manufacturer-3@2x.webp 2x">
-                  <img class="img-fluid" width="146" height="44" src="img/manufacturer-3.png"  srcset="img/manufacturer-3@2x.png 2x" alt="Логотип компании DeWalt">
+                  <img class="img-fluid" width="146" height="44" src="img/manufacturer-3.png"
+                    srcset="img/manufacturer-3@2x.png 2x" alt="Логотип компании DeWalt">
                 </picture>
               </a>
             </div>
@@ -476,7 +478,8 @@
                 <picture>
                   <!--1x: 200x75px  2x: 400x150px-->
                   <source type="image/webp" srcset="img/manufacturer-4.webp 1x, img/manufacturer-4@2x.webp 2x">
-                  <img class="img-fluid"  width="200" height="75" src="img/manufacturer-4.png"  srcset="img/manufacturer-4@2x.png 2x" alt="Логотип компании Интерскол">
+                  <img class="img-fluid" width="200" height="75" src="img/manufacturer-4.png"
+                    srcset="img/manufacturer-4@2x.png 2x" alt="Логотип компании Интерскол">
                 </picture>
               </a>
             </div>
@@ -487,7 +490,8 @@
                 <picture>
                   <!--1x: 169x31px  2x: 338x62px-->
                   <source type="image/webp" srcset="img/manufacturer-5.webp 1x, img/manufacturer-5@2x.webp 2x">
-                  <img class="img-fluid" width="169" height="31" src="img/manufacturer-5.png" srcset="img/manufacturer-5@2x.png 2x" alt="Логотип компании Hitachi">
+                  <img class="img-fluid" width="169" height="31" src="img/manufacturer-5.png"
+                    srcset="img/manufacturer-5@2x.png 2x" alt="Логотип компании Hitachi">
                 </picture>
               </a>
             </div>
@@ -498,7 +502,8 @@
                 <picture>
                   <!--1x: 153x60px  2x: 206x120px-->
                   <source type="image/webp" srcset="img/manufacturer-8.webp 1x, img/manufacturer-8@2x.webp 2x">
-                  <img class="img-fluid"  width="153" height="60" src="img/manufacturer-6.png" srcset="img/manufacturer-7@2x.png 2x" alt="Логотип компании Bort">
+                  <img class="img-fluid" width="153" height="60" src="img/manufacturer-6.png"
+                    srcset="img/manufacturer-7@2x.png 2x" alt="Логотип компании Bort">
                 </picture>
               </a>
             </div>
@@ -509,7 +514,8 @@
                 <picture>
                   <!--1x: 151x98px  2x: 302x96px-->
                   <source type="image/webp" srcset="img/manufacturer-7.webp 1x, img/manufacturer-7@2x.webp 2x">
-                  <img class="img-fluid" width="151" height="98" src="img/manufacturer-7.png" srcset="img/manufacturer-7@2x.png 2x" alt="Логотип компании AEG">
+                  <img class="img-fluid" width="151" height="98" src="img/manufacturer-7.png"
+                    srcset="img/manufacturer-7@2x.png 2x" alt="Логотип компании AEG">
                 </picture>
               </a>
             </div>
@@ -632,7 +638,7 @@
                       title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
                     </iframe>
                     <button class="contacts__button-close-popup" type="button"
-                  aria-label="Открыть/закрыть модальное окно"></button>
+                      aria-label="Открыть/закрыть модальное окно"></button>
                   </div>
                 </div>
 
@@ -640,8 +646,8 @@
                   <picture>
                     <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
                     <!--1x: 300x158px  2x: 600x316px-->
-                    <img class="img-fluid" width="300" height="158" src="img/map.png"
-                      srcset="img/map.png 2x" alt="Карта г. Санкт-Петербург с указанием офиса компании">
+                    <img class="img-fluid" width="300" height="158" src="img/map.png" srcset="img/map.png 2x"
+                      alt="Карта г. Санкт-Петербург с указанием офиса компании">
                   </picture>
                 </button>
                 <a class="contacts__link btn btn-danger" href="#">
@@ -802,6 +808,32 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal-lost">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="modal-lost__form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="modal-lost__wrapper-user">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия" />
+        </p>
+        <p>
+          <label for="user-email">Ваш email:</label>
+          <input id="user-email" type="email" name="email" placeholder="email@example.com" />
+        </p>
+        <p>
+          <label for="letter-text">Текст письма:</label>
+          <textarea id="letter-text" name="letter" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
+      <div class="modal-lost__wrapper-button">
+        <button class="modal-lost__button-submit btn btn-danger" type="submit" aria-label="Отправить письмо компании Техномаркет">
+          Отправить
+        </button>
+      </div>
+      <button class="modal-lost__button-close" type="button" aria-label="Закрыть"></button>
+    </form>
+  </section>
   <script type="module" src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>

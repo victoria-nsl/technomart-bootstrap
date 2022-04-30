@@ -1,0 +1,148 @@
+.modal-lost {
+  display: none;
+}
+
+.modal-lost--opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  display: block;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: rgba($black, 0.7);
+}
+
+.modal-lost__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 620px;
+  box-sizing: border-box;
+
+  border-top: 7px solid $red;
+}
+
+.modal-lost__wrapper-user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 46px 80px 37px;
+  background-color: $white;
+}
+
+.modal-lost__wrapper-user p {
+  display: flex;
+  flex-direction: column;
+  width: 47.8%;
+  margin-bottom: 13px;
+}
+
+.modal-lost__wrapper-user p:last-child {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.modal-lost__wrapper-user label {
+  margin-bottom: 11px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+}
+
+.modal-lost__wrapper-user input,
+.modal-lost__wrapper-user textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: $grey-text;
+
+  border: 2px solid $grey-dark-svg;
+  border-radius: 2px;
+
+  &--placeholder {
+    color: rgba($grey-text, 0.7);
+  }
+}
+
+.modal-lost__wrapper-user textarea {
+  min-height: 114px;
+  resize: none;
+}
+
+.modal-lost__wrapper-button {
+  padding: 37px 80px;
+
+  background-color: $azure-background;
+}
+
+.modal-lost__button-submit {
+  display: block;
+  width: 100%;
+
+  padding: 11px 0 9px;
+  box-sizing: border-box;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+//кнопка закрыть попап с поиском по сайту
+.modal-lost__button-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  border: none;
+  background-color: transparent;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-lost__button-close::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    width: 29px;
+    height: 2px;
+    background-color: $red;
+  }
+}
+
+.modal-lost__button-close::before {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(-45deg);
+
+    width: 29px;
+    height: 2px;
+
+    background-color: $red;
+  }
+}

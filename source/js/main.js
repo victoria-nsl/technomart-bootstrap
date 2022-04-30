@@ -3,3 +3,4 @@ import './modules/navigation.js';
 import './modules/tab.js';
 import './modules/search.js';
 import './modules/map.js';
+import './modules/modal-lost.js';

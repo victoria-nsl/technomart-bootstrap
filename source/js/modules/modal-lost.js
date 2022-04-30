@@ -1,19 +1,20 @@
 import { isEscEvent, setFocusTab } from './utils.js';
 
 const page = document.body;
-const modal = document.querySelector('.contacts__modal');
+const modal = document.querySelector('.modal-lost');
+
 
 /*============Закрытие модального окна===============*/
 const closeModal = () => {
-  modal.classList.remove('contacts__modal--opened');
+  modal.classList.remove('modal-lost--opened');
   page.classList.remove('page--no-scroll');
 };
 
 if (modal) {
-  const buttonOpenPopup = document.querySelector('.contacts__map-button');
-  const buttonClosePopup = modal.querySelector('.contacts__button-close-popup');
+  const buttonOpenPopup = document.querySelector('.contacts__link');
+  const buttonClosePopup = modal.querySelector('.modal-lost__button-close');
 
-  const elementsPopupFocusable = modal.querySelectorAll('iframe, button');
+  const elementsPopupFocusable = modal.querySelectorAll('input, textarea, button');
   const firstElementPopupFocusable = elementsPopupFocusable[0];
   const lastElementPopupFocusable = elementsPopupFocusable[[elementsPopupFocusable.length - 1]];
 
@@ -26,7 +27,7 @@ if (modal) {
   };
 
   const onPopupClick = (evt) => {
-    if (evt.target.matches('.contacts__modal')) {
+    if (evt.target.matches('.modal-lost')) {
       closeModal();
     }
   };
@@ -36,7 +37,7 @@ if (modal) {
   };
 
   const openPopup = () => {
-    modal.classList.add('contacts__modal--opened');
+    modal.classList.add('modal-lost--opened');
     page.classList.add('page--no-scroll');
     firstElementPopupFocusable.focus();
 

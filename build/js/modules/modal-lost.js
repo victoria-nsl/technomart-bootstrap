@@ -1,33 +1,33 @@
-import {isEscEvent, setFocusTab} from './utils.js';
+import { isEscEvent, setFocusTab } from './utils.js';
 
 const page = document.body;
-const modal = document.querySelector('.contacts__modal');
+const modal = document.querySelector('.modal-lost');
+
 
 /*============Закрытие модального окна===============*/
 const closeModal = () => {
-  modal.classList.remove('contacts__modal--opened');
-  page.classList.remove('page-body--no-scroll');
+  modal.classList.remove('modal-lost--opened');
+  page.classList.remove('page--no-scroll');
 };
 
 if (modal) {
-  const buttonOpenPopup = document.querySelector('.contacts__map-button');
-  const buttonClosePopup = modal.querySelector('.contacts__button-close-popup');
+  const buttonOpenPopup = document.querySelector('.contacts__link');
+  const buttonClosePopup = modal.querySelector('.modal-lost__button-close');
 
-  const elementsPopupFocusable = modal.querySelectorAll('iframe');
+  const elementsPopupFocusable = modal.querySelectorAll('input, textarea, button');
   const firstElementPopupFocusable = elementsPopupFocusable[0];
-  const lastElementPopupFocusable = elementsPopupFocusable[[elementsPopupFocusable.length-1]];
+  const lastElementPopupFocusable = elementsPopupFocusable[[elementsPopupFocusable.length - 1]];
 
   /*=========Открытие модального окна и обработчики при открытом окне===========*/
-
   const onDocumentKeydown = (evt) => {
-    if(isEscEvent(evt)) {
+    if (isEscEvent(evt)) {
       closeModal();
       document.removeEventListener('keydown', onDocumentKeydown);
     }
   };
 
   const onPopupClick = (evt) => {
-    if (evt.target.matches('section'))  {
+    if (evt.target.matches('.modal-lost')) {
       closeModal();
     }
   };
@@ -37,11 +37,12 @@ if (modal) {
   };
 
   const openPopup = () => {
-    modal.classList.add('modal-request--opened');
-    page.classList.add('page-body--no-scroll');
+    modal.classList.add('modal-lost--opened');
+    page.classList.add('page--no-scroll');
     firstElementPopupFocusable.focus();
 
     document.addEventListener('keydown', onDocumentKeydown);
+
     modal.addEventListener('click', onPopupClick);
     firstElementPopupFocusable.addEventListener('keydown', onElementFocusableKeydown);
     lastElementPopupFocusable.addEventListener('keydown', onElementFocusableKeydown);
@@ -49,7 +50,7 @@ if (modal) {
 
   /*====================Обработчики для открытия/закрытия окна=================*/
 
-  const  onButtonClosePopupClick = () => {
+  const onButtonClosePopupClick = () => {
     closeModal();
   };
 
@@ -58,6 +59,6 @@ if (modal) {
     openPopup();
   };
 
-  buttonClosePopup .addEventListener('click', onButtonClosePopupClick);
+  buttonClosePopup.addEventListener('click', onButtonClosePopupClick);
   buttonOpenPopup.addEventListener('click', onButtonOpenPopupClick);
 }

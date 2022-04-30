@@ -657,10 +657,6 @@
   }
 }
 
-.page-header__item-navigation-site--active {
-  border-bottom: 2px solid $red;
-}
-
 .page-header__link-navigation-site {
   font-weight: 400;
   font-size: 18px;
@@ -673,6 +669,11 @@
   @media (min-width: $desktop-width) {
     text-transform: capitalize;
   }
+}
+
+
+.page-header__link-navigation-site--active {
+  color: $red;
 }
 
 /*=============СТАЙЛГАЙД============*/
