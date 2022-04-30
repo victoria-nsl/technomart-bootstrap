@@ -1,30 +1,22 @@
 import { isEscEvent, setFocusTab } from './utils.js';
 
 const page = document.body;
-const modalLost = document.querySelector('.modal-lost');
-const modalMap = document.querySelector('.modal-map');
-const modalSearch = document.querySelector('.modal-search');
+const popupLost = document.querySelector('.popup-lost');
+const popupMap = document.querySelector('.popup-map');
+const formSearch = document.querySelector('.page-header__form');
 
 /*============Закрытие попапа===============*/
-const closePopup = (modal) => {
-  modal.classList.remove('modal--opened');
+const closePopup = (popup) => {
+  popup.classList.remove('popup--opened');
   page.classList.remove('page--no-scroll');
 };
 
-/*=========Открытие попапа и обработчик клика на попапе===========*/
-const onPopupClick = (evt) => {
-  if (evt.target.matches('.modal')) {
-    closePopup(evt.target);
-  }
-};
+/*=========Открытие попапа===========*/
 
-const openPopup = (modal, firstElementPopupFocusable, lastElementPopupFocusable) => {
-  modal.classList.add('modal--opened');
+const openPopup = (popup, firstElementPopupFocusable, lastElementPopupFocusable) => {
+  popup.classList.add('popup--opened');
   page.classList.add('page--no-scroll');
   firstElementPopupFocusable.focus();
-
-  modal.addEventListener('click', onPopupClick);
-
   firstElementPopupFocusable.addEventListener('keydown', (evt) => {
     setFocusTab(evt, firstElementPopupFocusable, lastElementPopupFocusable);
   });
@@ -33,101 +25,112 @@ const openPopup = (modal, firstElementPopupFocusable, lastElementPopupFocusable)
   });
 };
 
+/*========= Oбработчик клика на попапе===========*/
+const onPopupClick = (evt) => {
+  if (evt.target.matches('.popup')) {
+    closePopup(evt.target);
+  }
+};
+
 
 /*============МОДАЛЬНОЕ ОКНО "ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ"===============*/
-if (modalLost) {
+if (popupLost) {
   const buttonOpenPopupLost = document.querySelector('.contacts__link');
-  const buttonClosePopupLost = modalLost.querySelector('.modal__button-close');
+  const buttonClosePopupLost = popupLost.querySelector('.popup__button-close');
 
-  const elementsPopupLostFocusable = modalLost.querySelectorAll('input, textarea, button');
+  const elementsPopupLostFocusable = popupLost.querySelectorAll('input, textarea, button');
   const firstElementPopupLostFocusable = elementsPopupLostFocusable[0];
   const lastElementPopupLostFocusable = elementsPopupLostFocusable[[elementsPopupLostFocusable.length - 1]];
 
   const onDocumentKeydown = (evt) => {
     if (isEscEvent(evt)) {
-      closePopup(modalLost);
+      closePopup(popupLost);
       document.removeEventListener('keydown', onDocumentKeydown);
     }
   };
 
   const onButtonClosePopupLostClick = () => {
-    closePopup(modalLost);
+    closePopup(popupLost);
   };
 
   const onButtonOpenPopupLostClick = (evt) => {
     evt.preventDefault();
-    openPopup(modalLost, firstElementPopupLostFocusable, lastElementPopupLostFocusable);
+    openPopup(popupLost, firstElementPopupLostFocusable, lastElementPopupLostFocusable);
     document.addEventListener('keydown', onDocumentKeydown);
+    popupLost.addEventListener('click', onPopupClick);
   };
 
   buttonClosePopupLost.addEventListener('click', onButtonClosePopupLostClick);
   buttonOpenPopupLost.addEventListener('click', onButtonOpenPopupLostClick);
-
 }
 /*============МОДАЛЬНОЕ ОКНО С КАРТОЙ===============*/
-if (modalMap) {
+if (popupMap) {
   const buttonOpenPopupMap = document.querySelector('.contacts__map-button');
-  const buttonClosePopupMap = modalMap.querySelector('.modal__button-close');
+  const buttonClosePopupMap = popupMap.querySelector('.popup__button-close');
 
-  const elementsPopupMapFocusable = modalMap.querySelectorAll('iframe, button');
+
+  const elementsPopupMapFocusable = popupMap.querySelectorAll('iframe, button');
   const firstElementPopupMapFocusable = elementsPopupMapFocusable[0];
   const lastElementPopupMapFocusable = elementsPopupMapFocusable[[elementsPopupMapFocusable.length - 1]];
 
   /*=========Открытие модального окна и обработчики при открытом окне===========*/
   const onDocumentKeydown = (evt) => {
     if (isEscEvent(evt)) {
-      closePopup(modalMap);
+      closePopup(popupMap);
       document.removeEventListener('keydown', onDocumentKeydown);
     }
   };
 
-  const onButtonClosePopupClick = () => {
-    closePopup(modalMap);
+  const onButtonClosePopupMapClick = () => {
+    closePopup(popupMap);
   };
 
-  const onButtonOpenPopupClick = (evt) => {
+  const onButtonOpenPopupMapClick = (evt) => {
     evt.preventDefault();
-    openPopup(modalMap, firstElementPopupMapFocusable, lastElementPopupMapFocusable);
+    openPopup(popupMap, firstElementPopupMapFocusable, lastElementPopupMapFocusable);
     document.addEventListener('keydown', onDocumentKeydown);
+    popupMap.addEventListener('click', onPopupClick);
   };
 
-  buttonClosePopupMap.addEventListener('click', onButtonClosePopupClick);
-  buttonOpenPopupMap.addEventListener('click', onButtonOpenPopupClick);
+  buttonClosePopupMap.addEventListener('click', onButtonClosePopupMapClick);
+  buttonOpenPopupMap.addEventListener('click', onButtonOpenPopupMapClick);
 }
 
 /*============МОДАЛЬНОЕ ОКНО С ПОИСКОМ===============*/
+if(formSearch) {
+  const buttonOpenPopupSearch = formSearch.querySelector('.page-header__button-search');
 
-if(modalSearch) {
-  const buttonOpenPopupSearch = document.querySelector('.page-header__button-search');
-  const buttonSubmitRequest = modalSearch.querySelector('.page-header__button-submit');
-  const buttonClosePopupSearch = modalSearch.querySelector('.modal__button-close');
+  const popupSearch = formSearch.querySelector('.popup-search');
+  const buttonClosePopupSearch =  popupSearch.querySelector('.popup__button-close');
+  const buttonSubmitRequest =  popupSearch.querySelector('.page-header__button-submit');
 
 
-  const elementsPopupSearchFocusable = modalSearch.querySelectorAll('input, button');
+  const elementsPopupSearchFocusable = popupSearch.querySelectorAll('input, button');
   const firstElementPopupSearchFocusable = elementsPopupSearchFocusable[0];
   const lastElementPopupSearchFocusable = elementsPopupSearchFocusable[[elementsPopupSearchFocusable.length-1]];
 
+
   const onDocumentKeydown = (evt) => {
     if(isEscEvent(evt)) {
-      closePopup(modalSearch);
+      closePopup(popupSearch);
       document.removeEventListener('keydown', onDocumentKeydown);
     }
   };
 
-  const onButtonClosePopupSearchClick = () => {
-    closePopup(modalSearch);
+  const onButtonClosePopupSearchClick= () => {
+    closePopup(popupSearch);
   };
 
   const onButtonSubmitRequestClick = () => {
-    closePopup(modalSearch);
+    closePopup(popupSearch);
   };
 
-  const onButtonPopupSearchClick = () => {
-    openPopup(modalSearch,firstElementPopupSearchFocusable, lastElementPopupSearchFocusable);
+  const onButtonOpenPopupSearchClick = () => {
+    openPopup(popupSearch, firstElementPopupSearchFocusable, lastElementPopupSearchFocusable);
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
-  buttonOpenPopupSearch.addEventListener('click', onButtonPopupSearchClick);
+  buttonOpenPopupSearch.addEventListener('click', onButtonOpenPopupSearchClick);
   buttonSubmitRequest.addEventListener('click', onButtonSubmitRequestClick);
-  buttonClosePopupSearch .addEventListener('click', onButtonClosePopupSearchClick);
+  buttonClosePopupSearch.addEventListener('click', onButtonClosePopupSearchClick);
 }

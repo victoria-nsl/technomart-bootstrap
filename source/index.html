@@ -37,11 +37,11 @@
           <div class="row justify-content-md-between">
             <div class="col-xl-6 col-md-7">
               <form class="page-header__form" method="get" action="https://echo.htmlacademy.ru">
-                <div class="page-header__popup">
-                  <button class="page-header__button-close-popup" type="button"
-                    aria-label="Открыть/закрыть модальное окно">
+                <div class="popup popup-search">
+                  <button class="popup__button-close popup__button-close--search" type="button"
+                    aria-label="Закрыть модальное окно">
                   </button>
-                  <div class="page-header__wrapper-input">
+                  <div class="page-header__wrapper-input popup-search__wrapper-input">
                     <label class="visually-hidden" for="search">Поиск по сайту</label>
                     <input id="search" type="search" name="text" autocomplete="off" placeholder="Искать..." required
                       data-link-menu>
@@ -796,23 +796,22 @@
     </div>
   </footer>
 
-  <section class="modal modal-map">
+  <section class="popup popup-map">
     <h2 class="visually-hidden">Интерактивная карта с г. Санкт-Петербург</h2>
-    <div class="modal-map__wrapper-iframe">
+    <div class="popup-map__wrapper-iframe">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412406!2d30.320894616211245!3d59.938796869047785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1650535608761!5m2!1sru!2sru"
         height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
         title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
       </iframe>
-      <button class="modal__button-close" type="button"
-        aria-label="Открыть/закрыть модальное окно"></button>
+      <button class="popup__button-close" type="button" aria-label="Закрыть модальное окно"></button>
     </div>
   </section>
 
-  <section class="modal modal-lost">
+  <section class="popup popup-lost">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="modal-lost__form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="modal-lost__wrapper-user">
+    <form class="popup-lost__form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="popup-lost__wrapper-user">
         <p>
           <label for="user-name">Ваше имя:</label>
           <input id="user-name" type="text" name="name" placeholder="Имя Фамилия" />
@@ -826,12 +825,13 @@
           <textarea id="letter-text" name="letter" placeholder="В свободной форме"></textarea>
         </p>
       </div>
-      <div class="modal-lost__wrapper-button">
-        <button class="modal-lost__button-submit btn btn-danger" type="submit" aria-label="Отправить письмо компании Техномаркет">
+      <div class="popup-lost__wrapper-button">
+        <button class="popup-lost__button-submit btn btn-danger" type="submit"
+          aria-label="Отправить письмо компании Техномаркет">
           Отправить
         </button>
       </div>
-      <button class="modal__button-close" type="button" aria-label="Закрыть"></button>
+      <button class="popup__button-close" type="button" aria-label="Закрыть модальное окно"></button>
     </form>
   </section>
   <script type="module" src="js/vendor.js"></script>

@@ -190,33 +190,6 @@
   }
 }
 
-//попап c поиском по сайту
-.page-header__popup {
-  @media (min-width: $tablet-width) {
-    position: relative;
-
-    display: none;
-  }
-}
-
-.page-header__popup--opened {
-  @media (min-width: $tablet-width) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-
-    display: block;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    background-color: rgba($black, 0.7);
-  }
-}
-
 //Кнопка - открыть поиск
 .page-header__button-search {
   display: none;
@@ -310,20 +283,8 @@
 }
 
 // поле поиска -input
-.page-header__wrapper-input {
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 60%;
-  }
-}
-
 .page-header__wrapper-input input {
+  display: block;
   width: 100%;
   padding: 8px 40px 8px 10px;
   box-sizing: border-box;
