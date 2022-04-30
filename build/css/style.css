@@ -7814,80 +7814,6 @@ img {
   line-height: 24px;
   color: #000000; }
 
-.contacts__modal {
-  position: relative;
-  display: none; }
-
-.contacts__modal--opened {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  display: block;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.7); }
-
-.contacts__wrapper-iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 78.5%;
-  padding-top: 80%; }
-  @media (min-width: 768px) {
-    .contacts__wrapper-iframe {
-      padding-top: 55%; } }
-  @media (min-width: 1200px) {
-    .contacts__wrapper-iframe {
-      width: 943px;
-      padding-top: 449px; } }
-
-.contacts__wrapper-iframe iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
-.contacts__button-close-popup {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: block;
-  width: 21px;
-  height: 21px;
-  border: none;
-  background-color: transparent;
-  transition: all 0.2s ease-in-out; }
-
-@media (min-width: 768px) {
-  .contacts__button-close-popup::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 29px;
-    height: 2px;
-    background-color: #db1421; } }
-
-@media (min-width: 768px) {
-  .contacts__button-close-popup::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%) rotate(-45deg);
-    width: 29px;
-    height: 2px;
-    background-color: #db1421; } }
-
 .contacts__map-button {
   position: relative;
   display: block;
@@ -8221,10 +8147,10 @@ img {
 .page-footer__link-social:active {
   opacity: 0.5; }
 
-.modal-lost {
+.modal {
   display: none; }
 
-.modal-lost--opened {
+.modal--opened {
   position: fixed;
   top: 0;
   left: 0;
@@ -8236,6 +8162,39 @@ img {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.7); }
+
+.modal__button-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out; }
+
+@media (min-width: 768px) {
+  .modal__button-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 29px;
+    height: 2px;
+    background-color: #db1421; } }
+
+@media (min-width: 768px) {
+  .modal__button-close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(-45deg);
+    width: 29px;
+    height: 2px;
+    background-color: #db1421; } }
 
 .modal-lost__form {
   position: absolute;
@@ -8288,13 +8247,6 @@ img {
   min-height: 114px;
   resize: none; }
 
-.modal-lost__wrapper-user label {
-  margin-bottom: 11px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000; }
-
 .modal-lost__wrapper-button {
   padding: 37px 80px;
   background-color: #f3f7f9; }
@@ -8310,35 +8262,26 @@ img {
   text-transform: uppercase;
   border-radius: 0; }
 
-.modal-lost__button-close {
+.modal-map__wrapper-iframe {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 78.5%;
+  padding-top: 80%; }
+  @media (min-width: 768px) {
+    .modal-map__wrapper-iframe {
+      padding-top: 55%; } }
+  @media (min-width: 1200px) {
+    .modal-map__wrapper-iframe {
+      width: 943px;
+      padding-top: 449px; } }
+
+.modal-map__wrapper-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
-  width: 21px;
-  height: 21px;
-  border: none;
-  background-color: transparent;
-  transition: all 0.2s ease-in-out; }
-
-@media (min-width: 768px) {
-  .modal-lost__button-close::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 29px;
-    height: 2px;
-    background-color: #db1421; } }
-
-@media (min-width: 768px) {
-  .modal-lost__button-close::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%) rotate(-45deg);
-    width: 29px;
-    height: 2px;
-    background-color: #db1421; } }
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }

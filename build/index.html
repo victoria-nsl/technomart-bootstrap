@@ -607,15 +607,6 @@
                 </p>
               </div>
               <div class="contacts__wrapper-map">
-                <div class="contacts__modal">
-
-                  <div class="contacts__wrapper-iframe">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412406!2d30.320894616211245!3d59.938796869047785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1650535608761!5m2!1sru!2sru" height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
-                    </iframe>
-                    <button class="contacts__button-close-popup" type="button" aria-label="Открыть/закрыть модальное окно"></button>
-                  </div>
-                </div>
-
                 <button class="contacts__map-button" type="button">
                   <picture>
                     <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
@@ -777,7 +768,16 @@
     </div>
   </footer>
 
-  <section class="modal-lost">
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Интерактивная карта с г. Санкт-Петербург</h2>
+    <div class="modal-map__wrapper-iframe">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412406!2d30.320894616211245!3d59.938796869047785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1650535608761!5m2!1sru!2sru" height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
+      </iframe>
+      <button class="modal__button-close" type="button" aria-label="Открыть/закрыть модальное окно"></button>
+    </div>
+  </section>
+
+  <section class="modal modal-lost">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="modal-lost__form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="modal-lost__wrapper-user">
@@ -799,7 +799,7 @@
           Отправить
         </button>
       </div>
-      <button class="modal-lost__button-close" type="button" aria-label="Закрыть"></button>
+      <button class="modal__button-close" type="button" aria-label="Закрыть"></button>
     </form>
   </section>
   <script type="module" src="js/vendor.js"></script>
