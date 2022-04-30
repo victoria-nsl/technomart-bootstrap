@@ -6600,12 +6600,12 @@ img {
       padding: 9px 0 9px 240px; } }
 
 @media (min-width: 768px) {
-  .page-header__wrapper-popup {
+  .page-header__popup {
     position: relative;
     display: none; } }
 
 @media (min-width: 768px) {
-  .page-header__wrapper-popup--active {
+  .page-header__popup--opened {
     position: fixed;
     top: 0;
     left: 0;

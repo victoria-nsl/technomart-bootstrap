@@ -191,7 +191,7 @@
 }
 
 //попап c поиском по сайту
-.page-header__wrapper-popup {
+.page-header__popup {
   @media (min-width: $tablet-width) {
     position: relative;
 
@@ -199,7 +199,7 @@
   }
 }
 
-.page-header__wrapper-popup--active {
+.page-header__popup--opened {
   @media (min-width: $tablet-width) {
     position: fixed;
     top: 0;

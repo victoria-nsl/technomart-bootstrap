@@ -4,18 +4,19 @@ const formSearch = document.querySelector('.page-header__form');
 const page = document.body;
 
 if(formSearch) {
-  const buttonOpenInput = formSearch.querySelector('.page-header__button-search');
-  const buttonSubmitRequest = formSearch.querySelector('.page-header__button-submit');
-  const buttonCloseInput = formSearch.querySelector('.page-header__button-close-popup');
-  const popupInput = formSearch.querySelector('.page-header__wrapper-popup');
+  const buttonOpenPopupInput = formSearch.querySelector('.page-header__button-search');
 
-  const elementsPopupFocusable = popupInput.querySelectorAll('input, button');
-  const firstElementPopupFocusable = elementsPopupFocusable[0];
-  const lastElementPopupFocusable = elementsPopupFocusable[[elementsPopupFocusable.length-1]];
+  const popupInput = formSearch.querySelector('.page-header__popup');
+  const buttonSubmitRequest =  popupInput.querySelector('.page-header__button-submit');
+  const buttonClosePopupInput =  popupInput.querySelector('.page-header__button-close-popup');
+
+  const elementsPopupInputFocusable = popupInput.querySelectorAll('input, button');
+  const firstElementPopupInputFocusable = elementsPopupInputFocusable[0];
+  const lastElementPopupInputFocusable = elementsPopupInputFocusable[[elementsPopupInputFocusable.length-1]];
 
   const closePopupInput = () => {
     page.classList.remove('page--no-scroll');
-    popupInput.classList.remove('page-header__wrapper-popup--active');
+    popupInput.classList.remove('page-header__popup--opened');
   };
 
   const onDocumentKeydown = (evt) => {
@@ -26,33 +27,33 @@ if(formSearch) {
   };
 
   const onElementFocusableKeydown = (evt) => {
-    setFocusTab(evt, firstElementPopupFocusable, lastElementPopupFocusable);
+    setFocusTab(evt, firstElementPopupInputFocusable, lastElementPopupInputFocusable);
   };
 
   const openPopupInput = () => {
     page.classList.add('page--no-scroll');
-    popupInput.classList.add('page-header__wrapper-popup--active');
+    popupInput.classList.add('page-header__popup--opened');
 
-    firstElementPopupFocusable.focus();
-    firstElementPopupFocusable.addEventListener('keydown', onElementFocusableKeydown);
-    lastElementPopupFocusable.addEventListener('keydown', onElementFocusableKeydown);
+    firstElementPopupInputFocusable.focus();
+    firstElementPopupInputFocusable.addEventListener('keydown', onElementFocusableKeydown);
+    lastElementPopupInputFocusable.addEventListener('keydown', onElementFocusableKeydown);
 
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
-  const onButtonCloseInput = () => {
+  const onButtonClosePopupInputClick= () => {
     closePopupInput();
   };
 
-  const onButtonSubmitRequest = () => {
+  const onButtonSubmitRequestClick = () => {
     closePopupInput();
   };
 
-  const onButtonOpenInputClick = () => {
+  const onButtonOpenPopupInputClick = () => {
     openPopupInput();
   };
 
-  buttonOpenInput.addEventListener('click', onButtonOpenInputClick);
-  buttonSubmitRequest.addEventListener('click', onButtonSubmitRequest);
-  buttonCloseInput.addEventListener('click', onButtonCloseInput);
+  buttonOpenPopupInput.addEventListener('click', onButtonOpenPopupInputClick);
+  buttonSubmitRequest.addEventListener('click', onButtonSubmitRequestClick);
+  buttonClosePopupInput.addEventListener('click', onButtonClosePopupInputClick);
 }
