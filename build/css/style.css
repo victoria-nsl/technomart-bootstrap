@@ -6453,6 +6453,24 @@ img {
   height: 100vh;
   overflow: hidden; }
 
+.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #ffffff;
+  cursor: pointer; }
+
+.button-red {
+  padding: 11px 9px 9px 9px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0;
+  background-color: #dc3545;
+  border-color: #dc3545; }
+
 .page-header {
   position: relative;
   padding-top: 50px;
@@ -6749,7 +6767,6 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
   background-color: #63a63e;
   border-radius: 0;
   transition: all 0.2s ease-in-out; }
@@ -6800,6 +6817,7 @@ img {
   margin-bottom: 10px;
   box-sizing: border-box;
   border: 3px solid #ffffff;
+  background-color: transparent;
   border-radius: 0; }
   @media (min-width: 768px) {
     .page-header__link-tel {
@@ -7097,13 +7115,7 @@ img {
   color: #ffffff; }
 
 .about__button-carousel {
-  width: 192px;
-  padding: 9px 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0; }
+  width: 192px; }
 
 .about__item {
   margin-bottom: 20px; }
@@ -7217,13 +7229,7 @@ img {
       text-align: start; } }
 
 .products__link {
-  width: 192px;
-  padding: 11px 0 9px 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0; }
+  width: 192px; }
 
 .products__item {
   position: relative;
@@ -7410,12 +7416,7 @@ img {
       text-align: start; } }
 
 .manufacturer__link-header {
-  width: 192px;
-  padding: 11px 0 9px 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase; }
+  width: 192px; }
 
 .manufacturer__item {
   position: relative;
@@ -7739,13 +7740,7 @@ img {
 
 .logistics__link {
   display: block;
-  width: 100%;
-  padding: 11px 0 9px 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0; }
+  width: 100%; }
   @media (min-width: 768px) {
     .logistics__link {
       width: 220px;
@@ -7806,13 +7801,7 @@ img {
 
 .contacts__link {
   display: block;
-  width: 100%;
-  padding: 11px 0 9px 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0; }
+  width: 100%; }
   @media (min-width: 768px) {
     .contacts__link {
       width: 220px;
@@ -8191,14 +8180,7 @@ img {
 
 .popup-lost__button-submit {
   display: block;
-  width: 100%;
-  padding: 11px 0 9px;
-  box-sizing: border-box;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0; }
+  width: 100%; }
 
 .popup-map {
   display: none; }

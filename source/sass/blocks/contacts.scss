@@ -59,13 +59,6 @@
 .contacts__link {
   display: block;
   width: 100%;
-  padding: 11px 0 9px 0;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  border-radius: 0;
 
   @media (min-width: $tablet-width) {
     width: 220px;
