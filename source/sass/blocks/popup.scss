@@ -67,7 +67,7 @@
   color: $grey-text;
 
   border: 2px solid $grey-dark-svg;
-  border-radius: 2px;
+  border-radius: 0;
 
   &--placeholder {
     color: rgba($grey-text, 0.7);
@@ -387,7 +387,9 @@
 
 //focus
 .popup-cart__button-continue:focus-visible,
-.popup__button-close:focus-visible {
+.popup__button-close:focus-visible,
+.popup-lost__wrapper-user input:focus-visible,
+.popup-lost__wrapper-user textarea:focus-visible {
   outline: 2px solid $green;
   outline-offset: 2px;
 }

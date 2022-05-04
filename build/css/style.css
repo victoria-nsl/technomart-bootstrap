@@ -4411,7 +4411,7 @@ img {
   line-height: 24px;
   color: #a9a9a9;
   border: 2px solid #c5c5c5;
-  border-radius: 2px; }
+  border-radius: 0; }
   .popup-lost__wrapper-user input--placeholder,
   .popup-lost__wrapper-user textarea--placeholder {
     color: rgba(169, 169, 169, 0.7); }
@@ -4691,7 +4691,9 @@ img {
   background-color: #f53708; }
 
 .popup-cart__button-continue:focus-visible,
-.popup__button-close:focus-visible {
+.popup__button-close:focus-visible,
+.popup-lost__wrapper-user input:focus-visible,
+.popup-lost__wrapper-user textarea:focus-visible {
   outline: 2px solid #1bc01e;
   outline-offset: 2px; }
 

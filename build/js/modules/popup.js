@@ -4,6 +4,7 @@ const page = document.body;
 const popupLost = document.querySelector('.popup-lost');
 const popupMap = document.querySelector('.popup-map');
 const formSearch = document.querySelector('.page-header__form');
+const popupCart = document.querySelector('.popup-cart');
 
 /*============Закрытие попапа===============*/
 const closePopup = (popup) => {
@@ -58,9 +59,9 @@ if (popupLost) {
     openPopup(popupLost, firstElementPopupLostFocusable, lastElementPopupLostFocusable);
     document.addEventListener('keydown', onDocumentKeydown);
     popupLost.addEventListener('click', onPopupClick);
+    buttonClosePopupLost.addEventListener('click', onButtonClosePopupLostClick);
   };
 
-  buttonClosePopupLost.addEventListener('click', onButtonClosePopupLostClick);
   buttonOpenPopupLost.addEventListener('click', onButtonOpenPopupLostClick);
 }
 /*============МОДАЛЬНОЕ ОКНО С КАРТОЙ===============*/
@@ -90,34 +91,34 @@ if (popupMap) {
     openPopup(popupMap, firstElementPopupMapFocusable, lastElementPopupMapFocusable);
     document.addEventListener('keydown', onDocumentKeydown);
     popupMap.addEventListener('click', onPopupClick);
+    buttonClosePopupMap.addEventListener('click', onButtonClosePopupMapClick);
   };
 
-  buttonClosePopupMap.addEventListener('click', onButtonClosePopupMapClick);
   buttonOpenPopupMap.addEventListener('click', onButtonOpenPopupMapClick);
 }
 
 /*============МОДАЛЬНОЕ ОКНО С ПОИСКОМ===============*/
-if(formSearch) {
+if (formSearch) {
   const buttonOpenPopupSearch = formSearch.querySelector('.page-header__button-search');
 
   const popupSearch = formSearch.querySelector('.popup-search');
-  const buttonClosePopupSearch =  popupSearch.querySelector('.popup__button-close');
-  const buttonSubmitRequest =  popupSearch.querySelector('.page-header__button-submit');
+  const buttonClosePopupSearch = popupSearch.querySelector('.popup__button-close');
+  const buttonSubmitRequest = popupSearch.querySelector('.page-header__button-submit');
 
 
   const elementsPopupSearchFocusable = popupSearch.querySelectorAll('input, button');
   const firstElementPopupSearchFocusable = elementsPopupSearchFocusable[0];
-  const lastElementPopupSearchFocusable = elementsPopupSearchFocusable[[elementsPopupSearchFocusable.length-1]];
+  const lastElementPopupSearchFocusable = elementsPopupSearchFocusable[[elementsPopupSearchFocusable.length - 1]];
 
 
   const onDocumentKeydown = (evt) => {
-    if(isEscEvent(evt)) {
+    if (isEscEvent(evt)) {
       closePopup(popupSearch);
       document.removeEventListener('keydown', onDocumentKeydown);
     }
   };
 
-  const onButtonClosePopupSearchClick= () => {
+  const onButtonClosePopupSearchClick = () => {
     closePopup(popupSearch);
   };
 
@@ -128,9 +129,42 @@ if(formSearch) {
   const onButtonOpenPopupSearchClick = () => {
     openPopup(popupSearch, firstElementPopupSearchFocusable, lastElementPopupSearchFocusable);
     document.addEventListener('keydown', onDocumentKeydown);
+    buttonSubmitRequest.addEventListener('click', onButtonSubmitRequestClick);
+    buttonClosePopupSearch.addEventListener('click', onButtonClosePopupSearchClick);
   };
 
   buttonOpenPopupSearch.addEventListener('click', onButtonOpenPopupSearchClick);
-  buttonSubmitRequest.addEventListener('click', onButtonSubmitRequestClick);
-  buttonClosePopupSearch.addEventListener('click', onButtonClosePopupSearchClick);
+}
+
+/*============МОДАЛЬНОЕ ОКНО С ТОВАР ДОБАВЛЕН В КОРЗИНУ===============*/
+if (popupCart) {
+  const listProducts = document.querySelector('.products__list');
+  const buttonClosePopupCart = popupCart.querySelector('.popup__button-close');
+
+  const elementsPopupCartFocusable = popupCart.querySelectorAll('a, button');
+  const firstElementPopupCartFocusable = elementsPopupCartFocusable[0];
+  const lastElementPopupCartFocusable = elementsPopupCartFocusable[[elementsPopupCartFocusable.length - 1]];
+
+  const onDocumentKeydown = (evt) => {
+    if (isEscEvent(evt)) {
+      closePopup(popupCart);
+      document.removeEventListener('keydown', onDocumentKeydown);
+    }
+  };
+
+  const onButtonClosePopupCartClick = () => {
+    closePopup(popupCart);
+  };
+
+  const onButtonOpenPopupCartClick = (evt) => {
+    if (evt.target.matches('.products__button-buy') || evt.target.matches('.products__button-buy svg') || evt.target.matches('.products__button-buy span')) {
+      evt.preventDefault();
+      openPopup(popupCart, firstElementPopupCartFocusable, lastElementPopupCartFocusable);
+      document.addEventListener('keydown', onDocumentKeydown);
+      popupCart.addEventListener('click', onPopupClick);
+      buttonClosePopupCart.addEventListener('click', onButtonClosePopupCartClick);
+    }
+  };
+
+  listProducts.addEventListener('click', onButtonOpenPopupCartClick);
 }
