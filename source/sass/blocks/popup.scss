@@ -82,7 +82,7 @@
 .popup-lost__wrapper-button {
   padding: 20px;
 
-  background-color: $azure-background;
+  background-color: $grey-border;
 
   @media (min-width: $tablet-width) {
     padding: 37px 80px;
@@ -141,8 +141,6 @@
 }
 
 .popup-search__wrapper-input {
-  position: static;
-
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 50%;
@@ -150,6 +148,125 @@
     transform: translate(-50%, -50%);
 
     width: 60%;
+  }
+}
+
+//МОДАЛЬНОЕ ОКНО ТОВАР ДОБАВЛЕН В КОРЗИНУ
+.popup-cart {
+  display: none;
+}
+
+.popup-cart__wrapper-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  width: 80%;
+  box-sizing: border-box;
+
+  border-top: 7px solid $red;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+  }
+}
+
+.popup-cart__wrapper-text {
+  padding: 120px 15px 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 67px;
+  }
+}
+
+.popup-cart__wrapper-text p {
+  position: relative;
+
+  width: 90%;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: $black;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 420px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.popup-cart__wrapper-text p::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 66px;
+  height: 66px;
+
+  background-color: $green-dark;
+  background-image: url("../img/back-icon-mark.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: center center;
+
+  @media (min-width: $tablet-width) {
+    top: 50%;
+    left: -10px;
+    transform: translate(0, -50%);
+  }
+}
+
+.popup-cart__wrapper-buttons {
+  padding: 37px;
+  background-color: $grey-border;
+  text-align: center;
+}
+
+.popup-cart__button-order {
+  @include button;
+  @include button-red;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 100%;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+    margin-bottom: 0;
+    margin-right: 4px;
+  }
+}
+
+.popup-cart__button-continue {
+  @include button;
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 11px 9px 9px 9px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0;
+
+  color: $black;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
   }
 }
 
@@ -254,4 +371,29 @@
 
     background-color: $white;
   }
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.popup-cart__button-continue:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.popup__button-close:hover::after,
+.popup__button-close:hover::before {
+  background-color: $yellow;
+}
+
+//focus
+.popup-cart__button-continue:focus-visible,
+.popup__button-close:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
+
+//active
+.popup-cart__button-continue:active,
+.popup__button-close:active {
+  opacity: 0.5;
 }

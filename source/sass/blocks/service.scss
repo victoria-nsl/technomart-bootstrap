@@ -95,7 +95,7 @@
   font-size: 21px;
   line-height: 30px;
   color: $white;
-  background-color: $blue-light;
+  background-color: $blue-text;
   box-shadow: inset 0 1px 0 $blue-shadow;
   border: none;
   transition: all 0.2s ease-in-out;
@@ -224,7 +224,7 @@
 /*=============СТАЙЛГАЙД============*/
 //hover
 .service__button:not(.service__button--active):hover {
-  color: $yellow;
+  background-color: $blue-dark;
 }
 
 //focus

@@ -53,12 +53,12 @@
                     </button>
                   </div>
                 </div>
-                <button class="page-header__button-search" type="button" aria-label="Открыть окно поиска">
+                <a class="page-header__button-search" href="#" aria-label="Открыть окно поиска">
                   <svg role="img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="img/sprite_auto.svg#icon-header-search"></use>
                   </svg>
                   <span>Поиск</span>
-                </button>
+                </a>
               </form>
             </div>
 
@@ -629,14 +629,14 @@
                 </p>
               </div>
               <div class="contacts__wrapper-map">
-                <button class="contacts__map-button" type="button">
+                <a class="contacts__map-button" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
                     <!--1x: 300x158px  2x: 600x316px-->
                     <img width="300" height="158" src="img/map.png" srcset="img/map.png 2x"
                       alt="Карта г. Санкт-Петербург с указанием офиса компании">
                   </picture>
-                </button>
+                </a>
                 <a class="contacts__link" href="#">
                   Заблудились? Напишите нам!
                 </a>
@@ -826,13 +826,30 @@
         </p>
       </div>
       <div class="popup-lost__wrapper-button">
-        <button class="popup-lost__button-submit button button-red" type="submit"
-          aria-label="Отправить письмо компании Техномаркет">
+        <button class="popup-lost__button-submit" type="submit" aria-label="Отправить письмо компании Техномаркет">
           Отправить
         </button>
       </div>
       <button class="popup__button-close" type="button" aria-label="Закрыть модальное окно"></button>
     </form>
+  </section>
+
+  <section class="popup popup-cart">
+    <h2 class="visually-hidden">Сообщение о добавлении в коризину</h2>
+    <div class="popup popup-cart__wrapper-message">
+      <div class="popup-cart__wrapper-text">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="popup-cart__wrapper-buttons">
+        <a class="popup-cart__button-order" href="#">
+          Оформить заказ
+        </a>
+        <a class="popup-cart__button-continue" href="#">
+          Продолжить покупки
+        </a>
+      </div>
+      <button class="popup__button-close" type="button" aria-label="Закрыть модальное окно"></button>
+    </div>
   </section>
   <script type="module" src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>

@@ -283,6 +283,10 @@
 }
 
 // поле поиска -input
+.page-header__wrapper-input {
+  position: relative;
+}
+
 .page-header__wrapper-input input {
   display: block;
   width: 100%;
@@ -336,7 +340,7 @@
 
   @media (min-width: $desktop-width) {
     justify-content: center;
-    padding: 9px 0;
+    padding: 0;
   }
 }
 
@@ -348,17 +352,26 @@
 
 .page-header__item-navigation-user--bookmark {
   @media (min-width: $desktop-width) {
-    margin-right: 50px;
+    margin-right: 40px;
   }
 }
 
 .page-header__link-navigation-user {
+  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: $white;
 
   transition: all 0.2s ease-in-out;
+
+  @media (min-width: $desktop-width) {
+    padding: 9px 5px;
+  }
+}
+
+.page-header__link-navigation-user--active {
+  background-color: $red;
 }
 
 .page-header__link-navigation-user svg {
@@ -378,6 +391,10 @@
     width: 18px;
     height: 16px;
   }
+}
+
+.page-header__link-navigation-user--active svg {
+  opacity: 1;
 }
 
 .page-header__link-navigation-user span:nth-child(2) {
@@ -598,36 +615,32 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    column-gap: 45px;
-    row-gap: 20px;
-
-    padding: 16px 53px 20px 53px;
+    padding: 2px 0;
+    column-gap: 5px;
+    row-gap: 5px;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 53px;
-    row-gap: 5px;
-    justify-content: space-between;
+    padding: 2px 29px;
   }
 }
 
 .page-header__item-navigation-site {
   width: 100%;
-  padding: 10px 0;
-
   text-align: center;
 
   box-shadow: inset 0 1px 0 $blue-shadow;
 
   @media (min-width: $tablet-width) {
     width: auto;
-    padding: 0;
-
     box-shadow: none;
   }
 }
 
 .page-header__link-navigation-site {
+  display: block;
+  padding: 10px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -636,22 +649,35 @@
 
   transition: all 0.2s ease-in-out;
 
+  @media (min-width: $tablet-width) {
+    padding: 15px 20px;
+  }
+
   @media (min-width: $desktop-width) {
+    padding: 14px 24px 18px 24px;
+
     text-transform: capitalize;
   }
 }
 
-
 .page-header__link-navigation-site--active {
-  color: $red;
+  background-color: $blue-light-active;
+  color: rgba($white, 0.8);
 }
 
 /*=============СТАЙЛГАЙД============*/
 //hover
-.page-header__link-navigation-site[href]:hover,
-.page-header__link-navigation-user:hover span,
 .page-header__button-search:hover span {
   color: $yellow;
+}
+
+.page-header__link-navigation-site[href]:hover,
+.page-header__link-navigation-user:hover {
+  background-color: $blue-shadow;
+}
+
+.page-header__link-navigation-user:hover svg {
+  opacity: 1;
 }
 
 .page-header__link-order:hover {
@@ -687,7 +713,6 @@
   background-color: $yellow;
 }
 
-.page-header__link-navigation-user:hover:hover svg,
 .page-header__button-search:hover:hover svg,
 .page-header__button-submit:hover svg {
   fill: $yellow;

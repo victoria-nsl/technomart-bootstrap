@@ -96,7 +96,7 @@
 }
 
 .page-footer__link-about--active {
-  color: $red;
+  border-bottom: 1px solid $white;
 }
 
 
@@ -332,12 +332,19 @@
 
 /*=============СТАЙЛГАЙД============*/
 //hover
-.page-footer__link-about[href]:hover,
+.page-footer__link-about[href]:hover {
+  border-bottom: 1px solid $white;
+}
+
+.page-footer__link-tel:hover {
+  color: $yellow-text;
+}
+
+
 .page-footer__link-products:hover,
 .page-footer__link-site:hover,
-.page-footer__link-email:hover,
-.page-footer__link-tel:hover {
-  color: $yellow;
+.page-footer__link-email:hover {
+  border-bottom: 1px solid $yellow-text;
 }
 
 .page-footer__link-social:hover {
