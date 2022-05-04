@@ -38,15 +38,10 @@
 }
 
 .service__header p {
+  @include font-pt-sans;
+
   width: 80%;
   margin: 0 auto;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
-  color: $black;
-  text-align: center;
 
   @media (min-width: $desktop-width) {
     width: 38%;
@@ -205,16 +200,11 @@
 }
 
 .service__item-tab p {
+  @include font-pt-sans;
+
   width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
-  color: $blue-text;
-  text-align: center;
 
   @media (min-width: $tablet-width) {
     width: 60%;

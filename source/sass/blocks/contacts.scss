@@ -20,15 +20,11 @@
 }
 
 .contacts__wrapper-text p {
+  @include font-pt-sans;
+
   width: 60%;
   margin: 0;
   margin-bottom: 32px;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
-  color: $black;
 }
 
 //Блок с картой

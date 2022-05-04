@@ -20,14 +20,10 @@
 }
 
 .logistics__wrapper-text p {
+  @include font-pt-sans;
+
   margin: 0;
   margin-bottom: 5px;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
-  color: $black;
 }
 
 .logistics__wrapper-text p:first-child {
