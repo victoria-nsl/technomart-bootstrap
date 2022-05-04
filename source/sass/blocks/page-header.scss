@@ -386,6 +386,8 @@
 
 //ОФОРМИТЬ ЗАКАЗ
 .page-header__link-order {
+  @include button;
+
   display: block;
   width: 100%;
   margin: 20px auto;
@@ -449,6 +451,8 @@
 
 //Контакты
 .page-header__link-tel {
+  @include button;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -521,6 +525,10 @@
 
 .page-header__link-login,
 .page-header__link-registration {
+  @include button;
+
+  display: inline-block;
+  vertical-align: middle;
   padding: 12px;
   background-size: border-box;
 

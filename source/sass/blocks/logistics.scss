@@ -72,6 +72,9 @@
 }
 
 .logistics__link {
+  @include button;
+  @include button-red;
+
   display: block;
   width: 100%;
 

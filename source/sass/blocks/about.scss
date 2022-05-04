@@ -94,6 +94,9 @@
 }
 
 .about__button-carousel {
+  @include button;
+  @include button-red;
+
   width: 192px;
 }
 

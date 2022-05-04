@@ -40,6 +40,9 @@
 }
 
 .manufacturer__link-header {
+  @include button;
+  @include button-red;
+
   width: 192px;
 }
 

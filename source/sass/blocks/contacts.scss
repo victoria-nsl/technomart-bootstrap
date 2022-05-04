@@ -57,6 +57,9 @@
 
 //Кнопка Заблудились? Напишите нам!
 .contacts__link {
+  @include button;
+  @include button-red;
+
   display: block;
   width: 100%;
 

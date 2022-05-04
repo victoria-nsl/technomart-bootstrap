@@ -1,6 +1,44 @@
+//Списки
 @mixin reset-style-list {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
+//Кнопки
+@mixin button {
+  text-align: center;
+  text-decoration: none;
+
+  color: $white;
+
+  cursor: pointer;
+}
+
+@mixin button-red {
+  padding: 11px 9px 9px 9px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 0;
+
+  background-color: $red-button;
+  border-color: $red-button;
+
+  &:hover {
+    background-color: $red;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    outline: 2px solid $green;
+    outline-offset: 2px;
+  }
+}
+//Шрифты

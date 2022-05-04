@@ -40,6 +40,9 @@
 }
 
 .products__link {
+  @include button;
+  @include button-red;
+
   width: 192px;
 }
 

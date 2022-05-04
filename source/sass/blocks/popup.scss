@@ -90,6 +90,9 @@
 }
 
 .popup-lost__button-submit {
+  @include button;
+  @include button-red;
+
   display: block;
   width: 100%;
 }
