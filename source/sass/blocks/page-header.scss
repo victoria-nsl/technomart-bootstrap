@@ -10,6 +10,16 @@
   }
 }
 
+//---------------Шапка на страницах при неработающем js
+.page-header--page-form-lost {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  margin-bottom: 70px;
+
+  background-color: $white;
+}
+
 //Меню закрытo
 .page-header--closed .page-header__form,
 .page-header--closed .page-header__link-order,
@@ -92,6 +102,11 @@
   }
 }
 
+//---------Логотип на страницах при неработающем js
+.page-header--page-form-lost .page-header__logo-link-image {
+  position: static;
+}
+
 .page-header__logo-link-image[href] {
   cursor: pointer;
 }
@@ -172,6 +187,8 @@
 
 /*=============ВЕРХНЕЕ МЕНЮ===============*/
 .page-header__wrapper-top {
+  position: relative;
+
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
@@ -187,6 +204,12 @@
 
   @media (min-width: $desktop-width) {
     padding: 9px 0 9px 240px;
+  }
+}
+
+.page-header__form--nojs {
+  @media (min-width: $tablet-width) {
+    padding: 0;
   }
 }
 
@@ -217,6 +240,12 @@
     margin: 0;
 
     text-transform: capitalize;
+  }
+}
+
+.page-header__form--nojs .page-header__button-search {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -677,6 +706,12 @@
 
 /*=============СТАЙЛГАЙД============*/
 //hover
+.page-header__logo-link-image[href]:hover {
+  opacity: 0.7;
+
+  cursor: pointer;
+}
+
 .page-header__button-search:hover {
   color: $yellow;
 }
@@ -740,6 +775,7 @@
 }
 
 //focus
+.page-header__logo-link-image[href]:focus-visible,
 .page-header__link-navigation-site[href]:focus-visible,
 .page-header__link-login:focus-visible,
 .page-header__link-registration:focus-visible,
@@ -756,6 +792,7 @@
 }
 
 //active
+.page-header__logo-link-image[href]:active,
 .page-header__link-navigation-site[href]:active,
 .page-header__link-login:active,
 .page-header__link-registration:active,

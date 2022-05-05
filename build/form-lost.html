@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Лучшие перфораторы, низкие цены, высокое качество">
+  <title>Техномарт</title>
+  <link rel="preload" href="fonts/cuprum-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cuprum-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header page-header--page-form-lost">
+    <a class="page-header__logo-link-image" href="index.html">
+      <picture>
+        <img width="220" height="47" src="img/logotype.svg" alt="Логотип компании Техномарт">
+      </picture>
+    </a>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Страница с формой для отправки "Заблудились? Напишите нам"</h1>
+    <section class="popup popup-lost popup-lost--page-form-lost">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="popup-lost__form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="popup-lost__wrapper-user">
+          <p>
+            <label for="user-name">Ваше имя:</label>
+            <input id="user-name" type="text" name="name" placeholder="Имя Фамилия" data-required="" required="">
+          </p>
+          <p>
+            <label for="user-email">Ваш email:</label>
+            <input id="user-email" type="email" name="email" placeholder="email@example.com" data-required="" required="">
+          </p>
+          <p>
+            <label for="letter-text">Текст письма:</label>
+            <textarea id="letter-text" name="letter" placeholder="В свободной форме" data-required="" required=""></textarea>
+          </p>
+        </div>
+        <div class="popup-lost__wrapper-button">
+          <button class="popup-lost__button-submit" type="submit" aria-label="Отправить письмо компании Техномаркет">
+            Отправить
+          </button>
+        </div>
+        <button class="popup__button-close" type="button" aria-label="Закрыть модальное окно"></button>
+      </form>
+    </section>
+
+  </main>
+</body>
+
+</html>

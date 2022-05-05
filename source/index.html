@@ -36,8 +36,8 @@
         <div class="container">
           <div class="row justify-content-md-between">
             <div class="col-xl-6 col-md-7">
-              <form class="page-header__form" method="get" action="https://echo.htmlacademy.ru">
-                <div class="popup popup-search">
+              <form class="page-header__form page-header__form--nojs" method="get" action="https://echo.htmlacademy.ru">
+                <div class="popup popup-search  popup-search--nojs">
                   <button class="popup__button-close popup__button-close--search" type="button"
                     aria-label="Закрыть модальное окно">
                   </button>
@@ -572,7 +572,7 @@
                   </p>
                 </li>
                 <li class="service__item-tab service__item-tab--warranty service__item-tab--nojs">
-                  <h3>Гаранития</h3>
+                  <h3>Гарантия</h3>
                   <p>
                     Мы гарантируем качество товара.
                   </p>
@@ -629,15 +629,15 @@
                 </p>
               </div>
               <div class="contacts__wrapper-map">
-                <a class="contacts__map-button" href="#">
+                <button class="contacts__map-button" type="button">
                   <picture>
                     <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
                     <!--1x: 300x158px  2x: 600x316px-->
                     <img width="300" height="158" src="img/map.png" srcset="img/map.png 2x"
                       alt="Карта г. Санкт-Петербург с указанием офиса компании">
                   </picture>
-                </a>
-                <a class="contacts__link" href="#">
+                </button>
+                <a class="contacts__link" href="form-lost.html">
                   Заблудились? Напишите нам!
                 </a>
               </div>

@@ -2,6 +2,10 @@
 .popup-lost {
   display: none;
 }
+//------------Cтраница при неработающем js
+.popup-lost--page-form-lost {
+  display: block;
+}
 
 .popup-lost__form {
   position: absolute;
@@ -17,6 +21,16 @@
   @media (min-width: $tablet-width) {
     width: 620px;
   }
+}
+//---------------Форма на странице при неработающем js
+.popup-lost--page-form-lost .popup-lost__form {
+  position: static;
+  transform: translate(0, 0);
+
+  margin: 0 auto;
+
+  border: 1px solid $grey-border;
+  border-top: 7px solid $red;
 }
 
 .popup-lost__wrapper-user {
@@ -59,17 +73,14 @@
 
 .popup-lost__wrapper-user input,
 .popup-lost__wrapper-user textarea {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
+  @include font-pt-sans;
+
   color: $grey-text;
 
   border: 2px solid $grey-dark-svg;
   border-radius: 0;
 
-  &--placeholder {
+  &::placeholder {
     color: rgba($grey-text, 0.7);
   }
 }
@@ -141,6 +152,20 @@
   @media (min-width: $tablet-width) {
     position: relative;
     display: none;
+  }
+}
+
+.popup-search--nojs {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 240px;
+    top: 20px;
+    display: block;
+    width: 32%;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 300px;
   }
 }
 
@@ -326,6 +351,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.popup-lost--page-form-lost .popup__button-close {
+  display: none;
+}
+
 .popup__button-close--search {
   display: none;
 
@@ -333,6 +362,12 @@
     display: block;
     width: 30px;
     height: 30px;
+  }
+}
+
+.popup-search--nojs .popup__button-close--search {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 

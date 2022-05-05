@@ -111,6 +111,8 @@ if (formSearch) {
   const firstElementPopupSearchFocusable = elementsPopupSearchFocusable[0];
   const lastElementPopupSearchFocusable = elementsPopupSearchFocusable[[elementsPopupSearchFocusable.length - 1]];
 
+  formSearch.classList.remove('page-header__form--nojs');
+  popupSearch.classList.remove('popup-search--nojs');
 
   const onDocumentKeydown = (evt) => {
     if (isEscEvent(evt)) {
@@ -145,6 +147,7 @@ if (popupCart) {
   const elementsPopupCartFocusable = popupCart.querySelectorAll('a, button');
   const firstElementPopupCartFocusable = elementsPopupCartFocusable[0];
   const lastElementPopupCartFocusable = elementsPopupCartFocusable[[elementsPopupCartFocusable.length - 1]];
+
 
   const onDocumentKeydown = (evt) => {
     if (isEscEvent(evt)) {
