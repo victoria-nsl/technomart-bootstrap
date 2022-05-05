@@ -247,3 +247,10 @@
 .products__button-bookmark:active {
   opacity: 0.5;
 }
+
+//disabled
+
+.products__button-buy:disabled,
+.products__button-bookmark:disabled {
+  opacity: 0.2;
+}

@@ -154,7 +154,7 @@
     display: none;
   }
 }
-
+//------------ при неработающем js
 .popup-search--nojs {
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -350,7 +350,7 @@
 
   transition: all 0.2s ease-in-out;
 }
-
+//------------ при неработающем js
 .popup-lost--page-form-lost .popup__button-close {
   display: none;
 }
@@ -364,7 +364,7 @@
     height: 30px;
   }
 }
-
+//------------ при неработающем js
 .popup-search--nojs .popup__button-close--search {
   @media (min-width: $tablet-width) {
     display: none;

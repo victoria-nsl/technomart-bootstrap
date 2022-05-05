@@ -3382,6 +3382,11 @@ img {
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0.3); }
 
+.about .carousel-control-prev-icon,
+.about .carousel-control-next-icon {
+  fill: #0d6efd;
+  opacity: 1; }
+
 /*=============СТАЙЛГАЙД============*/
 .about__link:hover,
 .about__button-carousel:hover {
@@ -3396,6 +3401,10 @@ img {
 
 .about__link:active {
   opacity: 0.5; }
+
+.about .carousel-control-prev:disabled,
+.about .carousel-control-next:disabled {
+  opacity: 0; }
 
 .products {
   max-width: 1200px;
@@ -3604,6 +3613,10 @@ img {
 .products__button-buy:active,
 .products__button-bookmark:active {
   opacity: 0.5; }
+
+.products__button-buy:disabled,
+.products__button-bookmark:disabled {
+  opacity: 0.2; }
 
 .manufacturer {
   max-width: 1200px;

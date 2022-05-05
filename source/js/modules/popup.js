@@ -142,12 +142,16 @@ if (formSearch) {
 /*============МОДАЛЬНОЕ ОКНО С ТОВАР ДОБАВЛЕН В КОРЗИНУ===============*/
 if (popupCart) {
   const listProducts = document.querySelector('.products__list');
+  const buttonsBuy = listProducts.querySelectorAll('.products__button-buy');
   const buttonClosePopupCart = popupCart.querySelector('.popup__button-close');
 
   const elementsPopupCartFocusable = popupCart.querySelectorAll('a, button');
   const firstElementPopupCartFocusable = elementsPopupCartFocusable[0];
   const lastElementPopupCartFocusable = elementsPopupCartFocusable[[elementsPopupCartFocusable.length - 1]];
 
+  buttonsBuy.forEach((buttonBuy) => {
+    buttonBuy.disabled = false;
+  });
 
   const onDocumentKeydown = (evt) => {
     if (isEscEvent(evt)) {

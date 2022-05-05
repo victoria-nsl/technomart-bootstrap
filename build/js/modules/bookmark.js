@@ -1,5 +1,5 @@
 const bookmark = document.querySelector('.page-header__link-navigation-user--bookmark');
-const listProducts = document.querySelector('.products__list');
+const buttonsBookmark = document.querySelectorAll('.products__button-bookmark');
 
 if (bookmark) {
   const numberProductsBookmark = bookmark.querySelector('.page-header__link-navigation-user--bookmark span:last-child');
@@ -14,11 +14,12 @@ if (bookmark) {
     numberProductsBookmark.textContent = numberBookmarks;
   };
 
-  const onlistProductsClick = (evt) => {
-    if (evt.target.matches('.products__button-bookmark')) {
-      addProductInBookmark();
-    }
+  const onButtonBookmarkClick = () => {
+    addProductInBookmark();
   };
 
-  listProducts.addEventListener('click', onlistProductsClick);
+  buttonsBookmark.forEach((buttonBookmark) => {
+    buttonBookmark.disabled = false;
+    buttonBookmark.addEventListener('click', onButtonBookmarkClick);
+  });
 }

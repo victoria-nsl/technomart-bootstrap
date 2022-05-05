@@ -195,6 +195,12 @@
   background-color: rgba($white, 0.3);
 }
 
+.about .carousel-control-prev-icon,
+.about .carousel-control-next-icon {
+  fill: $blue;
+  opacity: 1;
+}
+
 /*=============СТАЙЛГАЙД============*/
 //hover
 .about__link:hover,
@@ -214,4 +220,10 @@
 //active
 .about__link:active {
   opacity: 0.5;
+}
+
+//disabled
+.about .carousel-control-prev:disabled,
+.about .carousel-control-next:disabled {
+  opacity: 0;
 }
