@@ -97,6 +97,10 @@
   width: 100%;
 }
 
+.popup-lost__field-error {
+  outline: 2px solid $red;
+}
+
 //МОДАЛЬНОЕ ОКНО С КАРТОЙ
 .popup-map {
   display: none;

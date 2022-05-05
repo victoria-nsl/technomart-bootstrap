@@ -1,4 +1,5 @@
 import { isEscEvent, setFocusTab } from './utils.js';
+import { addProductInCart } from './cart.js';
 
 const page = document.body;
 const popupLost = document.querySelector('.popup-lost');
@@ -163,8 +164,11 @@ if (popupCart) {
       document.addEventListener('keydown', onDocumentKeydown);
       popupCart.addEventListener('click', onPopupClick);
       buttonClosePopupCart.addEventListener('click', onButtonClosePopupCartClick);
+      addProductInCart();
     }
   };
 
   listProducts.addEventListener('click', onButtonOpenPopupCartClick);
 }
+
+export {closePopup};
