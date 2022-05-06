@@ -240,19 +240,16 @@
 }
 
 .products__button-bookmark--active:hover,
-.products__button-buy--active:hover  {
+.products__button-buy--active:hover {
   background-color: rgba($red, 0.8);
   color: $white;
 
   border: 3px solid $red;
 }
 
-
-
 .products__button-buy:hover svg {
   opacity: 1;
 }
-
 
 //focus
 .products__button-buy:focus-visible,
