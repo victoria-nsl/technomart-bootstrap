@@ -136,6 +136,12 @@
   background-color: $white;
 }
 
+.products__button-bookmark--active {
+  color: $white;
+  background-color: $red;
+  border: 3px solid $red;
+}
+
 .products__description {
   display: grid;
   grid-template-rows: 1fr min-content min-content;
@@ -228,6 +234,13 @@
   border: 3px solid $green;
 }
 
+.products__button-bookmark--active:hover {
+  background-color: rgba($red, 0.8);
+  color: $white;
+
+  border: 3px solid $red;
+}
+
 .products__button-buy:hover svg {
   opacity: 1;
 }
@@ -249,7 +262,6 @@
 }
 
 //disabled
-
 .products__button-buy:disabled,
 .products__button-bookmark:disabled {
   opacity: 0.2;

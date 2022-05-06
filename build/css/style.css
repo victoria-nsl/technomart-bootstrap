@@ -3526,6 +3526,11 @@ img {
   color: #32425c;
   background-color: #ffffff; }
 
+.products__button-bookmark--active {
+  color: #ffffff;
+  background-color: #ee1725;
+  border: 3px solid #ee1725; }
+
 .products__description {
   display: grid;
   grid-template-rows: 1fr min-content min-content;
@@ -3599,6 +3604,11 @@ img {
   background-color: #1bc01e;
   color: #ffffff;
   border: 3px solid #1bc01e; }
+
+.products__button-bookmark--active:hover {
+  background-color: rgba(238, 23, 37, 0.8);
+  color: #ffffff;
+  border: 3px solid #ee1725; }
 
 .products__button-buy:hover svg {
   opacity: 1; }
