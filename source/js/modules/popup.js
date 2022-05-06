@@ -1,5 +1,5 @@
 import { isEscEvent, setFocusTab } from './utils.js';
-import { addProductInCart } from './cart.js';
+import { changeProductInCart } from './cart.js';
 
 const page = document.body;
 const popupLost = document.querySelector('.popup-lost');
@@ -167,11 +167,13 @@ if (popupCart) {
   const onButtonOpenPopupCartClick = (evt) => {
     if (evt.target.matches('.products__button-buy') || evt.target.matches('.products__button-buy svg') || evt.target.matches('.products__button-buy span')) {
       evt.preventDefault();
-      openPopup(popupCart, firstElementPopupCartFocusable, lastElementPopupCartFocusable);
-      document.addEventListener('keydown', onDocumentKeydown);
-      popupCart.addEventListener('click', onPopupClick);
-      buttonClosePopupCart.addEventListener('click', onButtonClosePopupCartClick);
-      addProductInCart();
+      if(!evt.target.closest('button').classList.contains('products__button-buy--active')) {
+        openPopup(popupCart, firstElementPopupCartFocusable, lastElementPopupCartFocusable);
+        document.addEventListener('keydown', onDocumentKeydown);
+        popupCart.addEventListener('click', onPopupClick);
+        buttonClosePopupCart.addEventListener('click', onButtonClosePopupCartClick);
+      }
+      changeProductInCart(evt.target.closest('button'));
     }
   };
 

@@ -51,6 +51,7 @@ if (buttonsСhangeBookmarks) {
 
     if (button.classList.contains('products__button-bookmark--active')) {
       button.classList.remove('products__button-bookmark--active');
+      button.textContent = 'В закладки';
       numberBookmarks -= 1;
       numberProductsInBookmark.textContent = numberBookmarks;
       removeItemFromBookmark(itemBookmarkCurrentId);
@@ -63,6 +64,7 @@ if (buttonsСhangeBookmarks) {
         linkBookmarks.classList.add('page-header__link-navigation-user--active');
       }
       button.classList.add('products__button-bookmark--active');
+      button.textContent = 'В закладках';
       numberBookmarks += 1;
       numberProductsInBookmark.textContent = numberBookmarks;
       createItemInBookmarks(product, idProduct);

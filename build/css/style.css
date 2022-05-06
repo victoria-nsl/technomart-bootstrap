@@ -3494,7 +3494,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  width: 42.45%;
+  width: 55%;
   margin: 0 auto; }
 
 .products__button-buy,
@@ -3526,10 +3526,14 @@ img {
   color: #32425c;
   background-color: #ffffff; }
 
-.products__button-bookmark--active {
+.products__button-bookmark--active,
+.products__button-buy--active {
   color: #ffffff;
   background-color: #ee1725;
   border: 3px solid #ee1725; }
+
+.products__button-buy--active svg {
+  opacity: 1; }
 
 .products__description {
   display: grid;
@@ -3605,7 +3609,8 @@ img {
   color: #ffffff;
   border: 3px solid #1bc01e; }
 
-.products__button-bookmark--active:hover {
+.products__button-bookmark--active:hover,
+.products__button-buy--active:hover {
   background-color: rgba(238, 23, 37, 0.8);
   color: #ffffff;
   border: 3px solid #ee1725; }
