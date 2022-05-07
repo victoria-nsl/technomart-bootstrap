@@ -29,6 +29,7 @@ if (buttonsСhangeBookmarks) {
       const item = buttonСhangeBookmarks.closest('.products__item');
       if (storageArrayBookmarks.includes(item.id)) {
         buttonСhangeBookmarks.classList.add('products__button-bookmark--active');
+        buttonСhangeBookmarks.textContent = 'В закладках';
       }
     });
   }
@@ -55,7 +56,7 @@ if (buttonsСhangeBookmarks) {
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };
 
-  /*=============УДАЛЕНИЕ ТОВАРА В ЗАКЛАДКИ===========*/
+  /*=============УДАЛЕНИЕ ТОВАРА ИЗ ЗАКЛАДОК===========*/
   const removeFromBookmarks = (idProduct, button, numberBookmarks) => {
     const idIndex = arrayBookmarks.indexOf(idProduct);
     if (idIndex !== -1) {
@@ -81,7 +82,7 @@ if (buttonsСhangeBookmarks) {
     const numberBookmarksInitial = + numberProductsInBookmark.textContent;
 
     if(arrayBookmarks.length === 0) {
-      addToBookmarks(idProductSelected, buttonSelected, numberBookmarksInitial );
+      addToBookmarks(idProductSelected, buttonSelected, numberBookmarksInitial);
       return;
     }
 
