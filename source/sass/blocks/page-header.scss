@@ -455,20 +455,22 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  text-transform: uppercase;
 
-  background-color: $green-dark;
+  background-color: $azure-dark-background;
   border-radius: 0;
 
   transition: all 0.2s ease-in-out;
 
   @media (min-width: $tablet-width) {
-    width: 40%;
     margin: 20px auto;
   }
 
   @media (min-width: $desktop-width) {
     width: 140px;
     margin: 0;
+
+    text-transform: inherit;
   }
 }
 
@@ -821,8 +823,7 @@
 }
 
 .page-header__link-order:hover {
-  background-color: $green;
-  color: $white;
+  background-color: rgba($azure-dark-background, 0.8);
 }
 
 .page-header__link-tel:hover {

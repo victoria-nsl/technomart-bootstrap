@@ -7,12 +7,16 @@ import './modules/cart.js';
 import './modules/form-validation.js';
 
 //Карусель (сделана с помощью библиотеки bootstrap). Кнопки не видны при неработающем js
-const buttonsPrevCarousel = document.querySelector('.about .carousel-control-prev');
-const buttonsNextCarousel = document.querySelector('.about .carousel-control-next');
+const carousel =  document.querySelector('.about__carousel');
 
+if (carousel) {
+  const buttonsPrevCarousel = carousel.querySelector('.about__carousel-control--prev');
+  const buttonsNextCarousel = carousel.querySelector('.about__carousel-control--next');
 
-buttonsPrevCarousel.disabled = false;
-buttonsNextCarousel.disabled = false;
+  buttonsPrevCarousel.disabled = false;
+  buttonsNextCarousel.disabled = false;
+}
+
 
 //Временный  код для входа в личный кабинет/выхода из личного кабинета (без окна с паролем)
 const wrapperBlocksLogin = document.querySelector('.page-header__wrapper-login-cabinet');

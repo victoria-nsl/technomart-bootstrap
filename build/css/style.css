@@ -2926,17 +2926,18 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  background-color: #63a63e;
+  text-transform: uppercase;
+  background-color: #2f6e8d;
   border-radius: 0;
   transition: all 0.2s ease-in-out; }
   @media (min-width: 768px) {
     .page-header__link-order {
-      width: 40%;
       margin: 20px auto; } }
   @media (min-width: 1200px) {
     .page-header__link-order {
       width: 140px;
-      margin: 0; } }
+      margin: 0;
+      text-transform: inherit; } }
 
 /*=============СРЕДНЕЕ МЕНЮ===============*/
 .page-header__wrapper-middle {
@@ -3213,8 +3214,7 @@ img {
   opacity: 1; }
 
 .page-header__link-order:hover {
-  background-color: #1d861f;
-  color: #ffffff; }
+  background-color: rgba(47, 110, 141, 0.8); }
 
 .page-header__link-tel:hover {
   border: 3px solid #f53708; }
