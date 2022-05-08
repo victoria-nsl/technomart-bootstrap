@@ -2,6 +2,7 @@ import { objectProducts } from './object-product.js';
 
 const listBookmarks = document.createElement('div');
 listBookmarks.classList.add('bookmark__list');
+listBookmarks.classList.add('row');
 
 const createCardOnPageBookmarks = (idProduct) => {
   const cardOnPageBookmarks = document.createElement('div');
@@ -35,7 +36,13 @@ const createCardOnPageBookmarks = (idProduct) => {
       <span>Купить</span>
     </button>`;
 
-  listBookmarks.append(cardOnPageBookmarks);
+  const wrapperItem = document.createElement('div');
+  wrapperItem.classList.add('col-xl-3');
+  wrapperItem.classList.add('col-md-4');
+  wrapperItem.classList.add('col-sm-6');
+  wrapperItem.append(cardOnPageBookmarks);
+
+  listBookmarks.append(wrapperItem);
 
   return listBookmarks;
 };

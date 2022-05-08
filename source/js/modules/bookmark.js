@@ -35,7 +35,7 @@ if (buttonsСhangeBookmarks) {
         buttonСhangeBookmarks.textContent = 'В закладках';
       }
     });
-    const blockBookmarks = document.querySelector('.bookmarks__wrapper-list');
+    const blockBookmarks = document.querySelector('.bookmarks div:nth-child(2)');
     if (blockBookmarks) {
       arrayBookmarks.forEach((id) => {
         const list = createCardOnPageBookmarks(id);
@@ -63,8 +63,6 @@ if (buttonsСhangeBookmarks) {
     numberBookmarks += 1;
     numberProductsInBookmark.textContent = numberBookmarks;
 
-    //createCardOnPageBookmarks(idProduct);
-
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };
 
@@ -83,7 +81,6 @@ if (buttonsСhangeBookmarks) {
     button.textContent = 'В закладки';
     numberBookmarks -= 1;
     numberProductsInBookmark.textContent = numberBookmarks;
-    //removeCardOnPageBookmarks(idProduct);
 
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };

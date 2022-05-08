@@ -4937,28 +4937,12 @@ img {
       font-size: 30px;
       line-height: 30px; } }
 
-.bookmark__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 20px; }
-
 .bookmark__item {
-  width: 100%;
   padding: 17px;
   margin-bottom: 20px;
   text-align: center;
   border: 1px solid #eaeaea;
   overflow: hidden; }
-  @media (min-width: 540px) {
-    .bookmark__item {
-      width: 48%; } }
-  @media (min-width: 768px) {
-    .bookmark__item {
-      width: 31.2%; } }
-  @media (min-width: 1200px) {
-    .bookmark__item {
-      width: 220px; } }
 
 .bookmark__item img {
   display: block;

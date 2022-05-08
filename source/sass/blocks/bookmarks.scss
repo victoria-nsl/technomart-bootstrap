@@ -41,15 +41,7 @@
 }
 
 //Карточка
-.bookmark__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 20px;
-}
-
 .bookmark__item {
-  width: 100%;
   padding: 17px;
   margin-bottom: 20px;
 
@@ -57,18 +49,6 @@
 
   border: 1px solid $grey-border;
   overflow: hidden;
-
-  @media (min-width: 540px) {
-    width: 48%;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 31.2%;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 220px;
-  }
 }
 
 .bookmark__item img {
