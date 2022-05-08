@@ -39,3 +39,172 @@
     line-height: 30px;
   }
 }
+
+//Карточка
+.bookmarks__wrapper-list > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.bookmarks__wrapper-list > div > div {
+  width: 100%;
+  padding: 17px;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  border: 1px solid $grey-border;
+  overflow: hidden;
+
+  @media (min-width: 540px) {
+    width: 48%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 31.2%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 220px;
+  }
+}
+
+.bookmarks__wrapper-list img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.bookmarks__wrapper-list h3 {
+  margin-bottom: 20px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  color: $black;
+}
+
+.bookmarks__wrapper-list p:nth-child(3) {
+  margin-bottom: 20px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration: line-through;
+  color: $grey-text;
+}
+
+.bookmarks__wrapper-list p:nth-child(4) {
+  position: relative;
+
+  width: 141px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 7px 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $white;
+
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background-color: $red-button;
+}
+
+.bookmarks__wrapper-list p:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent $azure-background transparent transparent;
+}
+
+.bookmarks__wrapper-list p:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  transform: rotate(90deg);
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent $azure-background transparent transparent;
+}
+
+.bookmarks__wrapper-list button {
+  display: block;
+  width: 100%;
+  padding: 7px 3px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $green-dark;
+  border-radius: 0;
+  border: 3px solid $green-dark;
+
+  transition: all 0.2s ease-in-out;
+}
+
+
+.bookmarks__wrapper-list button svg {
+  margin-right: 3px;
+  fill: $white;
+  opacity: 0.3;
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.bookmarks__wrapper-list button:hover {
+  background-color: $green;
+  color: $white;
+
+  border: 3px solid $green;
+}
+
+.bookmarks__wrapper-list--active button:hover {
+  background-color: rgba($red, 0.8);
+  color: $white;
+
+  border: 3px solid $red;
+}
+
+.bookmarks__wrapper-list button:hover svg {
+  opacity: 1;
+}
+
+//focus
+.bookmarks__wrapper-list button:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
+
+//active
+.bookmarks__wrapper-list button:active {
+  opacity: 0.5;
+}
+
+//disabled
+.bookmarks__wrapper-list button:disabled {
+  opacity: 0.2;
+}
