@@ -4225,11 +4225,12 @@ img {
   outline: 2px solid #1d861f;
   outline-offset: 2px; }
 
-.contacts__map-button:not:active {
+.contacts__map-button:active {
   opacity: 0.5; }
 
 .contacts__map-button:disabled {
-  box-shadow: none; }
+  box-shadow: none;
+  opacity: 1; }
 
 .page-footer {
   background-color: #394a66; }
@@ -4811,7 +4812,7 @@ img {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.9); }
 
 @media (min-width: 768px) {
   .popup-search.popup--opened {
@@ -4825,7 +4826,7 @@ img {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.7); } }
+    background-color: rgba(0, 0, 0, 0.9); } }
 
 .popup__button-close {
   position: absolute;
@@ -4903,3 +4904,35 @@ img {
 .popup-cart__button-continue:active,
 .popup__button-close:active {
   opacity: 0.5; }
+
+.bookmarks {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px; }
+
+.bookmarks__header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 0;
+  margin-bottom: 20px;
+  background-color: #f3f7f9; }
+  @media (min-width: 768px) {
+    .bookmarks__header {
+      text-align: end; } }
+
+.bookmarks h2 {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #32425c;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .bookmarks h2 {
+      margin-bottom: 0;
+      font-size: 30px;
+      line-height: 30px; } }

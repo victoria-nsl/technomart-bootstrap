@@ -1,9 +1,10 @@
+import { createCardOnPageBookmarks} from './create-cards.js';
+
 const buttonsСhangeBookmarks = document.querySelectorAll('.products__button-bookmark');
-import { createCardOnPageBookmarks, removeCardOnPageBookmarks } from './card-bookmarks.js';
 
 if (buttonsСhangeBookmarks) {
   const linkBookmarks = document.querySelector('.page-header__link-navigation-user--bookmark');
-  const numberProductsInBookmark = linkBookmarks.querySelector('.page-header__link-navigation-user--bookmark span:last-child');
+  const numberProductsInBookmark = document.querySelector('.page-header__link-navigation-user--bookmark span:last-child');
 
   let arrayBookmarks = [];
   /*=============LOCALSTORAGE===========*/
@@ -20,11 +21,12 @@ if (buttonsСhangeBookmarks) {
   }
 
   if (storageNumberBookmarks || storageArrayBookmarks) {
-    numberProductsInBookmark.textContent = storageNumberBookmarks || '';
-    if (+numberProductsInBookmark.textContent > 0) {
-      linkBookmarks.classList.add('page-header__link-navigation-user--active');
+    if(numberProductsInBookmark) {
+      numberProductsInBookmark.textContent = storageNumberBookmarks || '';
+      if (+numberProductsInBookmark.textContent > 0) {
+        linkBookmarks.classList.add('page-header__link-navigation-user--active');
+      }
     }
-
     arrayBookmarks = storageArrayBookmarks || '';
     buttonsСhangeBookmarks.forEach((buttonСhangeBookmarks) => {
       const item = buttonСhangeBookmarks.closest('.products__item');
@@ -33,6 +35,13 @@ if (buttonsСhangeBookmarks) {
         buttonСhangeBookmarks.textContent = 'В закладках';
       }
     });
+    const blockBookmarks = document.querySelector('.bookmarks__wrapper-list');
+    if (blockBookmarks) {
+      arrayBookmarks.forEach((id) => {
+        const list = createCardOnPageBookmarks(id);
+        blockBookmarks.append(list);
+      });
+    }
   }
 
   //установить значения в localStorage
@@ -54,7 +63,7 @@ if (buttonsСhangeBookmarks) {
     numberBookmarks += 1;
     numberProductsInBookmark.textContent = numberBookmarks;
 
-    createCardOnPageBookmarks(idProduct);
+    //createCardOnPageBookmarks(idProduct);
 
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };
@@ -74,7 +83,7 @@ if (buttonsСhangeBookmarks) {
     button.textContent = 'В закладки';
     numberBookmarks -= 1;
     numberProductsInBookmark.textContent = numberBookmarks;
-    removeCardOnPageBookmarks(idProduct);
+    //removeCardOnPageBookmarks(idProduct);
 
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };

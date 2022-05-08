@@ -1,5 +1,5 @@
 const linkCart = document.querySelector('.page-header__link-navigation-user--cart');
-const numberProductsInCart = linkCart.querySelector('.page-header__link-navigation-user--cart span:last-child');
+const numberProductsInCart = document.querySelector('.page-header__link-navigation-user--cart span:last-child');
 
 const  buttonsСhangeCart = document.querySelectorAll('.products__button-buy');
 

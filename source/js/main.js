@@ -1,10 +1,13 @@
 import './modules/utils.js';
 import './modules/navigation.js';
 import './modules/tab.js';
+import './modules/form-validation.js';
 import './modules/popup.js';
+import './modules/object-product.js';
+import './modules/create-cards.js';
 import './modules/bookmark.js';
 import './modules/cart.js';
-import './modules/form-validation.js';
+
 
 //Карусель (сделана с помощью библиотеки bootstrap). Кнопки не видны при неработающем js
 const carousel =  document.querySelector('.about__carousel');

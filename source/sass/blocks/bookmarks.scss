@@ -1,0 +1,41 @@
+.bookmarks {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+//Шапка с заголовком и кнопкой
+.bookmarks__header {
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 25px 0;
+  margin-bottom: 20px;
+
+  background-color: $azure-background;
+
+  @media (min-width: $tablet-width) {
+    text-align: end;
+  }
+}
+
+.bookmarks h2 {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: $blue-text;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+}

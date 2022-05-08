@@ -1,13 +1,9 @@
+import { objectProducts } from './object-product.js';
+
 const listBookmarks =document.createElement('div');
 listBookmarks.classList.add('bookmark__list');
 
-const listProduct = document.querySelectorAll('.products__item');
-const arrayCardsProducts = Array.from(listProduct);
-
-
 const createCardOnPageBookmarks = (idProduct)=> {
-  const product = arrayCardsProducts.find((itemProduct) => itemProduct.id === idProduct);
-
   const cardOnPageBookmarks =document.createElement('div');
   cardOnPageBookmarks.classList.add('bookmark__item');
   cardOnPageBookmarks.setAttribute('id', idProduct);
@@ -17,21 +13,21 @@ const createCardOnPageBookmarks = (idProduct)=> {
     <picture>
       <source
         type="image/webp"
-        srcset="${product.children[0].children[0].children[0].srcset}">
+        srcset= "${objectProducts[idProduct].sourceSrcset}" >
 
       <img
         class="img-fluid"
-        width="${product.children[0].children[0].children[1].width}"
-        height="${product.children[0].children[0].children[1].height}"
-        src="img/${idProduct}.png"
-        srcset="${product.children[0].children[0].children[1].srcset}"
-        alt="${product.children[0].children[0].children[1].alt}">
+        width="${objectProducts[idProduct].imgWidth}"
+        height="${objectProducts[idProduct].imgHeight}"
+        src="${objectProducts[idProduct].imgSrc}"
+        srcset="${objectProducts[idProduct].imgSrcset}"
+        alt="${objectProducts[idProduct].imgAlt}">
     </picture>
   </div>
   <div class="bookmark__description">
-    <h3>${product.children[1].children[0].textContent}</h3>
-    <p>${product.children[1].children[1].textContent}</p>
-    <div class="bookmark__item-button">${product.children[1].children[2].textContent}</div>
+    <h3>${objectProducts[idProduct].title }</h3>
+    <p>${objectProducts[idProduct].oldPrice}</p>
+    <div class="bookmark__item-button">${objectProducts[idProduct].newPrice}</div>
   </div>
   <div class="bookmark__wrapper-button">
     <button class="bookmark__button-buy" type="button">
@@ -53,19 +49,4 @@ const createCardOnPageBookmarks = (idProduct)=> {
   return listBookmarks;
 };
 
-const removeCardOnPageBookmarks = (idProduct)=> {
-
-
-  const arrayCardsBookmarks = Array.from(listBookmarks.children);
-
-  arrayCardsBookmarks.forEach((cardBookmarks) => {
-    if (cardBookmarks.children[0].id === idProduct) {
-      cardBookmarks.remove();
-    }
-  });
-
-  return listBookmarks;
-};
-
-
-export {createCardOnPageBookmarks, removeCardOnPageBookmarks};
+export { createCardOnPageBookmarks };
