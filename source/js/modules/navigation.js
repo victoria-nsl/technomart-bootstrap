@@ -3,7 +3,7 @@ import {isEscEvent, setFocusTab} from './utils.js';
 const TABLET_DESKTOP = 767;
 
 const page = document.body;
-const menu = document.querySelector('.page-header');
+const menu = document.querySelector('.page-header--main');
 const anchorsLinks = document.querySelectorAll('[data-link-anchors]');
 
 

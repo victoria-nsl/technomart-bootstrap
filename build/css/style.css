@@ -4937,13 +4937,13 @@ img {
       font-size: 30px;
       line-height: 30px; } }
 
-.bookmarks__wrapper-list > div {
+.bookmark__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 20px; }
 
-.bookmarks__wrapper-list > div > div {
+.bookmark__item {
   width: 100%;
   padding: 17px;
   margin-bottom: 20px;
@@ -4951,22 +4951,22 @@ img {
   border: 1px solid #eaeaea;
   overflow: hidden; }
   @media (min-width: 540px) {
-    .bookmarks__wrapper-list > div > div {
+    .bookmark__item {
       width: 48%; } }
   @media (min-width: 768px) {
-    .bookmarks__wrapper-list > div > div {
+    .bookmark__item {
       width: 31.2%; } }
   @media (min-width: 1200px) {
-    .bookmarks__wrapper-list > div > div {
+    .bookmark__item {
       width: 220px; } }
 
-.bookmarks__wrapper-list img {
+.bookmark__item img {
   display: block;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 20px; }
 
-.bookmarks__wrapper-list h3 {
+.bookmark__item h3 {
   margin-bottom: 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
@@ -4974,7 +4974,7 @@ img {
   line-height: 20px;
   color: #000000; }
 
-.bookmarks__wrapper-list p:nth-child(3) {
+.bookmark__item p:nth-child(3) {
   margin-bottom: 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
@@ -4983,7 +4983,7 @@ img {
   text-decoration: line-through;
   color: #a9a9a9; }
 
-.bookmarks__wrapper-list p:nth-child(4) {
+.bookmark__item p:nth-child(4) {
   position: relative;
   width: 141px;
   margin: 0 auto;
@@ -4998,7 +4998,7 @@ img {
   box-shadow: none;
   background-color: #dc3545; }
 
-.bookmarks__wrapper-list p:nth-child(4)::after {
+.bookmark__item p:nth-child(4)::after {
   content: "";
   position: absolute;
   top: -1px;
@@ -5007,9 +5007,9 @@ img {
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent #f3f7f9 transparent transparent; }
+  border-color: transparent #ffffff transparent transparent; }
 
-.bookmarks__wrapper-list p:nth-child(4)::before {
+.bookmark__item p:nth-child(4)::before {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -5019,9 +5019,9 @@ img {
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 0;
-  border-color: transparent #f3f7f9 transparent transparent; }
+  border-color: transparent #ffffff transparent transparent; }
 
-.bookmarks__wrapper-list button {
+.bookmark__item button {
   display: block;
   width: 100%;
   padding: 7px 3px;
@@ -5037,31 +5037,31 @@ img {
   border: 3px solid #63a63e;
   transition: all 0.2s ease-in-out; }
 
-.bookmarks__wrapper-list button svg {
+.bookmark__item button svg {
   margin-right: 3px;
   fill: #ffffff;
   opacity: 0.3; }
 
 /*=============СТАЙЛГАЙД============*/
-.bookmarks__wrapper-list button:hover {
+.bookmark__item button:hover {
   background-color: #1d861f;
   color: #ffffff;
   border: 3px solid #1d861f; }
 
-.bookmarks__wrapper-list--active button:hover {
+.bookmark__item--active button:hover {
   background-color: rgba(238, 23, 37, 0.8);
   color: #ffffff;
   border: 3px solid #ee1725; }
 
-.bookmarks__wrapper-list button:hover svg {
+.bookmark__item button:hover svg {
   opacity: 1; }
 
-.bookmarks__wrapper-list button:focus-visible {
+.bookmark__item button:focus-visible {
   outline: 2px solid #1d861f;
   outline-offset: 2px; }
 
-.bookmarks__wrapper-list button:active {
+.bookmark__item button:active {
   opacity: 0.5; }
 
-.bookmarks__wrapper-list button:disabled {
+.bookmark__item button:disabled {
   opacity: 0.2; }
