@@ -71,9 +71,26 @@
 }
 
 /*=============СТАЙЛГАЙД============*/
+//hover
+.contacts__map-button:hover {
+  box-shadow: 0 0 16px 0 rgba($black, 0.5);
+}
+
 //focus
 .contacts__link:focus-visible,
-.contacts__map iframe:focus-visible {
+.contacts__map iframe:focus-visible,
+.contacts__map-button:focus-visible {
   outline: 2px solid $green;
   outline-offset: 2px;
+}
+
+//active
+.contacts__map-button:active {
+  opacity: 0.5;
+}
+
+//disabled
+.contacts__map-button:disabled {
+  box-shadow: none;
+  opacity: 1;
 }

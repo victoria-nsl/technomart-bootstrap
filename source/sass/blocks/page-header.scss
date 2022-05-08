@@ -818,6 +818,12 @@
   background-color: $blue-shadow;
 }
 
+
+.page-header__link-navigation-user--active:hover {
+  background-color: $red-button;
+}
+
+
 .page-header__link-navigation-user:hover svg {
   opacity: 1;
 }

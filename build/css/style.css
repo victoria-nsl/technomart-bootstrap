@@ -3210,6 +3210,9 @@ img {
 .page-header__link-navigation-user:hover {
   background-color: #405069; }
 
+.page-header__link-navigation-user--active:hover {
+  background-color: #dc3545; }
+
 .page-header__link-navigation-user:hover svg {
   opacity: 1; }
 
@@ -4213,10 +4216,20 @@ img {
       margin: 0; } }
 
 /*=============СТАЙЛГАЙД============*/
+.contacts__map-button:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5); }
+
 .contacts__link:focus-visible,
-.contacts__map iframe:focus-visible {
+.contacts__map iframe:focus-visible,
+.contacts__map-button:focus-visible {
   outline: 2px solid #1d861f;
   outline-offset: 2px; }
+
+.contacts__map-button:not:active {
+  opacity: 0.5; }
+
+.contacts__map-button:disabled {
+  box-shadow: none; }
 
 .page-footer {
   background-color: #394a66; }

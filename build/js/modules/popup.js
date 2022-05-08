@@ -95,6 +95,7 @@ if (popupMap) {
     buttonClosePopupMap.addEventListener('click', onButtonClosePopupMapClick);
   };
 
+  buttonOpenPopupMap.disabled = false;
   buttonOpenPopupMap.addEventListener('click', onButtonOpenPopupMapClick);
 }
 

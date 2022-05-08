@@ -1,4 +1,5 @@
 const buttonsСhangeBookmarks = document.querySelectorAll('.products__button-bookmark');
+import { createCardOnPageBookmarks, removeCardOnPageBookmarks } from './card-bookmarks.js';
 
 if (buttonsСhangeBookmarks) {
   const linkBookmarks = document.querySelector('.page-header__link-navigation-user--bookmark');
@@ -53,6 +54,8 @@ if (buttonsСhangeBookmarks) {
     numberBookmarks += 1;
     numberProductsInBookmark.textContent = numberBookmarks;
 
+    createCardOnPageBookmarks(idProduct);
+
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };
 
@@ -71,6 +74,7 @@ if (buttonsСhangeBookmarks) {
     button.textContent = 'В закладки';
     numberBookmarks -= 1;
     numberProductsInBookmark.textContent = numberBookmarks;
+    removeCardOnPageBookmarks(idProduct);
 
     setItemsLocalStorage (arrayBookmarks, numberProductsInBookmark);
   };
