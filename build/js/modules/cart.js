@@ -19,9 +19,11 @@ try {
 }
 
 if (storageNumberCart || storageArrayCart) {
-  numberProductsInCart.textContent = storageNumberCart || '';
-  if (+numberProductsInCart.textContent > 0) {
-    linkCart.classList.add('page-header__link-navigation-user--active');
+  if(numberProductsInCart) {
+    numberProductsInCart.textContent = storageNumberCart || '';
+    if (+numberProductsInCart.textContent > 0) {
+      linkCart.classList.add('page-header__link-navigation-user--active');
+    }
   }
 
   arrayCart = storageArrayCart || '';

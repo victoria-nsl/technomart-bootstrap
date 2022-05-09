@@ -2605,9 +2605,6 @@ img {
     .page-header--closed .page-header__wrapper-bottom {
       display: block; } }
 
-.page-header--closed .page-header__search {
-  display: none; }
-
 .page-header--opened .page-header__navigation {
   position: fixed;
   top: 50px;
@@ -2624,7 +2621,8 @@ img {
 .page-header--opened .page-header__wrapper-middle {
   display: none; }
 
-.page-header--opened .page-header__wrapper-top {
+.page-header--opened .page-header__button-search,
+.page-header--opened .page-header__list-navigation-user {
   display: none; }
 
 .page-header--nojs .page-header__form,
