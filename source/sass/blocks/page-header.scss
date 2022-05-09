@@ -6,7 +6,6 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
-    margin-bottom: 70px;
   }
 }
 
@@ -21,8 +20,6 @@
 }
 
 //Меню закрытo
-.page-header--closed .page-header__form,
-.page-header--closed .page-header__link-order,
 .page-header--closed .page-header__wrapper-bottom {
   display: none;
 
@@ -31,12 +28,8 @@
   }
 }
 
-.page-header--closed .page-header__list-navigation-user {
+.page-header--closed .page-header__search {
   display: none;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
 }
 
 //Меню открыто
@@ -53,7 +46,6 @@
   height: 100%;
 
   background-color: $blue-dark;
-
   overflow-y: scroll;
 }
 
@@ -61,23 +53,18 @@
   display: none;
 }
 
-.page-header--opened .page-header__list-navigation-user {
-  display: flex;
-}
-
 //Меню при отключенном js
 .page-header--nojs .page-header__form,
-.page-header--nojs .page-header__link-order,
 .page-header--nojs .page-header__wrapper-bottom {
   display: block;
 }
 
-.page-header--nojs .page-header__list-navigation-user {
-  display: flex;
+.page-header--nojs .page-header__wrapper-middle {
+  margin-bottom: 20px;
 }
 
-.page-header--nojs .page-header__list-navigation-site {
-  margin-top: 20px;
+.page-header--nojs .page-header__list-navigation-user {
+  display: flex;
 }
 
 .page-header--nojs .page-header__toggle {
@@ -196,6 +183,11 @@
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 //ПОИСК
@@ -203,6 +195,7 @@
   padding-top: 18px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 9px;
     padding-left: 240px;
   }
 
@@ -219,26 +212,19 @@
 
 //Кнопка - открыть поиск
 .page-header__button-search {
-  display: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  width: 100%;
 
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white;
+
+  border: none;
+  background-color: transparent;
   transition: all 0.2s ease-in-out;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    width: 70px;
-    margin: 0 auto;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    color: $white;
-    text-transform: uppercase;
-
-    border: none;
-    background-color: transparent;
-  }
 
   @media (min-width: $desktop-width) {
     margin: 0;
@@ -266,53 +252,45 @@
 
 //кнопка закрыть попап с поиском по сайту
 .page-header__button-close-popup {
-  display: none;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
 
   transition: all 0.2s ease-in-out;
-
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-
-    display: block;
-    width: 40px;
-    height: 40px;
-
-    border: none;
-    background-color: transparent;
-  }
 }
 
 .page-header__button-close-popup::after {
-  @media (min-width: $tablet-width) {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: top left;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: top left;
 
-    width: 56px;
-    height: 2px;
-    background-color: $white;
-  }
+  width: 56px;
+  height: 2px;
+  background-color: $white;
 }
 
 .page-header__button-close-popup::before {
-  @media (min-width: $tablet-width) {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(-45deg);
-    transform-origin: top right;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
 
-    width: 56px;
-    height: 2px;
+  width: 56px;
+  height: 2px;
 
-    background-color: $white;
-  }
+  background-color: $white;
 }
 
 // поле поиска -input
@@ -367,7 +345,7 @@
   @include reset-style-list;
 
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   padding-top: 18px;
   column-gap: 10%;
@@ -375,18 +353,17 @@
   @media (min-width: $tablet-width) {
     justify-content: center;
     column-gap: 4%;
-    padding-top: 9px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: center;
-    padding: 0;
     column-gap: 6%;
   }
 }
 
 .page-header__item-navigation-user {
-  width: 45%;
+  width: 28%;
 
   text-align: center;
 
@@ -439,17 +416,23 @@
 }
 
 .page-header__link-navigation-user span:nth-child(2) {
+  display: none;
   margin-right: 2px;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 //ОФОРМИТЬ ЗАКАЗ
 .page-header__link-order {
   @include button;
 
-  display: block;
+  display: none;
   width: 100%;
   margin: 20px auto;
-  padding: 8px;
+  padding: 9px;
   box-sizing: border-box;
 
   font-weight: 400;
@@ -462,11 +445,8 @@
 
   transition: all 0.2s ease-in-out;
 
-  @media (min-width: $tablet-width) {
-    margin: 20px auto;
-  }
-
   @media (min-width: $desktop-width) {
+    display: block;
     width: 140px;
     margin: 0;
 
@@ -478,6 +458,14 @@
 .page-header__wrapper-middle {
   padding: 40px 0;
   background-color: $blue-light;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 0;
+  }
 }
 
 .page-header__middle {
@@ -784,7 +772,7 @@
   transition: all 0.2s ease-in-out;
 
   @media (min-width: $tablet-width) {
-    padding: 15px 20px;
+    padding: 7px 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -818,11 +806,9 @@
   background-color: $blue-shadow;
 }
 
-
 .page-header__link-navigation-user--active:hover {
   background-color: $red-button;
 }
-
 
 .page-header__link-navigation-user:hover svg {
   opacity: 1;

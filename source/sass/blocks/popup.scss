@@ -149,11 +149,14 @@
 
 //МОДАЛЬНОЕ ОКНО С ПОИСКОМ
 .popup-search {
+  display: none;
+
   @media (min-width: $tablet-width) {
     position: relative;
     display: none;
   }
 }
+
 //------------ при неработающем js
 .popup-search--nojs {
   @media (min-width: $tablet-width) {
@@ -170,14 +173,12 @@
 }
 
 .popup-search__wrapper-input {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    width: 60%;
-  }
+  width: 60%;
 }
 
 //МОДАЛЬНОЕ ОКНО ТОВАР ДОБАВЛЕН В КОРЗИНУ
@@ -316,24 +317,6 @@
   background-color: rgba($black, 0.9);
 }
 
-.popup-search.popup--opened {
-  @media (min-width: $tablet-width) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-
-    display: block;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    background-color: rgba($black, 0.9);
-  }
-}
-
 //кнопка закрыть попап
 .popup__button-close {
   position: absolute;
@@ -356,14 +339,11 @@
 }
 
 .popup__button-close--search {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    width: 30px;
-    height: 30px;
-  }
+  display: block;
+  width: 30px;
+  height: 30px;
 }
+
 //------------ при неработающем js
 .popup-search--nojs .popup__button-close--search {
   @media (min-width: $tablet-width) {
@@ -384,11 +364,9 @@
 }
 
 .popup__button-close--search::after {
-  @media (min-width: $tablet-width) {
-    width: 42px;
+  width: 42px;
 
-    background-color: $white;
-  }
+  background-color: $white;
 }
 
 .popup__button-close::before {
@@ -405,11 +383,9 @@
 }
 
 .popup__button-close--search::before {
-  @media (min-width: $tablet-width) {
-    width: 42px;
+  width: 42px;
 
-    background-color: $white;
-  }
+  background-color: $white;
 }
 
 /*=============СТАЙЛГАЙД============*/
