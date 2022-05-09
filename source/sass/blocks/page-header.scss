@@ -53,6 +53,10 @@
   display: none;
 }
 
+.page-header--opened .page-header__wrapper-top {
+  display: none;
+}
+
 //Меню при отключенном js
 .page-header--nojs .page-header__form,
 .page-header--nojs .page-header__wrapper-bottom {

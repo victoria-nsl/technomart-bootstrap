@@ -2624,6 +2624,9 @@ img {
 .page-header--opened .page-header__wrapper-middle {
   display: none; }
 
+.page-header--opened .page-header__wrapper-top {
+  display: none; }
+
 .page-header--nojs .page-header__form,
 .page-header--nojs .page-header__wrapper-bottom {
   display: block; }
