@@ -126,7 +126,7 @@
   border-color: transparent $white transparent transparent;
 }
 
-.bookmark__item button {
+.bookmark__button-buy {
   display: block;
   width: 100%;
   padding: 7px 3px;
@@ -153,23 +153,29 @@
   opacity: 0.3;
 }
 
+.bookmark__button-buy.products__button-buy--active {
+  color: $white;
+  background-color: $red;
+  border: 3px solid $red;
+}
+
 /*=============СТАЙЛГАЙД============*/
 //hover
-.bookmark__item button:hover {
+.bookmark__button-buy:hover {
   background-color: $green;
   color: $white;
 
   border: 3px solid $green;
 }
 
-.bookmark__item--active button:hover {
+.bookmark__button-buy.products__button-buy--active:hover {
   background-color: rgba($red, 0.8);
   color: $white;
 
   border: 3px solid $red;
 }
 
-.bookmark__item button:hover svg {
+.bookmark__button-buy:hover svg {
   opacity: 1;
 }
 

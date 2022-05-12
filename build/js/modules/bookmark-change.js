@@ -1,10 +1,10 @@
 import { createCardOnPageBookmarks} from './create-cards.js';
 
 const buttonsСhangeBookmarks = document.querySelectorAll('.products__button-bookmark');
+const linkBookmarks = document.querySelector('.page-header__link-navigation-user--bookmark');
+const numberProductsInBookmark = document.querySelector('.page-header__link-navigation-user--bookmark span:last-child');
 
 if (buttonsСhangeBookmarks) {
-  const linkBookmarks = document.querySelector('.page-header__link-navigation-user--bookmark');
-  const numberProductsInBookmark = document.querySelector('.page-header__link-navigation-user--bookmark span:last-child');
 
   let arrayBookmarks = [];
   /*=============LOCALSTORAGE===========*/

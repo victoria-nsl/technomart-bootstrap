@@ -5289,7 +5289,7 @@ img {
   border-width: 0 20px 20px 0;
   border-color: transparent #ffffff transparent transparent; }
 
-.bookmark__item button {
+.bookmark__button-buy {
   display: block;
   width: 100%;
   padding: 7px 3px;
@@ -5310,18 +5310,23 @@ img {
   fill: #ffffff;
   opacity: 0.3; }
 
+.bookmark__button-buy.products__button-buy--active {
+  color: #ffffff;
+  background-color: #ee1725;
+  border: 3px solid #ee1725; }
+
 /*=============СТАЙЛГАЙД============*/
-.bookmark__item button:hover {
+.bookmark__button-buy:hover {
   background-color: #1d861f;
   color: #ffffff;
   border: 3px solid #1d861f; }
 
-.bookmark__item--active button:hover {
+.bookmark__button-buy.products__button-buy--active:hover {
   background-color: rgba(238, 23, 37, 0.8);
   color: #ffffff;
   border: 3px solid #ee1725; }
 
-.bookmark__item button:hover svg {
+.bookmark__button-buy:hover svg {
   opacity: 1; }
 
 .bookmark__item button:focus-visible {

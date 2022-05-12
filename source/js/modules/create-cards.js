@@ -13,13 +13,14 @@ const createCardOnPageBookmarks = (idProduct) => {
   const cardOnPageBookmarks = document.createElement('div');
   cardOnPageBookmarks.classList.add('bookmark__item');
   cardOnPageBookmarks.setAttribute('id', idProduct);
+  cardOnPageBookmarks.setAttribute('data-product-item', '');
 
   cardOnPageBookmarks.innerHTML = `
 
     <picture>
       <source
         type="image/webp"
-        srcset= "${objectProducts[idProduct].sourceSrcset}" >
+        srcset= "${objectProducts[idProduct].sourceSrcset}">
 
       <img
         class="img-fluid"
@@ -34,11 +35,21 @@ const createCardOnPageBookmarks = (idProduct) => {
     <p>${objectProducts[idProduct].oldPrice}</p>
     <p>${objectProducts[idProduct].newPrice}</p>
 
-    <button type="button">
-      <svg role="img" width="18" height="16">
-        <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+    <button
+      class="bookmark__button-buy"
+      type="button"
+      data-button-buy>
+      <svg
+        role="img"
+        width="18"
+        height="16">
+        <use
+          xlink:href="img/sprite_auto.svg#icon-header-cart">
+        </use>
       </svg>
-      <span>Купить</span>
+      <span>
+        В корзину
+      </span>
     </button>`;
 
   const wrapperItem = document.createElement('div');

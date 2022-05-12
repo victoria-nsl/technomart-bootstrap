@@ -1,12 +1,12 @@
 import { createCardOnPageCart } from './create-cards.js';
 
-const buttonsСhangeCart = document.querySelectorAll('.products__button-buy');
+const buttonsСhangeCart = document.querySelectorAll('[data-button-buy]');
+const linkCart = document.querySelector('[data-cart]');
+const numberProductsInCart = linkCart.querySelector('span:last-child');
+
 let changeProductInCart;
 
 if (buttonsСhangeCart) {
-  const linkCart = document.querySelector('.page-header__link-navigation-user--cart');
-  const numberProductsInCart = document.querySelector('.page-header__link-navigation-user--cart span:last-child');
-
   let arrayCart = [];
 
   /*=============LOCALSTORAGE===========*/
@@ -32,7 +32,7 @@ if (buttonsСhangeCart) {
 
     arrayCart = storageArrayCart || '';
     buttonsСhangeCart.forEach((buttonСhangeCart) => {
-      const item = buttonСhangeCart.closest('.products__item');
+      const item = buttonСhangeCart.closest('[data-product-item]');
       if (storageArrayCart.includes(item.id)) {
         buttonСhangeCart.classList.add('products__button-buy--active');
         buttonСhangeCart.children[1].textContent = 'В корзине';
@@ -48,7 +48,6 @@ if (buttonsСhangeCart) {
       blockCart.append(list);
     });
   }
-
 
   //установить значения в localStorage
   const setItemsLocalStorage = (array, numberCart) => {
@@ -94,7 +93,7 @@ if (buttonsСhangeCart) {
 
   /*=============ИЗМЕНИТЬ КОЛИЧЕСТВО ТОВАРОВ В КОРЗИНЕ===========*/
   changeProductInCart = (buttonSelected) => {
-    const productSelected = buttonSelected.closest('.products__item');
+    const productSelected = buttonSelected.closest('[data-product-item]');
     const idProductSelected = productSelected.id;
     const numberCartInitial = + numberProductsInCart.textContent;
 
@@ -105,7 +104,17 @@ if (buttonsСhangeCart) {
 
     arrayCart.includes(idProductSelected) ? removeFromCart(idProductSelected, buttonSelected, numberCartInitial) : addToCart(idProductSelected, buttonSelected, numberCartInitial);
   };
+
+  const onButtonСhangCartClick = (evt) => {
+    if (evt.target.matches('[data-button-buy]') || evt.target.matches('[data-button-buy] svg') || evt.target.matches('[data-button-buy] span')) {
+      changeProductInCart(evt.target.closest('button'));
+    }
+  };
+
+  buttonsСhangeCart.forEach((buttonСhangeCart) => {
+    buttonСhangeCart.disabled = false;
+    buttonСhangeCart.addEventListener('click', onButtonСhangCartClick);
+  });
 }
 
 export { changeProductInCart};
-
