@@ -5,9 +5,10 @@ import './modules/form-validation.js';
 import './modules/popup.js';
 import './modules/object-product.js';
 import './modules/create-cards.js';
-import './modules/bookmark.js';
-import './modules/cart.js';
-
+import './modules/bookmark-change.js';
+import './modules/cart-change.js';
+import './modules/cart-change-quantity.js';
+import './modules/slider.js';
 
 //Карусель (сделана с помощью библиотеки bootstrap). Кнопки не видны при неработающем js
 const carousel =  document.querySelector('.about__carousel');

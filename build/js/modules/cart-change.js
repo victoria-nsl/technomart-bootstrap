@@ -85,7 +85,7 @@ if (buttonsСhangeCart) {
     }
 
     button.classList.remove('products__button-buy--active');
-    button.children[1].textContent = 'Купить';
+    button.children[1].textContent = 'В корзину';
     numberCart -= 1;
     numberProductsInCart.textContent = numberCart;
 
@@ -107,4 +107,5 @@ if (buttonsСhangeCart) {
   };
 }
 
-export { changeProductInCart };
+export { changeProductInCart};
+

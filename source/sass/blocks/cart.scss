@@ -1,0 +1,256 @@
+.cart {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+//Шапка с заголовком и кнопкой
+.cart__header {
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 25px 0;
+  margin-bottom: 20px;
+
+  background-color: $azure-background;
+
+  @media (min-width: $tablet-width) {
+    text-align: end;
+  }
+}
+
+.cart h2 {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: $blue-text;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+//Карточка
+.cart__item {
+  padding: 17px;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  border: 1px solid $grey-border;
+  overflow: hidden;
+}
+
+.cart__item img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.cart__item h3 {
+  margin-bottom: 20px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  color: $black;
+}
+
+.cart__item p:nth-child(3) {
+  margin-bottom: 20px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration: line-through;
+  color: $grey-text;
+}
+
+.cart__item p:nth-child(4) {
+  position: relative;
+
+  width: 141px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 7px 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $white;
+
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background-color: $red-button;
+}
+
+.cart__item p:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent $white transparent transparent;
+}
+
+.cart__item p:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  transform: rotate(90deg);
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent $white transparent transparent;
+}
+
+//Добавить-удалить количество товара
+.cart__quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  border: 1px solid $grey-border;
+}
+
+.cart__quantity input {
+  width: 80%;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
+  color: $blue-text;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: none;
+}
+
+.cart__button-quantity {
+  display: inline-block;
+  width: 20%;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: $blue-text;
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+}
+//Удалить кнопка
+
+.cart__button-delete {
+  display: block;
+  width: 100%;
+  padding: 7px 3px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $blue-text;
+  text-transform: uppercase;
+
+  background-color: $white;
+  border-radius: 0;
+  border: 3px solid $green-dark;
+
+  transition: all 0.2s ease-in-out;
+}
+
+//Итого, кнопка купить
+.cart__total {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $blue-text;
+}
+
+.cart__button-buy {
+  display: block;
+  width: 100%;
+  padding: 7px 3px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $green-dark;
+  border-radius: 0;
+  border: 3px solid $green-dark;
+
+  transition: all 0.2s ease-in-out;
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.cart__button-buy:hover,
+.cart__button-delete:hover {
+  background-color: $green;
+  color: $white;
+
+  border: 3px solid $green;
+}
+
+.cart__button-quantity:hover {
+  color: $red-button;
+}
+
+//focus
+.cart__button-buy:focus-visible,
+.cart__button-delete:focus-visible,
+.cart__button-quantity:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
+
+//active
+.cart__button-buy:active,
+.cart__button-delete:active,
+.cart__button-quantity:active {
+  opacity: 0.5;
+}
+
+//disabled
+.cart__button-quantity:disabled,
+.cart__button-delete:disabled {
+  opacity: 0.2;
+}

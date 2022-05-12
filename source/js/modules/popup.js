@@ -1,5 +1,5 @@
 import { isEscEvent, setFocusTab } from './utils.js';
-import { changeProductInCart } from './cart.js';
+import { changeProductInCart } from './cart-change.js';
 
 const page = document.body;
 const popupLost = document.querySelector('.popup-lost');

@@ -1,6 +1,7 @@
 @import "global/mygrid.scss";
 @import "../bootstrap-5/scss/bootstrap-grid.scss";
 @import "../bootstrap-5/scss/bootstrap-custom.scss";
+@import "../nouislider/nouislider.scss";
 
 /*ГЛОБАЛЬНЫЕ СТИЛИ*/
 @import "global/font.scss";
@@ -22,3 +23,5 @@
 @import "blocks/page-footer.scss";
 @import "blocks/popup.scss";
 @import "blocks/bookmarks.scss";
+@import "blocks/cart.scss";
+@import "blocks/slider-block.scss";
