@@ -41,7 +41,7 @@ if(blockCards) {
     let priceTotal = 0;
     cardsProduct.forEach((cardProduct) =>  {
       const quantity = +cardProduct.querySelector('input').value;
-      const price = +(cardProduct.querySelector('p:nth-child(4)').textContent).match(/\d/g).join('');
+      const price = +(cardProduct.querySelector('p:nth-child(3)').textContent).match(/\d/g).join('');
       priceTotal += quantity*price;
     });
 
