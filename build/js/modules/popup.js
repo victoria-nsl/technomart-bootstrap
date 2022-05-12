@@ -167,7 +167,7 @@ if (popupCart) {
   const onButtonOpenPopupCartClick = (evt) => {
     if (evt.target.matches('.products__button-buy') || evt.target.matches('.products__button-buy svg') || evt.target.matches('.products__button-buy span')) {
       evt.preventDefault();
-      if(!evt.target.closest('button').classList.contains('products__button-buy--active')) {
+      if(evt.target.closest('button').classList.contains('products__button-buy--active')) {
         openPopup(popupCart, firstElementPopupCartFocusable, lastElementPopupCartFocusable);
         document.addEventListener('keydown', onDocumentKeydown);
         popupCart.addEventListener('click', onPopupClick);
