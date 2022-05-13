@@ -1,0 +1,12 @@
+.sorting__list {
+  @include reset-style-list;
+  display: flex;
+}
+
+.sorting__list-price {
+  @include reset-style-list;
+}
+
+.sorting__list-price-icons {
+  @include reset-style-list;
+}

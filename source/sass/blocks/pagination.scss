@@ -1,0 +1,28 @@
+.pagination__list {
+  @include reset-style-list;
+  display: flex;
+  column-gap: 10px;
+}
+
+.pagination__item {
+  padding: 10px 15px;
+
+  border: 1px solid $grey-dark-border;
+  border-radius: 2px;
+}
+
+.pagination__item--active {
+  background-color: $red;
+  border: 1px solid $red;
+}
+
+.pagination__link {
+  @include font-pt-sans;
+
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.pagination__item--active .pagination__link {
+  color: $white;
+}

@@ -1,7 +1,7 @@
 const slider = document.getElementById('slider');
-const fieldsValue = document.querySelectorAll('.slider-block__value');
+const fieldsValue = document.querySelectorAll('.filter__slider-block input');
 
-if (slider ) {
+if (slider) {
   window.noUiSlider.create(slider, {
     start: [0, 30000],
     connect: [false, true, false],

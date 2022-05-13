@@ -1,0 +1,154 @@
+.catalog-inner {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+//Хлебные крошки
+.catalog__breadcrumb-list {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 10px;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 40px;
+  }
+}
+
+.catalog__breadcrumb-item:not(:last-child) {
+  position: relative;
+}
+
+.catalog__breadcrumb-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%) rotate(45deg);
+
+  width: 7px;
+  height: 7px;
+
+  border: 1px solid $blue-text;
+  border-bottom: none;
+  border-left: none;
+
+  @media (min-width: $tablet-width) {
+    right: -20px;
+  }
+}
+
+.catalog__breadcrumb-link {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.catalog__breadcrumb-link--icon svg {
+  width: 14px;
+  height: 12px;
+  margin-bottom: 5px;
+
+  fill: $black;
+}
+
+.catalog__breadcrumb-link--active {
+  color: $grey-text;
+}
+
+//Заголовок
+.catalog__header {
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 25px 20px;
+  margin-bottom: 20px;
+
+  text-align: center;
+  background-color: $azure-background;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
+}
+
+.catalog__header h2 {
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: $blue-text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-align: start;
+  }
+}
+
+//О перфораторах
+.catalog__about-perforator {
+  background-color: $azure-background;
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 64px 0;
+  }
+}
+
+.catalog-inner-about-perforator {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.catalog__about-perforator h2 {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    width: 338px;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.catalog__about-perforator p {
+  @include font-pt-sans;
+
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 96.5%;
+    margin: 0;
+  }
+}
+
+.catalog__about-perforator br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

@@ -10,18 +10,32 @@
 @import "global/global.scss";
 
 /*БЛОКИ*/
+//Общие
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
-@import "blocks/mark-new.scss";
-@import "blocks/about.scss";
+@import "blocks/page-footer.scss";
 @import "blocks/products.scss";
+@import "blocks/mark-new.scss";
+
+//Главная страница
+@import "blocks/about.scss";
 @import "blocks/manufacturer.scss";
 @import "blocks/service.scss";
 @import "blocks/logistics-contacts.scss";
 @import "blocks/logistics.scss";
 @import "blocks/contacts.scss";
-@import "blocks/page-footer.scss";
-@import "blocks/popup.scss";
-@import "blocks/bookmarks.scss";
-@import "blocks/cart.scss";
+
+//Каталог
+@import "blocks/catalog.scss";
 @import "blocks/filter.scss";
+@import "blocks/sorting.scss";
+@import "blocks/pagination.scss";
+
+//Попапы
+@import "blocks/popup.scss";
+
+//Страница с Закладками
+@import "blocks/bookmarks.scss";
+
+//Страница с Корзиной
+@import "blocks/cart.scss";

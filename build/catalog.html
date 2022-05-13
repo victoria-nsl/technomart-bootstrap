@@ -205,439 +205,470 @@
 
   </header>
 
-  <main class="page-main  page-main--catalog">
+  <main class="catalog">
+    <div class="catalog-inner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-5">
+            <ul class="catalog__breadcrumb-list">
+              <li class="catalog__breadcrumb-item">
+                <a class="catalog__breadcrumb-link catalog__breadcrumb-link--icon" href="index.html" aria-label="Перейти на главную страницу">
+                  <svg role="img" width="14" height="12">
+                    <use xlink:href="img/sprite_auto.svg#icon-home"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="catalog__breadcrumb-item">
+                <a class="catalog__breadcrumb-link" href="#">Каталог</a>
+              </li>
+              <li class="catalog__breadcrumb-item">
+                <a class="catalog__breadcrumb-link" href="#">Инструмент</a>
+              </li>
+              <li class="catalog__breadcrumb-item">
+                <a class="catalog__breadcrumb-link catalog__breadcrumb-link--active">Перфораторы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-xl-5">
-          <ul class="page-main__breadcrumb">
-            <li>
-              <a href="index.html" aria-label="Перейти на главную страницу">
-                <svg role="img" width="14" height="12">
-                  <use xlink:href="img/sprite_auto.svg#icon-home"></use>
-                </svg>
-              </a>
-            </li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Инструмент</a></li>
-            <li><a>Перфораторы</a></li>
-          </ul>
+        <div class="catalog__header row align-items-center">
+          <div class="col-xl-3">
+            <h1>Перфораторы</h1>
+          </div>
         </div>
       </div>
-      <div class="page-main__header row align-items-center">
-        <div class="col-xl-3">
-          <h1>Перфораторы</h1>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="row page-main__wrapper-filter-catalog">
-        <div class="col-xl-3">
-          <section class="filter">
-            <div class="filter__wrapper-title">
-              <h2>Фильтр</h2>
-            </div>
+      <div class="container">
+        <div class="row catalog__wrapper-filter-catalog">
+          <div class="col-xl-3">
+            <section class="filter">
+              <div class="filter__wrapper-title">
+                <h2>Фильтр</h2>
+              </div>
 
-            <form class="filter__form">
+              <form class="filter__form">
 
-              <fieldset class="filter__slider-block">
-                <legend class="filter__slider-legend">Цена</legend>
-                <div class="filter__slider" id="slider"></div>
-                <ul class="filter__slider-list">
-                  <li class="filter__slider-item">
-                    <label for="from">от</label>
-                    <input id="from" type="number">
+                <fieldset class="filter__slider-block">
+                  <legend class="filter__slider-legend">Цена</legend>
+                  <div class="filter__slider" id="slider"></div>
+                  <ul class="filter__slider-list">
+                    <li class="filter__slider-item">
+                      <label class="visually-hidden" for="from">от</label>
+                      <input id="from" type="number">
+                    </li>
+                    <li class="filter__slider-item">
+                      <label class="visually-hidden" for="to">до</label>
+                      <input id="to" type="number">
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="filter__manufacturer-block">
+                  <legend class="filter__manufacturer-legend">
+                    Производители
+                  </legend>
+                  <ul class="filter__manufacturer-list">
+                    <li class="filter__manufacturer-item">
+                      <input id="bosch" type="checkbox" name="bosch" checked="">
+                      <label for="bosch">bosch</label>
+                    </li>
+                    <li class="filter__manufacturer-item">
+                      <input id="interskol" type="checkbox" name="interskol">
+                      <label for="interskol">интерскол</label>
+                    </li>
+                    <li class="filter__manufacturer-item">
+                      <input id="makita" type="checkbox" name="makita" checked="">
+                      <label for="makita">makita</label>
+                    </li>
+                    <li class="filter__manufacturer-item">
+                      <input id="dewalt" type="checkbox" name="dewalt">
+                      <label for="dewalt">dewalt</label>
+                    </li>
+
+                    <li class="filter__manufacturer-item">
+                      <input id="hitachi" type="checkbox" name="hitachi">
+                      <label for="hitachi">hitachi</label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="filter__power-block">
+                  <legend class="filter__power-legend">Питание</legend>
+                  <ul class="filter__power-list">
+                    <li class="filter__power-item">
+                      <input id="battery" type="radio" name="power" value="battery" checked="">
+                      <label for="battery">Аккумуляторные</label>
+                    </li>
+                    <li class="filter__power-item">
+                      <input id="network" type="radio" name="power" value="network" checked="">
+                      <label for="network">Сетевое</label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <div class="filter__button-wrapper">
+                  <button class="filter__button-form" type="submit">показать</button>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <div class="col-xl-9">
+
+            <section class="sorting row justify-content-between align-items-center">
+              <div class="col-xl-3">
+                <h2>Сортировка</h2>
+              </div>
+
+              <div class="col-xl-8">
+                <div class="sorting__wrapper-button">
+                  <ul class="sorting__list">
+                    <li class="sorting__item sorting__item--price">
+                      <button class="sorting__button-show" type="button">
+                        Цена
+                      </button>
+                      <ul class="sorting__list-price">
+                        <li class="sorting__item-price">
+                          <button class="sorting__button" type="button">
+                            По возрастанию
+                          </button>
+                        </li>
+                        <li class="sorting__item-price">
+                          <button class="sorting__button" type="button">
+                            По убыванию
+                          </button>
+                        </li>
+                      </ul>
+                      <ul class="sorting__list-price-icons">
+                        <li class="sorting__item-price-icons">
+                          <button class="sorting__button" type="button" aria-label="Сортировать по возрастанию цены">
+                          </button>
+                        </li>
+                        <li class="sorting__item-price-icons">
+                          <button class="sorting__button" type="button" aria-label="Сортировать по убыванию цены">
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sorting__item">
+                      <button class="sorting__button" type="button">
+                        По типу
+                      </button>
+                    </li>
+                    <li class="sorting__item">
+                      <button class="sorting__button" type="button">
+                        По функциональности
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="products">
+              <h2 class="visually-hidden">Перфораторы и дрели</h2>
+              <div class="products__list row justify-content-space-between align-items-center">
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-1" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-one">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
+                        <!--1x: 184x164px  2x: 368x328px-->
+                        <img class="img-fluid" width="184" height="164" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 9000</h3>
+                      <p>32500 Р.</p>
+                      <div class="products__item-button">25500 Р.</div>
+                    </div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-2" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-two">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 3000</h3>
+                      <p>22500 Р.</p>
+                      <div class="products__item-button">15500 Р.</div>
+                    </div>
+                    <div class="mark-new">New</div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-3" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-three">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
+                        <!--1x: 144x128px  2x: 288x256px-->
+                        <img class="img-fluid" width="144" height="128" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 6000</h3>
+                      <p>32500 Р.</p>
+                      <div class="products__item-button">25500 Р.</div>
+                    </div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-4" data-product-item="">
+                    <div class="products__wrapper-image">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-4.png" srcset="img/product-4@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 2000</h3>
+                      <p>22500 Р.</p>
+                      <div class="products__item-button">12500 Р.</div>
+                    </div>
+                    <div class="mark-new">New</div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-5" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-four">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-5.webp 1x, img/product-5@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-5.png" srcset="img/product-5@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 6000</h3>
+                      <p>30500 Р.</p>
+                      <div class="products__item-button">25500 Р.</div>
+                    </div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-6" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-four">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-6.webp 1x, img/product-6@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-6.png" srcset="img/product-6@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 2000</h3>
+                      <p>22500 Р.</p>
+                      <div class="products__item-button">12500 Р.</div>
+                    </div>
+                    <div class="mark-new">New</div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-7" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-four">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-7.webp 1x, img/product-7@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-7.png" srcset="img/product-7@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 3000</h3>
+                      <p>22500 Р.</p>
+                      <div class="products__item-button">15500 Р.</div>
+                    </div>
+                    <div class="mark-new">New</div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-8" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-four">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-8.webp 1x, img/product-8@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-8.png" srcset="img/product-8@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 6000</h3>
+                      <p>30500 Р.</p>
+                      <div class="products__item-button">25500 Р.</div>
+                    </div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4">
+                  <div class="products__item" id="product-9" data-product-item="">
+                    <div class="products__wrapper-image products__wrapper-image-four">
+                      <picture>
+                        <source type="image/webp" srcset="img/product-9.webp 1x, img/product-9@2x.webp 2x">
+                        <!--1x: 127x112px  2x: 254x224px-->
+                        <img class="img-fluid" width="127" height="112" src="img/product-9.png" srcset="img/product-9@2x.png 2x" alt="Фотография перфоратора Bosch">
+                      </picture>
+                    </div>
+                    <div class="products__description">
+                      <h3>Перфоратор BOSCH BFG 2000</h3>
+                      <p>22500 Р.</p>
+                      <div class="products__item-button">12500 Р.</div>
+                    </div>
+                    <div class="mark-new">New</div>
+                    <div class="products__wrapper-button">
+                      <button class="products__button-buy" type="button" data-button-buy="" disabled="">
+                        <svg role="img" width="18" height="16">
+                          <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
+                        </svg>
+                        <span>В корзину</span>
+                      </button>
+                      <button class="products__button-bookmark" disabled="">
+                        В закладки
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="pagination row justify-content-start align-items-center">
+              <div class="col-xl-4">
+                <ul class="pagination__list">
+                  <li class="pagination__item pagination__item--active">
+                    <a class="pagination__link">1</a>
                   </li>
-                  <li class="filter__slider-item">
-                    <label for="to">до</label>
-                    <input id="to" type="number">
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#" aria-label="перейти на страницу 2">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#" aria-label="перейти на страницу 3">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#" aria-label="перейти на следующую страницу">следующая</a>
                   </li>
                 </ul>
-              </fieldset>
-
-              <fieldset class="filter__manufacturer-block">
-                <legend class="filter__manufacturer-legend">
-                  Производители
-                </legend>
-                <ul class="filter__manufacturer-list">
-                  <li class="filter__manufacturer-item">
-                    <input id="bosch" type="checkbox" name="bosch" checked="">
-                    <label for="bosch">bosch</label>
-                  </li>
-                  <li class="filter__manufacturer-item">
-                    <input id="interskol" type="checkbox" name="interskol">
-                    <label for="interskol">интерскол</label>
-                  </li>
-                  <li class="filter__manufacturer-item">
-                    <input id="makita" type="checkbox" name="makita" checked="">
-                    <label for="makita">makita</label>
-                  </li>
-                  <li class="filter__manufacturer-item">
-                    <input id="dewalt" type="checkbox" name="dewalt">
-                    <label for="dewalt">dewalt</label>
-                  </li>
-
-                  <li class="filter__manufacturer-item">
-                    <input id="hitachi" type="checkbox" name="hitachi">
-                    <label for="hitachi">hitachi</label>
-                  </li>
-                </ul>
-              </fieldset>
-
-              <fieldset class="filter__power-block">
-                <legend class="filter__power-legend">Питание</legend>
-                <ul class="filter__power-list">
-                  <li class="filter__power-item">
-                    <input id="battery" type="radio" name="power" value="battery" checked="">
-                    <label for="battery">Аккумуляторные</label>
-                  </li>
-                  <li class="filter__power-item">
-                    <input id="network" type="radio" name="power" value="network" checked="">
-                    <label for="network">Сетевое</label>
-                  </li>
-                </ul>
-              </fieldset>
-
-              <div class="filter__button-wrapper">
-                <button class="filter__button-form" type="submit">показать</button>
               </div>
-            </form>
-          </section>
-        </div>
-
-        <div class="col-xl-9">
-          <section class="sorting row  justify-content-space-between align-items-center">
-            <div class="col-xl-2">
-              <h2>Сортировка</h2>
-            </div>
-
-            <div class="col-xl-8">
-              <div class="sorting__wrapper-button">
-                <ul class="sorting__list">
-                  <li class="sorting__item sorting__item--price">
-                    <button class="sorting__button-show" type="button">
-                      Цена
-                    </button>
-                    <ul class="sorting__list-price">
-                      <li class="sorting__item-price">
-                        <button class="sorting__button" type="button">
-                          По возрастанию
-                        </button>
-                      </li>
-                      <li class="sorting__item-price">
-                        <button class="sorting__button" type="button">
-                          По убыванию
-                        </button>
-                      </li>
-                    </ul>
-                    <ul class="sorting__list-price-icons">
-                      <li class="sorting__item-price-icons">
-                        <button class="sorting__button" type="button" aria-label="Сортировать по возрастанию цены">
-                        </button>
-                      </li>
-                      <li class="sorting__item-price-icons">
-                        <button class="sorting__button" type="button" aria-label="Сортировать по убыванию цены">
-                        </button>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="sorting__item">
-                    <button class="sorting__button" type="button">
-                      По типу
-                    </button>
-                  </li>
-                  <li class="sorting__item">
-                    <button class="sorting__button" type="button">
-                      По функциональности
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="products row justify-content-center align-items-center">
-            <h2 class="visually-hidden">Перфораторы и дрели</h2>
-            <div class="col-xl-4">
-              <div class="products__item" id="product-1" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-one">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
-                    <!--1x: 184x164px  2x: 368x328px-->
-                    <img class="img-fluid" width="184" height="164" src="img/product-1.png" srcset="img/product-1@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 9000</h3>
-                  <p>32500 Р.</p>
-                  <div class="products__item-button">25500 Р.</div>
-                </div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-2" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-two">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-2.png" srcset="img/product-2@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 3000</h3>
-                  <p>22500 Р.</p>
-                  <div class="products__item-button">15500 Р.</div>
-                </div>
-                <div class="mark-new">New</div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-3" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-three">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
-                    <!--1x: 144x128px  2x: 288x256px-->
-                    <img class="img-fluid" width="144" height="128" src="img/product-3.png" srcset="img/product-3@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 6000</h3>
-                  <p>32500 Р.</p>
-                  <div class="products__item-button">25500 Р.</div>
-                </div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-4" data-product-item="">
-                <div class="products__wrapper-image">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-4.png" srcset="img/product-4@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                  <p>22500 Р.</p>
-                  <div class="products__item-button">12500 Р.</div>
-                </div>
-                <div class="mark-new">New</div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-5" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-four">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-5.webp 1x, img/product-5@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-5.png" srcset="img/product-5@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 6000</h3>
-                  <p>30500 Р.</p>
-                  <div class="products__item-button">25500 Р.</div>
-                </div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-6" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-four">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-6.webp 1x, img/product-6@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-6.png" srcset="img/product-6@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                  <p>22500 Р.</p>
-                  <div class="products__item-button">12500 Р.</div>
-                </div>
-                <div class="mark-new">New</div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-7" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-four">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-7.webp 1x, img/product-7@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-7.png" srcset="img/product-7@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 3000</h3>
-                  <p>22500 Р.</p>
-                  <div class="products__item-button">15500 Р.</div>
-                </div>
-                <div class="mark-new">New</div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-8" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-four">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-8.webp 1x, img/product-8@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-8.png" srcset="img/product-8@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 6000</h3>
-                  <p>30500 Р.</p>
-                  <div class="products__item-button">25500 Р.</div>
-                </div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-4">
-              <div class="products__item" id="product-9" data-product-item="">
-                <div class="products__wrapper-image products__wrapper-image-four">
-                  <picture>
-                    <source type="image/webp" srcset="img/product-9.webp 1x, img/product-9@2x.webp 2x">
-                    <!--1x: 127x112px  2x: 254x224px-->
-                    <img class="img-fluid" width="127" height="112" src="img/product-9.png" srcset="img/product-9@2x.png 2x" alt="Фотография перфоратора Bosch">
-                  </picture>
-                </div>
-                <div class="products__description">
-                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                  <p>22500 Р.</p>
-                  <div class="products__item-button">12500 Р.</div>
-                </div>
-                <div class="mark-new">New</div>
-                <div class="products__wrapper-button">
-                  <button class="products__button-buy" type="button" data-button-buy="" disabled="">
-                    <svg role="img" width="18" height="16">
-                      <use xlink:href="img/sprite_auto.svg#icon-header-cart"></use>
-                    </svg>
-                    <span>В корзину</span>
-                  </button>
-                  <button class="products__button-bookmark" disabled="">
-                    В закладки
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <div class="pagination row justify-content-start align-items-center">
-            <div class="col-xl-4">
-              <ul class="pagination__list">
-                <li class="pagination__item pagination__item--active">
-                  <a>1</a>
-                </li>
-                <li class="pagination__item">
-                  <a href="#" aria-label="перейти на страницу 2">2</a>
-                </li>
-                <li class="pagination__item">
-                  <a href="#" aria-label="перейти на страницу 3">3</a>
-                </li>
-                <li class="pagination__item">
-                  <a href="#" aria-label="перейти на следующую страницу">СЛЕДУЮЩАЯ</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <section class="catalog__about-perforator">
+      <div class="catalog-inner-about-perforator">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-12">
+              <h2>Пара слов о перфораторах</h2>
+              <p>
+                Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+                кирпиче, бетоне и камне.<br>
+                Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+                дрели, шуруповерта и отбойного молотка.<br>
+                В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+                ударная дрель.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -783,6 +814,24 @@
       </div>
     </div>
   </footer>
+  
+  <section class="popup popup-cart">
+    <h2 class="visually-hidden">Сообщение о добавлении в коризину</h2>
+    <div class="popup popup-cart__wrapper-message">
+      <div class="popup-cart__wrapper-text">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="popup-cart__wrapper-buttons">
+        <a class="popup-cart__button-order" href="#">
+          Оформить заказ
+        </a>
+        <a class="popup-cart__button-continue" href="#">
+          Продолжить покупки
+        </a>
+      </div>
+      <button class="popup__button-close" type="button" aria-label="Закрыть модальное окно"></button>
+    </div>
+  </section>
   <script type="module" src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>

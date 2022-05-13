@@ -1,5 +1,5 @@
 .filter__slider-block {
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   padding: 30px 0;
 }
@@ -14,7 +14,7 @@
 .filter__slider-list {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   padding: 0;
 
@@ -22,11 +22,12 @@
 }
 
 .filter__slider-item {
+  width: 95px;
   margin-bottom: 20px;
 }
 
 .filter__slider-block input {
-  width: 100px;
+  width: 100%;
 }
 
 //Ползунок
