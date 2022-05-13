@@ -97,6 +97,9 @@
   @include button;
   @include button-red;
 
+  position: relative;
+  z-index: 100;
+
   width: 192px;
 }
 

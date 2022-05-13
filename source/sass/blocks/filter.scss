@@ -1,17 +1,17 @@
-.slider-block {
+.filter__slider-block {
   width: 80%;
   margin: 20px auto;
   padding: 30px 0;
 }
 
-.slider-block__field {
+.filter__slider-legend {
   margin: 0;
 
   font-weight: 600;
   font-size: 20px;
 }
 
-.slider-block__list {
+.filter__slider-list {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -21,31 +21,31 @@
   list-style: none;
 }
 
-.slider-block__item {
+.filter__slider-item {
   margin-bottom: 20px;
 }
 
-.slider-block__value {
+.filter__slider-block input {
   width: 100px;
 }
 
 //Ползунок
-.slider-block__slider {
+.filter__slider {
   width: 60%;
   height: 12px;
   margin: 0 auto;
   border-radius: 10px;
 }
 
-.slider-block__slider .noUi-base {
+.filter__slider .noUi-base {
   background-color: $grey-text;
 }
 
-.slider-block__slider .noUi-connect {
+.filter__slider .noUi-connect {
   background-color: $grey-text;
 }
 
-.slider-block__slider .noUi-handle {
+.filter__slider .noUi-handle {
   width: 20px;
   height: 20px;
   box-shadow: none;
@@ -55,7 +55,7 @@
   background-color: $red;
 }
 
-.slider-block__slider .noUi-handle::before,
-.slider-block__slider .noUi-handle::after {
+.filter__slider .noUi-handle::before,
+.filter__slider .noUi-handle::after {
   display: none;
 }

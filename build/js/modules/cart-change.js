@@ -111,10 +111,10 @@ if (buttonsСhangeCart) {
     }
   };
 
+  //паралельно вызывается функция  openPopup (файл popup.js), т.к. нажатие кнопки одновременно вызывает появление модального окна и измeнение количества товаров в корзине
+
   buttonsСhangeCart.forEach((buttonСhangeCart) => {
     buttonСhangeCart.disabled = false;
     buttonСhangeCart.addEventListener('click', onButtonСhangCartClick);
   });
 }
-
-export { changeProductInCart};

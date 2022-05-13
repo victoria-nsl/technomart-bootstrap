@@ -62,6 +62,10 @@
 
 .page-header--nojs .page-header__wrapper-middle {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-header--nojs .page-header__list-navigation-user {
@@ -76,6 +80,7 @@
 //Логотип
 .page-header__logo-link-image {
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 10px;
 
@@ -476,7 +481,7 @@
 }
 
 //Название интернет-магазина
-.page-header__middle h1 {
+.page-header__wrapper-title p {
   width: 100%;
   margin: 0;
   margin-bottom: 20px;
@@ -546,7 +551,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.page-header__middle p {
+.page-header__wrapper-contact p {
   width: 250px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -773,7 +778,7 @@
   transition: all 0.2s ease-in-out;
 
   @media (min-width: $tablet-width) {
-    padding: 7px 20px;
+    padding: 14px 20px;
   }
 
   @media (min-width: $desktop-width) {

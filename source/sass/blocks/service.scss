@@ -86,8 +86,12 @@
     width: 10px;
     height: 279px;
 
-    background-image: url("../img/back-icon-shadow.png");
+    background-image: url("../img/shadow.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/shadow@2x.png");
+    }
   }
 }
 

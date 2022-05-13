@@ -176,6 +176,7 @@ if (popupCart) {
     }
   };
 
+  //паралельно вызывается функция changeProductInCart (файл cart-change.js), т.к. нажатие кнопки одновременно вызывает появление модального окна и измeнение количества товаров в корзине
   listProducts.addEventListener('click', onButtonOpenPopupCartClick);
 }
 
