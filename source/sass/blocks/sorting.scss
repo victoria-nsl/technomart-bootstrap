@@ -9,16 +9,30 @@
   @include font-pt-sans;
 
   margin: 0;
+  margin-bottom: 15px;
 
   text-transform: uppercase;
   line-height: 18px;
+  font-weight: 700;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+
+    font-weight: 400;
+  }
 }
 
 .sorting__list {
   @include reset-style-list;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 //Кнопки сортировки
