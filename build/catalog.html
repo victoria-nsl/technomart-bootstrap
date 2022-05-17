@@ -32,7 +32,7 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <nav class="page-header__navigation">
-      <div class="page-header__wrapper-top justify-content-between">
+      <div class="page-header__wrapper-top">
         <div class="container">
           <div class="row justify-content-md-between align-items-center">
             <div class="col-xl-6 col-md-7 col-4">
@@ -242,15 +242,17 @@
         <div class="row catalog__wrapper-filter-catalog">
           <div class="col-xl-3">
             <section class="filter">
-              <div class="filter__wrapper-title">
-                <h2>Фильтр</h2>
-              </div>
+              <h2 class="filter__title">
+                <button class="filter__button" type="button" disabled="">Фильтр:</button>
+              </h2>
 
               <form class="filter__form">
 
                 <fieldset class="filter__slider-block">
                   <legend class="filter__slider-legend">Цена</legend>
-                  <div class="filter__slider" id="slider"></div>
+                  <div class="filter__wrapper-slider">
+                    <div class="filter__slider" id="slider"></div>
+                  </div>
                   <ul class="filter__slider-list">
                     <li class="filter__slider-item">
                       <label class="visually-hidden" for="from">от</label>
@@ -265,43 +267,43 @@
 
                 <fieldset class="filter__manufacturer-block">
                   <legend class="filter__manufacturer-legend">
-                    Производители
+                    Производители:
                   </legend>
                   <ul class="filter__manufacturer-list">
                     <li class="filter__manufacturer-item">
-                      <input id="bosch" type="checkbox" name="bosch" checked="">
-                      <label for="bosch">bosch</label>
+                      <input class="visually-hidden" id="bosch" type="checkbox" name="bosch" checked="">
+                      <label class="filter__manufacturer-label" for="bosch">bosch</label>
                     </li>
                     <li class="filter__manufacturer-item">
-                      <input id="interskol" type="checkbox" name="interskol">
-                      <label for="interskol">интерскол</label>
+                      <input class="visually-hidden" id="interskol" type="checkbox" name="interskol">
+                      <label class="filter__manufacturer-label" for="interskol">интерскол</label>
                     </li>
                     <li class="filter__manufacturer-item">
-                      <input id="makita" type="checkbox" name="makita" checked="">
-                      <label for="makita">makita</label>
+                      <input class="visually-hidden" id="makita" type="checkbox" name="makita" checked="">
+                      <label class="filter__manufacturer-label" for="makita">makita</label>
                     </li>
                     <li class="filter__manufacturer-item">
-                      <input id="dewalt" type="checkbox" name="dewalt">
-                      <label for="dewalt">dewalt</label>
+                      <input class="visually-hidden" id="dewalt" type="checkbox" name="dewalt">
+                      <label class="filter__manufacturer-label" for="dewalt">dewalt</label>
                     </li>
 
                     <li class="filter__manufacturer-item">
-                      <input id="hitachi" type="checkbox" name="hitachi">
-                      <label for="hitachi">hitachi</label>
+                      <input class="visually-hidden" id="hitachi" type="checkbox" name="hitachi">
+                      <label class="filter__manufacturer-label" for="hitachi">hitachi</label>
                     </li>
                   </ul>
                 </fieldset>
 
                 <fieldset class="filter__power-block">
-                  <legend class="filter__power-legend">Питание</legend>
+                  <legend class="filter__power-legend">Питание:</legend>
                   <ul class="filter__power-list">
                     <li class="filter__power-item">
-                      <input id="battery" type="radio" name="power" value="battery" checked="">
-                      <label for="battery">Аккумуляторные</label>
+                      <input class="visually-hidden" id="battery" type="radio" name="power" value="battery" checked="">
+                      <label class="filter__power-label" for="battery">Аккумуляторные</label>
                     </li>
                     <li class="filter__power-item">
-                      <input id="network" type="radio" name="power" value="network" checked="">
-                      <label for="network">Сетевое</label>
+                      <input class="visually-hidden" id="network" type="radio" name="power" value="network" checked="">
+                      <label class="filter__power-label" for="network">Сетевое</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -315,40 +317,20 @@
 
           <div class="col-xl-9">
 
-            <section class="sorting row justify-content-between align-items-center">
-              <div class="col-xl-3">
-                <h2>Сортировка</h2>
-              </div>
+            <section class="sorting">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-xl-4">
+                  <h2>Сортировка:</h2>
+                </div>
 
-              <div class="col-xl-8">
-                <div class="sorting__wrapper-button">
+                <div class="col-xl-8">
                   <ul class="sorting__list">
                     <li class="sorting__item sorting__item--price">
-                      <button class="sorting__button-show" type="button">
+                      <button class="sorting__button sorting__button--price" type="button">
                         Цена
+                        <span class="sorting__price-icons sorting__price-icons--down"></span>
+                        <span class="sorting__price-icons sorting__price-icons--up"></span>
                       </button>
-                      <ul class="sorting__list-price">
-                        <li class="sorting__item-price">
-                          <button class="sorting__button" type="button">
-                            По возрастанию
-                          </button>
-                        </li>
-                        <li class="sorting__item-price">
-                          <button class="sorting__button" type="button">
-                            По убыванию
-                          </button>
-                        </li>
-                      </ul>
-                      <ul class="sorting__list-price-icons">
-                        <li class="sorting__item-price-icons">
-                          <button class="sorting__button" type="button" aria-label="Сортировать по возрастанию цены">
-                          </button>
-                        </li>
-                        <li class="sorting__item-price-icons">
-                          <button class="sorting__button" type="button" aria-label="Сортировать по убыванию цены">
-                          </button>
-                        </li>
-                      </ul>
                     </li>
                     <li class="sorting__item">
                       <button class="sorting__button" type="button">
@@ -356,7 +338,7 @@
                       </button>
                     </li>
                     <li class="sorting__item">
-                      <button class="sorting__button" type="button">
+                      <button class="sorting__button sorting__button--active" type="button">
                         По функциональности
                       </button>
                     </li>
@@ -814,7 +796,6 @@
       </div>
     </div>
   </footer>
-  
   <section class="popup popup-cart">
     <h2 class="visually-hidden">Сообщение о добавлении в коризину</h2>
     <div class="popup popup-cart__wrapper-message">

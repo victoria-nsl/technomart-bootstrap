@@ -43,11 +43,30 @@
     outline-offset: 2px;
   }
 }
+
 //Шрифты
 @mixin font-pt-sans {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
+  color: $black;
+}
+
+@mixin font-pt-sans-legend {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+@mixin font-pt-sans-label {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
   color: $black;
 }

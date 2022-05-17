@@ -7,7 +7,7 @@ if (slider) {
     connect: [false, true, false],
     range: {
       'min': 0,
-      'max': 35000,
+      'max': 40000,
     },
     step: 100,
     //tooltips: true,

@@ -1,12 +1,79 @@
+.sorting {
+  margin-bottom: 28px;
+  padding: 10px 20px;
+
+  background-color: $azure-background;
+}
+
+.sorting h2 {
+  @include font-pt-sans;
+
+  margin: 0;
+
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
 .sorting__list {
   @include reset-style-list;
+
   display: flex;
+  justify-content: space-between;
 }
 
-.sorting__list-price {
-  @include reset-style-list;
+//Кнопки сортировки
+.sorting__button {
+  @include font-pt-sans;
+
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 5px;
+
+  text-transform: uppercase;
+  line-height: 18px;
+
+  border: 0;
+  background-color: transparent;
 }
 
-.sorting__list-price-icons {
-  @include reset-style-list;
+.sorting__button--active {
+  color: $yellow;
+}
+
+//Кнопка с ценой
+.sorting__button--price {
+  position: relative;
+  padding: 0 15px 0 5px;
+}
+
+.sorting__price-icons--up {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  display: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent $yellow transparent;
+}
+
+.sorting__price-icons--down {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  display: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: $yellow transparent transparent transparent;
+}
+
+.sorting__price-icons--active {
+  display: inline;
 }

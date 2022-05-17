@@ -1,21 +1,48 @@
+//Заголовок
+.filter__title {
+  margin: 0;
+  margin-bottom: 14px;
+
+  background-color: $azure-background;
+}
+
+.filter__button {
+  @include font-pt-sans;
+  width: 100%;
+  padding: 10px 20px;
+
+  text-align: start;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+}
+
+//Блок со Слайдером с двумя ползунками
 .filter__slider-block {
   width: 100%;
-  margin: 20px auto;
-  padding: 30px 0;
+  margin-bottom: 25px;
 }
 
 .filter__slider-legend {
-  margin: 0;
+  @include font-pt-sans-legend;
 
-  font-weight: 600;
-  font-size: 20px;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.filter__wrapper-slider {
+  padding: 40px 20px;
+  margin-bottom: 20px;
+
+  background-color: $azure-background;
 }
 
 .filter__slider-list {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
@@ -23,17 +50,22 @@
 
 .filter__slider-item {
   width: 95px;
-  margin-bottom: 20px;
 }
 
 .filter__slider-block input {
+  @include font-pt-sans-legend;
+
   width: 100%;
+  padding: 10px;
+
+  background-color: $azure-background;
+  border: none;
 }
 
-//Ползунок
+//-----------ползунок
 .filter__slider {
-  width: 60%;
-  height: 12px;
+  width: 100%;
+  height: 2px;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -49,14 +81,193 @@
 .filter__slider .noUi-handle {
   width: 20px;
   height: 20px;
-  box-shadow: none;
+  transform: translateY(-25%);
 
   border-radius: 50%;
-  border: 2px solid $red;
-  background-color: $red;
+  border: none;
+  background-color: $white;
+
+  box-shadow: 0 2px 0 0 rgba($grey-text, 0.3);
+  cursor: pointer;
+}
+
+.filter__slider .noUi-touch-area {
+  position: relative;
+}
+
+.filter__slider .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 4px;
+  height: 4px;
+
+  background-color: rgba($grey-text, 0.3);
+  border-radius: 50%;
 }
 
 .filter__slider .noUi-handle::before,
 .filter__slider .noUi-handle::after {
   display: none;
+}
+
+//Блок с чекбоксами
+.filter__manufacturer-block {
+  padding: 16px 0;
+  margin-bottom: 10px;
+
+  border-top: 1px solid rgba($black, 0.1);
+}
+
+.filter__manufacturer-legend {
+  @include font-pt-sans-legend;
+
+  margin-bottom: 15px;
+}
+
+.filter__manufacturer-list {
+  @include reset-style-list;
+}
+
+.filter__manufacturer-item:not(:last-child) {
+  margin-bottom: 21px;
+}
+
+.filter__manufacturer-label {
+  @include font-pt-sans-label;
+  position: relative;
+
+  display: block;
+  padding-left: 35px;
+
+  cursor: pointer;
+}
+
+input + .filter__manufacturer-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/back-icon-checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+input:checked + .filter__manufacturer-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/back-icon-checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+//Блок с радиокнопками
+.filter__power-block {
+  padding-top: 18px;
+  margin-bottom: 37px;
+
+  border-top: 1px solid rgba($black, 0.1);
+}
+
+.filter__power-legend {
+  @include font-pt-sans-legend;
+
+  margin-bottom: 21px;
+}
+
+.filter__power-list {
+  @include reset-style-list;
+}
+
+.filter__power-item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.filter__power-label {
+  @include font-pt-sans-label;
+
+  position: relative;
+
+  display: block;
+  padding-left: 35px;
+
+  cursor: pointer;
+}
+
+input + .filter__power-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+
+  border: 2px solid $grey-dark-svg;
+  border-radius: 50%;
+}
+
+input:checked + .filter__power-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+
+  border: 2px solid $grey-dark-svg;
+  border-radius: 50%;
+}
+
+input:checked + .filter__power-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+
+  background-color: $grey-dark-svg;
+  border: 2px solid $grey-dark-svg;
+  border-radius: 50%;
+}
+
+//Кнопка Показать
+.filter__button-form {
+  @include button;
+  @include font-pt-sans;
+
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid $grey-dark-border;
+
+  transition: all 0.2s ease-in-out;
 }
