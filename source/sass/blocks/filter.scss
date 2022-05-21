@@ -156,6 +156,8 @@
 
   background-color: $azure-background;
   border: none;
+
+  cursor: pointer;
 }
 
 //-----------ползунок
@@ -185,6 +187,7 @@
 
   box-shadow: 0 2px 0 0 rgba($grey-text, 0.3);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .filter__slider .noUi-touch-area {
@@ -280,6 +283,9 @@ input + .filter__manufacturer-label::before {
 
   background-image: url("../img/back-icon-checkbox-off.svg");
   background-repeat: no-repeat;
+  opacity: 0.7;
+
+  transition: all 0.2s ease-in-out;
 }
 
 input:checked + .filter__manufacturer-label::after {
@@ -294,6 +300,9 @@ input:checked + .filter__manufacturer-label::after {
 
   background-image: url("../img/back-icon-checkbox-on.svg");
   background-repeat: no-repeat;
+  opacity: 0.7;
+
+  transition: all 0.2s ease-in-out;
 }
 
 //Блок с радиокнопками
@@ -371,8 +380,11 @@ input + .filter__power-label::after {
   height: 25px;
   box-sizing: border-box;
 
-  border: 2px solid $grey-dark-svg;
+  border: 2px solid $grey-very-dark-svg;
   border-radius: 50%;
+  opacity: 0.7;
+
+  transition: all 0.2s ease-in-out;
 }
 
 input:checked + .filter__power-label::after {
@@ -386,8 +398,11 @@ input:checked + .filter__power-label::after {
   height: 25px;
   box-sizing: border-box;
 
-  border: 2px solid $grey-dark-svg;
+  border: 2px solid $grey-very-dark-svg;
   border-radius: 50%;
+  opacity: 0.7;
+
+  transition: all 0.2s ease-in-out;
 }
 
 input:checked + .filter__power-label::before {
@@ -401,9 +416,12 @@ input:checked + .filter__power-label::before {
   height: 8px;
   box-sizing: border-box;
 
-  background-color: $grey-dark-svg;
-  border: 2px solid $grey-dark-svg;
+  background-color: $grey-very-dark-svg;
+  border: 2px solid $grey-very-dark-svg;
   border-radius: 50%;
+  opacity: 0.7;
+
+  transition: all 0.2s ease-in-out;
 }
 
 //Кнопка Показать
@@ -429,6 +447,8 @@ input:checked + .filter__power-label::before {
 
   border: none;
 
+  transition: all 0.2s ease-in-out;
+
   @media (min-width: $desktop-width) {
     @include font-pt-sans;
 
@@ -437,4 +457,42 @@ input:checked + .filter__power-label::before {
     background-color: transparent;
     border: 1px solid $grey-dark-border;
   }
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+input + .filter__power-label:hover::after,
+input:checked + .filter__power-label:hover::after,
+input:checked + .filter__power-label:hover::before,
+input + .filter__manufacturer-label:hover::before,
+input:checked + .filter__manufacturer-label:hover::after {
+  opacity: 1;
+}
+
+.filter__slider .noUi-handle:hover {
+  box-shadow: 0 0 3px 2px rgba($grey-text, 0.3);
+}
+
+.filter__button-form:hover {
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+//focus
+input:focus-visible + .filter__power-label::after,
+input:focus-visible + .filter__manufacturer-label::before,
+.filter__slider .noUi-handle:focus-visible,
+.filter__slider-block input:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
+
+//disabled
+input + .filter__power-label:disabled::after,
+input:checked + .filter__power-label:disabled::after,
+input:checked + .filter__power-label:disabled::before,
+input + .filter__manufacturer-label:disabled::before,
+input:checked + .filter__manufacturer-label:disabled::after {
+  opacity: 0.3;
 }

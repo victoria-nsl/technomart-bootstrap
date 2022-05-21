@@ -49,6 +49,8 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $black;
+
+  transition: all 0.2s ease-in-out;
 }
 
 .catalog__breadcrumb-link--icon svg {
@@ -156,4 +158,23 @@
   @media (min-width: $desktop-width) {
     display: block;
   }
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.catalog__breadcrumb-link:not(.catalog__breadcrumb-link--active):hover {
+  opacity: 0.7;
+}
+
+//focus
+.catalog__breadcrumb-link:not(.catalog__breadcrumb-link--active):focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+
+  opacity: 1;
+}
+
+//active
+.catalog__breadcrumb-link:not(.catalog__breadcrumb-link--active):active {
+  opacity: 0.5;
 }

@@ -4,25 +4,41 @@
   column-gap: 10px;
 }
 
-.pagination__item {
+.pagination__link {
+  @include font-pt-sans;
+
   padding: 10px 15px;
+
+  line-height: 18px;
+  text-transform: uppercase;
 
   border: 1px solid $grey-dark-border;
   border-radius: 2px;
+
+  transition: all 0.2s ease-in-out;
 }
 
-.pagination__item--active {
+.pagination__link--active {
+  color: $white;
+
   background-color: $red;
   border: 1px solid $red;
 }
 
-.pagination__link {
-  @include font-pt-sans;
-
-  line-height: 18px;
-  text-transform: uppercase;
+/*=============СТАЙЛГАЙД============*/
+//hover
+.pagination__link:not(.pagination__link--active):hover {
+  border: 1px solid $grey-dark-svg;
 }
 
-.pagination__item--active .pagination__link {
-  color: $white;
+//focus
+.pagination__link:not(.pagination__link--active):focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+}
+
+//active
+.pagination__link:not(.pagination__link--active):active {
+  background-color: transparent;
+  border: 1px solid $red;
 }

@@ -45,13 +45,17 @@
 
   text-transform: uppercase;
   line-height: 18px;
+  opacity: 0.3;
 
   border: 0;
   background-color: transparent;
+
+  transition: all 0.2s ease-in-out;
 }
 
 .sorting__button--active {
   color: $yellow;
+  opacity: 1;
 }
 
 //Кнопка с ценой
@@ -90,4 +94,24 @@
 
 .sorting__price-icons--active {
   display: inline;
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.sorting__button:hover {
+  opacity: 1;
+}
+
+//focus
+.sorting__button:focus-visible {
+  outline: 2px solid $green;
+  outline-offset: 2px;
+
+  opacity: 1;
+}
+
+//active
+.sorting__button:active {
+  color: $yellow;
+  opacity: 1;
 }
