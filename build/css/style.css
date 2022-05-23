@@ -4224,7 +4224,7 @@ img {
   border-color: #dc3545;
   transition: all 0.2s ease-in-out;
   position: relative;
-  z-index: 100;
+  z-index: 20;
   width: 192px; }
   .about__button-carousel:hover {
     background-color: #ee1725; }
@@ -5471,7 +5471,7 @@ input:checked + .filter__manufacturer-label:disabled::after {
   position: relative;
   padding: 0 15px 0 5px; }
 
-.sorting__price-icons--up {
+.sorting__price-icons {
   position: absolute;
   top: 50%;
   right: 0;
@@ -5479,24 +5479,15 @@ input:checked + .filter__manufacturer-label:disabled::after {
   display: none;
   width: 0;
   height: 0;
-  border-style: solid;
-  border-width: 0 5px 10px 5px;
-  border-color: transparent transparent #f53708 transparent; }
-
-.sorting__price-icons--down {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  display: none;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 5px 0 5px;
-  border-color: #f53708 transparent transparent transparent; }
-
-.sorting__price-icons--active {
-  display: inline; }
+  border-style: solid; }
+  .sorting__price-icons--up {
+    display: inline;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent #f53708 transparent; }
+  .sorting__price-icons--down {
+    display: inline;
+    border-width: 10px 5px 0 5px;
+    border-color: #f53708 transparent transparent transparent; }
 
 /*=============СТАЙЛГАЙД============*/
 .sorting__button:hover {

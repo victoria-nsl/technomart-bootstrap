@@ -50,8 +50,8 @@
 
   border-top: none;
   border-left: none;
-  border-bottom:  2px solid $blue-text;
-  border-right:  2px solid $blue-text;
+  border-bottom: 2px solid $blue-text;
+  border-right: 2px solid $blue-text;
 
   &--opened {
     border-top: 2px solid $blue-text;
@@ -501,7 +501,7 @@ input:focus-visible + .filter__manufacturer-label::before,
 
   @media (min-width: $desktop-width) {
     outline: none;
-     outline-offset: 0;
+    outline-offset: 0;
   }
 }
 
