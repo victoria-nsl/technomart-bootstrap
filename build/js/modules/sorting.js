@@ -30,7 +30,7 @@ if(blockSorting && listProducts) {
       wrapperItem.classList.add('col-sm-6');
       wrapperItem.append(item);
 
-      listProducts.appendChild(wrapperItem);
+      listProducts.append(wrapperItem);
     });
   };
 

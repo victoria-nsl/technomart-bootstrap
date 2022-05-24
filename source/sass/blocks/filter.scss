@@ -161,43 +161,53 @@
   border: none;
 
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-//-----------ползунок
+//-----------ползунок-------//
 .filter__slider {
   width: 100%;
-  height: 2px;
-  margin: 0 auto;
-  border-radius: 10px;
+  height: 4px;
+  padding: 0 8px; //чтобы ручки были внутри слайдера 40% от ручки
+  box-sizing: border-box;
+
+  box-shadow: none;
 }
 
-.filter__slider .noUi-base {
+//полоса на слайдере
+.filter__slider.noUi-target {
+  border: 1px solid $azure-background;
   background-color: $grey-text;
 }
 
+//полоса внутри слайдера между двух ручек
 .filter__slider .noUi-connect {
-  background-color: $grey-text;
+  height: 4px;
+
+  background: $green-ligth;
 }
 
+//ручки
 .filter__slider .noUi-handle {
-  width: 20px;
   height: 20px;
-  transform: translateY(-25%);
+  width: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px; /* half the width */
 
-  border-radius: 50%;
-  border: none;
-  background-color: $white;
-
+  border: 1px solid $white;
+  border-radius: 10px;
   box-shadow: 0 2px 0 0 rgba($grey-text, 0.3);
+
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-.filter__slider .noUi-touch-area {
-  position: relative;
+.filter__slider .noUi-handle::before {
+  display: none;
 }
 
-.filter__slider .noUi-touch-area::after {
+.filter__slider .noUi-handle::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -210,11 +220,7 @@
   background-color: rgba($grey-text, 0.3);
   border-radius: 50%;
 }
-
-.filter__slider .noUi-handle::before,
-.filter__slider .noUi-handle::after {
-  display: none;
-}
+//---------------------------------//
 
 //Блок с чекбоксами
 .filter__manufacturer-block {
@@ -472,7 +478,8 @@ input:checked + .filter__manufacturer-label:hover::after {
   opacity: 1;
 }
 
-.filter__slider .noUi-handle:hover {
+.filter__slider .noUi-handle:hover,
+.filter__slider-item input:hover {
   box-shadow: 0 0 3px 2px rgba($grey-text, 0.3);
 }
 
@@ -504,7 +511,6 @@ input:focus-visible + .filter__manufacturer-label::before,
     outline-offset: 0;
   }
 }
-
 
 //disabled
 input + .filter__power-label:disabled::after,

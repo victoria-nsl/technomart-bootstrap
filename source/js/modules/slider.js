@@ -1,4 +1,4 @@
-const slider = document.getElementById('slider');
+const slider = document.getElementById('slider-fit');
 const fieldsValue = document.querySelectorAll('.filter__slider-block input');
 
 if (slider) {
@@ -30,5 +30,5 @@ if (slider) {
   };
 
   slider.noUiSlider.on('update', onSliderUpdate);
-  fieldsValue.forEach((fieldValue) => fieldValue.addEventListener('input', onfieldValueInput));
+  fieldsValue.forEach((fieldValue) => fieldValue.addEventListener('change', onfieldValueInput));
 }
