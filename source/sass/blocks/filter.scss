@@ -67,6 +67,10 @@
   }
 }
 
+.filter__icon--nojs {
+  display: none;
+}
+
 /*=============ФОРМА=================*/
 .filter__form {
   display: none;
@@ -81,6 +85,11 @@
 .filter__form--active {
   display: block;
 }
+
+.filter__form--nojs {
+  display: block;
+}
+
 
 //Блок со Слайдером с двумя ползунками
 .filter__slider-block {
@@ -100,6 +109,10 @@
 
     text-align: start;
   }
+}
+
+.filter__form--nojs .filter__slider-block {
+  display: none;
 }
 
 .filter__slider-legend {

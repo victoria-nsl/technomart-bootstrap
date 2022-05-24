@@ -245,11 +245,11 @@
               <h2 class="filter__title">
                 <button class="filter__button" type="button" disabled="">
                   Фильтр:
-                  <span class="filter__icon"></span>
+                  <span class="filter__icon filter__icon--nojs"></span>
                 </button>
               </h2>
 
-              <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+              <form class="filter__form filter__form--nojs" action="https://echo.htmlacademy.ru/" method="get">
 
                 <fieldset class="filter__slider-block">
                   <legend class="filter__slider-legend">Цена</legend>
@@ -259,11 +259,11 @@
                   <ul class="filter__slider-list">
                     <li class="filter__slider-item">
                       <label class="visually-hidden" for="from">от</label>
-                      <input id="from" type="text">
+                      <input id="from" type="text" name="from">
                     </li>
                     <li class="filter__slider-item">
                       <label class="visually-hidden" for="to">до</label>
-                      <input id="to" type="text">
+                      <input id="to" type="text" name="to">
                     </li>
                   </ul>
                 </fieldset>
@@ -328,18 +328,18 @@
                 <div class="col-xl-8">
                   <ul class="sorting__list">
                     <li class="sorting__item sorting__item--price">
-                      <button class="sorting__button sorting__button--price" type="button">
+                      <button class="sorting__button sorting__button--price" type="button" disabled="">
                         Цена
                         <span class="sorting__price-icons"></span>
                       </button>
                     </li>
                     <li class="sorting__item">
-                      <button class="sorting__button sorting__button--type" type="button">
+                      <button class="sorting__button sorting__button--type" type="button" disabled="">
                         По типу
                       </button>
                     </li>
                     <li class="sorting__item">
-                      <button class="sorting__button sorting__button--functionality sorting__button--active" type="button">
+                      <button class="sorting__button sorting__button--functionality sorting__button--active" type="button" disabled="">
                         По функциональности
                       </button>
                     </li>

@@ -109,3 +109,8 @@
   color: $yellow;
   opacity: 1;
 }
+
+//disadled
+.sorting__button:disabled {
+  opacity: 0.3;
+}

@@ -14,6 +14,10 @@ if(blockSorting && listProducts) {
 
   let listSorted;
 
+  buttons.forEach((button) => {
+    button.disabled = false;
+  });
+
   const showActiveButton = (buttonActive) => {
     buttons.forEach((button) => {
       button.classList.remove('sorting__button--active');

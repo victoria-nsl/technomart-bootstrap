@@ -169,6 +169,9 @@
 }
 
 .cart__button-quantity {
+  position: relative;
+  z-index: 20;
+
   display: inline-block;
   width: 20%;
   padding: 0;

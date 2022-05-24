@@ -5021,6 +5021,9 @@ img {
     .filter__icon {
       display: none; } }
 
+.filter__icon--nojs {
+  display: none; }
+
 /*=============ФОРМА=================*/
 .filter__form {
   display: none; }
@@ -5031,6 +5034,9 @@ img {
       flex-wrap: wrap; } }
 
 .filter__form--active {
+  display: block; }
+
+.filter__form--nojs {
   display: block; }
 
 .filter__slider-block {
@@ -5046,6 +5052,9 @@ img {
       order: 1;
       width: 100%;
       text-align: start; } }
+
+.filter__form--nojs .filter__slider-block {
+  display: none; }
 
 .filter__slider-legend {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -5504,6 +5513,9 @@ input:checked + .filter__manufacturer-label:disabled::after {
 .sorting__button:active {
   color: #f53708;
   opacity: 1; }
+
+.sorting__button:disabled {
+  opacity: 0.3; }
 
 .pagination__list {
   margin: 0;
@@ -6194,6 +6206,8 @@ input:checked + .filter__manufacturer-label:disabled::after {
   border: none; }
 
 .cart__button-quantity {
+  position: relative;
+  z-index: 20;
   display: inline-block;
   width: 20%;
   padding: 0;
