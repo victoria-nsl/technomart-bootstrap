@@ -98,7 +98,18 @@ if(blockCards) {
     }
   };
 
+  const onCardProductChange = (evt) => {
+    if (evt.target.tagName === 'INPUT') {
+      countPriceTotal();
+    }
+  };
+
+
   cardsProduct. forEach((cardProduct) => {
     cardProduct.addEventListener('click', onCardProductClick);
+  });
+
+  cardsProduct. forEach((cardProduct) => {
+    cardProduct.addEventListener('change', onCardProductChange);
   });
 }

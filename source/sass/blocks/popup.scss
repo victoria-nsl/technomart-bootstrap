@@ -75,13 +75,13 @@
 .popup-lost__wrapper-user textarea {
   @include font-pt-sans;
 
-  color: $grey-text;
+  color: rgda($black, 0.8);
 
   border: 2px solid $grey-dark-svg;
   border-radius: 0;
 
   &::placeholder {
-    color: rgba($grey-text, 0.7);
+    color: $grey-text;
   }
 }
 
